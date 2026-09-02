@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Living Waters — Teacher's Guide</title>
+<style>
+  :root{ --ink:#1a1408; --gold:#b45309; --blue:#0369a1; --purple:#7c3aed; --amber:#d97706; }
+  body{ font-family: Georgia, serif; background:#f4f0e6; color:var(--ink); margin:0; }
+  .toolbar{ position:sticky; top:0; background:#1a1408; color:#f4f0e6; padding:10px 16px; display:flex; gap:8px; align-items:center; z-index:50; font-family:-apple-system,sans-serif; flex-wrap:wrap; }
+  .toolbar button, .toolbar select{ background:#b45309; color:#fff; border:none; padding:8px 12px; border-radius:6px; font-size:0.78rem; font-weight:700; cursor:pointer; }
+  .toolbar button.secondary{ background:transparent; border:1px solid #b45309; }
+  .toolbar .timer{ margin-left:auto; font-size:1.05rem; font-weight:700; font-variant-numeric:tabular-nums; }
+  #btn-menu{ font-size:1.1rem; padding:6px 12px; }
+  .app-title{ font-weight:800; font-size:0.9rem; letter-spacing:0.02em; margin-right:8px; }
+  .sync-status{ font-size:0.7rem; font-weight:700; padding:5px 10px; border-radius:999px; background:rgba(255,255,255,0.08); }
+  .sync-status.sync-off{ color:#c9b894; }
+  .sync-status.sync-on{ color:#7ee787; background:rgba(126,231,135,0.12); }
+  .nav-drawer{ position:fixed; top:0; left:-320px; width:300px; height:100vh; background:#1a1408; color:#f4f0e6; z-index:100; transition:left 0.25s; padding:20px; overflow-y:auto; font-family:-apple-system,sans-serif; box-shadow:4px 0 20px rgba(0,0,0,0.3); }
+  .nav-drawer.open{ left:0; }
+  .nav-drawer-header{ display:flex; justify-content:space-between; align-items:center; font-weight:800; font-size:1rem; margin-bottom:16px; padding-bottom:12px; border-bottom:1px solid rgba(255,255,255,0.15); }
+  .nav-drawer-header button{ background:none; border:none; color:#f4f0e6; font-size:1.4rem; cursor:pointer; }
+  .nav-section-label{ font-size:0.65rem; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:#d97706; margin:16px 0 8px; }
+  .nav-drawer-note{ font-size:0.78rem; color:#9c8b6a; font-style:italic; line-height:1.5; }
+  .nav-book-group{ font-size:0.72rem; font-weight:700; color:#e8d9a8; margin:12px 0 4px; }
+  .nav-lesson-item{ display:block; width:100%; text-align:left; background:none; border:none; color:#f4f0e6; padding:8px 10px; border-radius:6px; font-size:0.82rem; cursor:pointer; }
+  .nav-lesson-item:hover{ background:rgba(255,255,255,0.08); }
+  .nav-lesson-item.active{ background:#b45309; font-weight:700; }
+  .nav-overlay{ display:none; position:fixed; inset:0; background:rgba(0,0,0,0.4); z-index:99; }
+  .nav-overlay.open{ display:block; }
+  .planner-launch-btn{ width:100%; background:#7c3aed; color:#fff; border:none; padding:12px; border-radius:8px; font-weight:700; font-size:0.85rem; cursor:pointer; margin-bottom:8px; }
+  .sitting-chip{ display:block; width:100%; text-align:left; background:rgba(255,255,255,0.08); color:#f4f0e6; border:1px solid rgba(255,255,255,0.12); padding:8px 10px; border-radius:6px; font-size:0.78rem; cursor:pointer; margin-bottom:6px; }
+  .sitting-card{ background:#fff; border:1px solid #e8d9a8; border-radius:10px; padding:12px; margin-bottom:12px; }
+  .sitting-card-head{ display:flex; justify-content:space-between; gap:8px; font-size:0.82rem; margin-bottom:8px; color:#6b5c3c; }
+  .sitting-note-jump{ display:block; width:100%; text-align:left; background:#fffdf8; border:1px solid #eee; border-radius:8px; padding:8px 10px; margin-bottom:6px; cursor:pointer; }
+  .sitting-note-jump-ref{ display:block; font-size:0.68rem; font-weight:700; color:#b45309; letter-spacing:0.04em; text-transform:uppercase; }
+  .sitting-note-jump-text{ display:block; font-size:0.82rem; color:#332a1a; margin-top:3px; }
+  .sitting-delete{ background:none; border:none; color:#b45309; font-size:0.75rem; cursor:pointer; padding:6px 0; }
+  .sitting-notes-callout{ background:#ecfdf5; border:2px solid #34d399; border-radius:10px; padding:14px 18px; margin:14px 0; }
+  .sitting-notes-label{ font-family:-apple-system,sans-serif; font-size:0.72rem; font-weight:700; letter-spacing:0.05em; text-transform:uppercase; color:#065f46; margin-bottom:8px; }
+  .sitting-note{ background:#fff; border-radius:8px; padding:10px 12px; margin-bottom:8px; }
+  .sitting-note-meta{ font-family:-apple-system,sans-serif; font-size:0.68rem; font-weight:700; color:#047857; margin-bottom:4px; }
+  .sitting-note-ctx{ font-size:0.8rem; color:#6b5c3c; font-style:italic; margin-bottom:6px; }
+  .sitting-note-text{ font-size:0.95rem; line-height:1.6; }
+  .sitting-notes-hint{ font-size:0.78rem; color:#6b5c3c; font-style:italic; margin:8px 0 0; }
+  #sitting-paste{ width:100%; min-height:90px; padding:10px; border-radius:8px; border:1px solid #ddd; font-family:-apple-system,sans-serif; font-size:0.85rem; box-sizing:border-box; }
+  .planner-modal{ display:none; position:fixed; inset:0; background:rgba(0,0,0,0.5); z-index:200; align-items:center; justify-content:center; }
+  .planner-modal.open{ display:flex; }
+  .planner-box{ background:#fffdf8; border-radius:14px; width:90%; max-width:420px; max-height:85vh; overflow-y:auto; font-family:-apple-system,sans-serif; }
+  .planner-header{ display:flex; justify-content:space-between; align-items:center; background:#1a1408; color:#fff; padding:16px 20px; border-radius:14px 14px 0 0; font-weight:800; }
+  .planner-header button{ background:none; border:none; color:#fff; font-size:1.4rem; cursor:pointer; }
+  .planner-body{ padding:20px; }
+  .planner-body label{ display:block; font-size:0.8rem; font-weight:700; color:#6b5c3c; margin:14px 0 6px; }
+  .planner-body input, .planner-body select{ width:100%; padding:10px; border-radius:8px; border:1px solid #ddd; font-size:0.95rem; box-sizing:border-box; font-family:-apple-system,sans-serif; }
+  .planner-future-note{ font-size:0.75rem; color:#9c8b6a; font-style:italic; margin-top:12px; line-height:1.5; }
+  #btn-generate-plan{ width:100%; margin-top:18px; background:#b45309; color:#fff; border:none; padding:12px; border-radius:8px; font-weight:700; cursor:pointer; }
+  #planner-result{ margin-top:18px; font-size:0.85rem; line-height:1.6; }
+  #planner-result table{ width:100%; border-collapse:collapse; font-size:0.8rem; }
+  #planner-result th, #planner-result td{ text-align:left; padding:6px 8px; border-bottom:1px solid #eee; }
+  #planner-result th{ background:#f4f0e6; }
+  .split{ display:grid; grid-template-columns: 1fr 1fr; gap:0; min-height:calc(100vh - 52px); }
+  .pane{ padding:24px 20px 80px; overflow-y:auto; }
+  .pane-display{ background:#fffdf8; border-right:2px solid #ddd4bf; }
+  .pane-teacher{ background:#f4f0e6; }
+  body.student-mode .pane-teacher, body.student-mode #btn-popout, body.student-mode .sync-status, body.student-mode #btn-timer, body.student-mode .timer{ display:none !important; }
+  body.student-mode .split{ grid-template-columns: 1fr; }
+  body.student-mode .pane-display{ border-right:none; max-width:800px; margin:0 auto; }
+  .pane-label{ font-family:-apple-system,sans-serif; font-size:0.65rem; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; color:var(--gold); text-align:center; margin-bottom:14px; padding-bottom:8px; border-bottom:1px solid #ddd4bf; }
+  .session-head{ text-align:center; margin-bottom:20px; }
+  .session-head .eyebrow{ font-family:-apple-system,sans-serif; font-size:0.7rem; letter-spacing:0.1em; text-transform:uppercase; color:var(--gold); font-weight:700; }
+  .session-head h1{ font-size:1.5rem; margin:6px 0; }
+  .session-head .meta{ font-family:-apple-system,sans-serif; font-size:0.8rem; color:#6b5c3c; }
+  .block{ background:#fff; border-radius:10px; padding:18px; margin-bottom:16px; box-shadow:0 2px 8px rgba(0,0,0,0.06); }
+  .block-label{ font-family:-apple-system,sans-serif; font-size:0.66rem; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; margin-bottom:10px; display:flex; align-items:center; gap:8px; }
+  .block-label .time{ margin-left:auto; background:#f4f0e6; padding:2px 10px; border-radius:999px; font-size:0.66rem; }
+  .block.reading .block-label{ color:var(--blue); }
+  .block.history .block-label{ color:var(--amber); }
+  .block.discuss .block-label{ color:var(--gold); }
+  .block.cross .block-label{ color:var(--purple); }
+  .block.open .block-label{ color:var(--amber); }
+  .scripture-link{ display:inline-block; background:#0369a1; color:#fff; text-decoration:none; padding:10px 16px; border-radius:8px; font-family:-apple-system,sans-serif; font-size:0.85rem; font-weight:700; }
+  .scripture-text{ font-size:1.15rem; line-height:1.85; }
+  .reader-bar{ display:flex; gap:8px; align-items:center; margin-bottom:14px; flex-wrap:wrap; }
+  .verse-wrap.reading-now{ background:#fef3c7; border-radius:4px; box-shadow:0 0 0 3px #fef3c7; transition:background 0.3s; }
+  .reader-bar select{ padding:6px 10px; border-radius:6px; border:1px solid #ccc; font-family:-apple-system,sans-serif; font-size:0.78rem; max-width:220px; }
+  .reader-bar button{ background:#0369a1; color:#fff; border:none; padding:8px 14px; border-radius:6px; font-family:-apple-system,sans-serif; font-size:0.78rem; font-weight:700; cursor:pointer; }
+  @media print{ .reader-bar{ display:none; } }
+  .scripture-text .vn{ font-size:0.7rem; vertical-align:super; color:#b45309; font-weight:700; }
+  .hero-image{ margin:0 0 20px; border-radius:12px; overflow:hidden; box-shadow:0 4px 16px rgba(0,0,0,0.12); }
+  .hero-image img{ width:100%; display:block; max-height:280px; object-fit:cover; }
+  .hero-caption{ background:#fff; padding:10px 14px; font-family:-apple-system,sans-serif; font-size:0.75rem; color:#6b5c3c; font-style:italic; }
+  .topics-grid{ display:grid; grid-template-columns:1fr 1fr; gap:16px; margin-bottom:16px; }
+  .topic-card{ background:linear-gradient(160deg,#fff8e8,#fffdf8); border:2px solid #e8d9a8; border-radius:14px; padding:20px; box-shadow:0 3px 10px rgba(180,83,9,0.08); }
+  .topic-icon{ font-size:1.8rem; margin-bottom:8px; }
+  .topic-title{ font-family:-apple-system,sans-serif; font-weight:800; font-size:1.05rem; color:#8a4f0a; margin-bottom:10px; }
+  .topic-body{ font-size:0.96rem; line-height:1.65; color:#332a1a; }
+  @media (max-width: 700px){ .topics-grid{ grid-template-columns:1fr; } }
+  .block.history{ background:#fff; }
+  .word-cards-wrap{ margin-bottom:16px; }
+  .word-cards-label{ font-family:-apple-system,sans-serif; font-size:0.66rem; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:#7c3aed; margin-bottom:10px; }
+  .word-cards-grid{ display:grid; grid-template-columns:repeat(auto-fit, minmax(220px, 1fr)); gap:14px; }
+  .word-card{ background:linear-gradient(160deg,#f3f0ff,#fdfcff); border:2px solid #ddd0f7; border-radius:14px; padding:18px; box-shadow:0 3px 10px rgba(124,58,237,0.08); }
+  .word-card-term{ font-family:Georgia,serif; font-weight:800; font-size:1.25rem; color:#4c1d95; margin-bottom:6px; }
+  .word-card-orig{ display:inline-block; background:#7c3aed; color:#fff; font-family:-apple-system,sans-serif; font-size:0.68rem; font-weight:700; padding:3px 10px; border-radius:999px; margin-bottom:10px; }
+  .word-card-meaning{ font-size:0.9rem; line-height:1.6; color:#332a1a; }
+  .doctrinal-note{ background:#fef2f2; border-left:3px solid #dc2626; padding:12px 16px; margin-top:14px; font-size:0.88rem; line-height:1.6; color:#7f1d1d; }
+  .views-block{ background:#f8fafc; border:2px solid #cbd5e1; }
+  .views-lead{ font-family:-apple-system,sans-serif; font-size:0.82rem; color:#475569; font-style:italic; margin-bottom:10px; }
+  .view-card{ background:#fff; border-radius:8px; padding:12px 14px; margin-bottom:8px; border-left:4px solid #0369a1; }
+  .view-name{ font-family:-apple-system,sans-serif; font-size:0.72rem; font-weight:800; letter-spacing:0.06em; text-transform:uppercase; color:#0369a1; margin-bottom:4px; }
+  .view-body{ font-size:0.92rem; line-height:1.6; }
+  .apocrypha-block{ background:#fff7ed; border:2px solid #fdba74; }
+  .apocrypha-block .block-label{ color:#c2410c; }
+  .notes-section{ background:#fffdf5; border:2px solid #e8d9a8; border-radius:12px; padding:16px 18px; margin-top:16px; }
+  .notes-label{ font-family:-apple-system,sans-serif; font-size:0.7rem; font-weight:700; letter-spacing:0.08em; text-transform:uppercase; color:#8a6d1f; margin-bottom:10px; }
+  .notes-list{ margin-bottom:10px; }
+  .notes-item{ display:flex; align-items:flex-start; gap:8px; background:#fff; border-radius:8px; padding:10px 12px; margin-bottom:6px; font-size:0.9rem; line-height:1.55; }
+  .notes-item-text{ flex:1; }
+  .notes-item-del{ background:none; border:none; color:#b45309; cursor:pointer; font-size:1rem; font-weight:700; padding:0 4px; line-height:1; flex-shrink:0; }
+  .notes-add-row{ display:flex; gap:8px; }
+  .notes-input{ flex:1; padding:9px 12px; border-radius:8px; border:1px solid #ddd; font-size:0.9rem; font-family:-apple-system,sans-serif; }
+  .notes-add-btn{ background:#b45309; color:#fff; border:none; padding:9px 16px; border-radius:8px; font-weight:700; font-size:0.85rem; cursor:pointer; }
+  .qa-section{ background:#eff6ff; border:2px solid #bfdbfe; border-radius:12px; padding:16px 18px; margin-top:16px; }
+  .qa-add-row{ display:flex; gap:8px; margin-bottom:12px; }
+  .qa-input{ flex:1; padding:9px 12px; border-radius:8px; border:1px solid #bfdbfe; font-size:0.9rem; font-family:-apple-system,sans-serif; }
+  .qa-search-btn{ background:#0369a1; color:#fff; border:none; padding:9px 16px; border-radius:8px; font-weight:700; font-size:0.85rem; cursor:pointer; white-space:nowrap; }
+  .qa-result-item{ background:#fff; border-radius:8px; padding:12px 14px; margin-bottom:8px; font-size:0.88rem; line-height:1.55; }
+  .qa-result-source{ font-family:-apple-system,sans-serif; font-size:0.65rem; font-weight:700; letter-spacing:0.06em; text-transform:uppercase; color:#0369a1; margin-bottom:5px; }
+  .qa-no-results{ color:#6b7280; font-size:0.85rem; font-style:italic; }
+  .doctrinal-note strong{ color:#991b1b; }
+  .teacher-note{ background:#fff8e8; border-left:3px solid var(--gold); padding:10px 14px; margin-top:12px; font-family:-apple-system,sans-serif; font-size:0.8rem; font-style:italic; color:#6b5c3c; }
+  .script-narrative p{ margin-bottom:14px; line-height:1.75; font-size:1rem; }
+  .teacher-scripture-block{ background:#fffdf5; border:1px solid #e8d9a8; border-radius:10px; padding:14px 18px; margin:14px 0; }
+  .my-notes-callout{ background:#fef3c7; border:2px solid #f59e0b; border-radius:10px; padding:14px 18px; margin:14px 0; }
+  .my-notes-callout-label{ font-family:-apple-system,sans-serif; font-size:0.72rem; font-weight:700; letter-spacing:0.05em; text-transform:uppercase; color:#92400e; margin-bottom:8px; }
+  .my-notes-callout ul{ margin:0; padding-left:20px; }
+  .my-notes-callout li{ font-size:0.92rem; line-height:1.6; margin-bottom:6px; color:#332a1a; }
+  .story-toggle-btn{ display:block; width:100%; background:#7c3aed; color:#fff; border:none; padding:12px; border-radius:8px; font-family:-apple-system,sans-serif; font-weight:700; font-size:0.85rem; cursor:pointer; margin:14px 0 0; }
+  .story-panel{ display:none; margin-top:10px; }
+  .story-panel.open{ display:block; }
+  .story-block{ background:#f3f0ff; border-left:4px solid #7c3aed; border-radius:0 10px 10px 0; padding:16px 20px; margin-bottom:12px; }
+  .story-block.modern{ background:#eff6ff; border-left-color:#0369a1; }
+  .story-label{ font-family:-apple-system,sans-serif; font-size:0.65rem; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:#6d28d9; margin-bottom:8px; }
+  .story-block.modern .story-label{ color:#0369a1; }
+  .story-block p{ font-size:0.98rem; line-height:1.75; font-style:italic; color:#332a1a; margin-bottom:12px; }
+  .story-block p:last-child{ margin-bottom:0; }
+  .teacher-scripture-label{ font-family:-apple-system,sans-serif; font-size:0.65rem; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:#8a6d1f; margin-bottom:8px; }
+  .point{ margin-bottom:12px; line-height:1.6; }
+  ul.refs{ margin:0; padding-left:20px; }
+  ul.refs li{ margin-bottom:8px; line-height:1.5; }
+  .verse-ref-link{ color:#0369a1; font-weight:700; text-decoration:underline; text-decoration-style:dotted; }
+  .verse-ref-link:hover{ text-decoration-style:solid; }
+  .nav-row{ display:flex; gap:10px; margin-top:20px; grid-column: 1 / -1; padding:0 20px 24px; }
+  .nav-row button{ flex:1; padding:12px; border-radius:8px; border:1px solid #ccc; background:#fff; font-family:-apple-system,sans-serif; font-weight:700; cursor:pointer; }
+  @media (max-width: 860px){ .split{ grid-template-columns: 1fr; } .pane-display{ border-right:none; border-bottom:2px solid #ddd4bf; } }
+  .atlas-wrap{ display:grid; grid-template-columns:1fr; gap:14px; margin:0 0 18px; }
+  .atlas-fig{ margin:0; background:#fff; border-radius:12px; overflow:hidden; box-shadow:0 3px 12px rgba(0,0,0,0.08); border:1px solid #e8d9a8; }
+  .atlas-fig img{ width:100%; display:block; max-height:320px; object-fit:cover; }
+  .atlas-fig-title{ font-family:-apple-system,sans-serif; font-size:0.72rem; font-weight:800; letter-spacing:0.08em; text-transform:uppercase; color:#8a4f0a; padding:10px 14px 0; }
+  .atlas-svg{ width:100%; height:auto; display:block; background:#f3efe2; }
+  .atlas-label{ font-size:13px; font-weight:700; font-family:-apple-system,sans-serif; fill:#1a1408; }
+  .atlas-sub{ font-size:11px; font-family:-apple-system,sans-serif; fill:#6b5c3c; }
+  .atlas-sea{ font-size:13px; font-style:italic; font-family:Georgia,serif; fill:#0369a1; }
+  .atlas-region{ font-size:15px; font-weight:800; letter-spacing:0.12em; font-family:-apple-system,sans-serif; fill:#b45309; }
+  .atlas-kicker{ font-size:10px; letter-spacing:0.16em; font-family:-apple-system,sans-serif; fill:#9c8b6a; }
+  .atlas-fig figcaption{ padding:10px 14px 12px; font-family:-apple-system,sans-serif; font-size:0.8rem; color:#6b5c3c; line-height:1.5; }
+  .beast-row{ display:grid; grid-template-columns:repeat(4,1fr); gap:8px; padding:12px; }
+  .beast-card{ background:#fff8e8; border:2px solid #e8d9a8; border-radius:10px; padding:12px 10px; text-align:center; }
+  .beast-num{ font-size:1.4rem; font-weight:800; color:#b45309; }
+  .beast-name{ font-family:-apple-system,sans-serif; font-weight:800; font-size:0.82rem; margin:6px 0; }
+  .beast-note{ font-size:0.75rem; color:#6b5c3c; }
+  .weeks-bar{ display:flex; gap:6px; padding:16px 12px; align-items:stretch; }
+  .week-seg{ border-radius:8px; padding:12px 8px; text-align:center; color:#fff; font-family:-apple-system,sans-serif; }
+  .week-seg span{ display:block; font-size:1.3rem; font-weight:800; }
+  .week-seg em{ display:block; font-size:0.68rem; font-style:normal; opacity:0.9; margin-top:4px; }
+  .week-7{ flex:1.2; background:#b45309; }
+  .week-62{ flex:3.2; background:#92400e; }
+  .week-gap{ flex:1.4; background:#e7e5e4; color:#57534e; border:2px dashed #a8a29e; }
+  .week-1{ flex:1.2; background:#7f1d1d; }
+  .time-line{ display:flex; justify-content:space-between; gap:4px; padding:18px 10px 12px; position:relative; }
+  .time-rail{ position:absolute; left:16px; right:16px; top:28px; height:4px; background:#d6bc8a; border-radius:4px; }
+  .time-tick{ flex:1; text-align:center; position:relative; z-index:1; }
+  .time-tick b{ display:block; background:#b45309; color:#fff; font-size:0.68rem; padding:3px 4px; border-radius:999px; margin:0 auto 8px; width:max-content; font-family:-apple-system,sans-serif; }
+  .time-tick span{ font-size:0.68rem; color:#6b5c3c; font-family:-apple-system,sans-serif; }
+  .rev-path{ display:flex; flex-wrap:wrap; align-items:center; justify-content:center; gap:8px; padding:16px 12px; }
+  .rev-step{ background:#fff8e8; border:2px solid #e8d9a8; border-radius:12px; padding:10px 12px; text-align:center; min-width:72px; }
+  .rev-step i{ display:block; font-style:normal; font-weight:800; color:#b45309; }
+  .rev-step span{ font-family:-apple-system,sans-serif; font-size:0.75rem; font-weight:700; }
+  .rev-arrow{ color:#b45309; font-weight:800; }
+  @media (max-width:700px){ .beast-row{ grid-template-columns:1fr 1fr; } .weeks-bar{ flex-wrap:wrap; } }
+  @media print{ .toolbar,.nav-row,.pane-display,.pane-label{ display:none !important; } .split{ display:block; } .pane-teacher{ background:#fff; max-width:100%; } body{ background:#fff; } }
+</style>
+</head>
+<body>
+<div class="toolbar">
+  <button id="btn-menu" title="Menu">&#9776;</button>
+  <div class="app-title">Living Waters Study</div>
+  <select id="translation-select" title="Scripture translation"></select>
+  <button id="btn-popout">Pop Out Display</button>
+  <button id="btn-close-popout" class="secondary" style="display:none;">Close Display</button>
+  <span id="sync-status" class="sync-status sync-off">&#9679; Popup not open</span>
+  <button class="secondary" onclick="window.print()">Print / PDF</button>
+  <div class="timer" id="timer">45:00</div>
+  <button class="secondary" id="btn-timer">Start</button>
+</div>
+
+<div id="nav-drawer" class="nav-drawer">
+  <div class="nav-drawer-header">
+    <span>Studies &amp; Lessons</span>
+    <button id="btn-menu-close">&times;</button>
+  </div>
+  <button id="btn-open-planner" class="planner-launch-btn">📅 Build a Meeting Plan</button>
+  <button id="btn-open-sittings" class="planner-launch-btn" style="background:#047857;">🎙️ Drive Notes / Sittings</button>
+  <button id="btn-copy-student-link" class="planner-launch-btn" style="background:#0369a1;">🔗 Copy Student-Safe Link</button>
+  <div class="nav-section-label">Continue your notes</div>
+  <div id="sittings-continue"></div>
+  <div class="nav-drawer-note" style="margin-bottom:12px;">This link shows only the scripture/display side — never your teacher script. Safe to send to your group.</div>
+  <div class="nav-section-label">This Study</div>
+  <div id="nav-lesson-list"></div>
+  <div class="nav-section-label">Other Studies</div>
+  <div class="nav-drawer-note">Daniel, Revelation, and John are live. Between-the-Testaments / Apocrypha history sessions sit after Daniel. Gospels, epistles, Genesis, and the major prophets come next on the same pattern.</div>
+</div>
+<div id="nav-overlay" class="nav-overlay"></div>
+
+<div id="planner-modal" class="planner-modal">
+  <div class="planner-box">
+    <div class="planner-header">
+      <span>Build Your Meeting Plan</span>
+      <button id="btn-planner-close">&times;</button>
+    </div>
+    <div class="planner-body">
+      <p class="planner-future-note">No week cap. You set how often you meet and how long a night is. The plan runs lesson by lesson until that stretch is done.</p>
+      <label>How many times per week can your group meet?</label>
+      <input type="number" id="planner-freq" min="1" max="7" value="1">
+      <label>How many minutes per meeting?</label>
+      <input type="number" id="planner-mins" min="15" max="120" value="40">
+      <label>Start date (optional — only if you want dates on the list)</label>
+      <input type="date" id="planner-start">
+      <label>Which stretch?</label>
+      <select id="planner-scope">
+        <option value="path:daniel">Daniel only — start now, through chapter 12</option>
+        <option value="path:dan-rev">Daniel, then the two history hours, then Revelation</option>
+        <option value="all" selected>Whole path: Daniel → Revelation → John</option>
+        <option value="custom">Custom range — pick start &amp; end lesson</option>
+      </select>
+      <div id="planner-custom-range" style="display:none;">
+        <label>Start lesson</label>
+        <select id="planner-range-start"></select>
+        <label>End lesson</label>
+        <select id="planner-range-end"></select>
+      </div>
+      <div class="planner-future-note">One lesson per night unless a meeting is 70+ minutes and two light chapters actually fit. Heavy chapters stay one-to-a-night so you do not rush Daniel 7 or 9.</div>
+      <button id="btn-generate-plan">Generate Plan</button>
+      <div id="planner-result"></div>
+    </div>
+  </div>
+</div>
+
+<div id="sittings-modal" class="planner-modal">
+  <div class="planner-box" style="max-width:560px;">
+    <div class="planner-header">
+      <span>Sittings — commute notes</span>
+      <button id="btn-sittings-close" type="button">&times;</button>
+    </div>
+    <div class="planner-body">
+      <p class="planner-future-note">A sitting is one file you listened to: book + date. Notes stay tied to that sitting. Nothing uploads. Import the .txt you shared from Today’s Notes on the tablet.</p>
+      <p class="planner-future-note">Loop: drive → pause (mic starts) → talk → stop (Whisper) → export book or all → drop the file here → teach from the verse you paused on.</p>
+      <input type="file" id="sitting-file" accept=".txt,text/plain" style="display:none">
+      <button type="button" id="btn-import-sitting" class="planner-launch-btn" style="background:#047857;">Import sitting export (.txt)</button>
+      <label>Or paste an export</label>
+      <textarea id="sitting-paste" placeholder="Book / file title&#10;John 3:16 • 3:42 • 8-28-2026&#10;Context: For God so loved the world…&#10;Your spoken words"></textarea>
+      <button type="button" id="btn-paste-sitting" class="planner-launch-btn" style="background:#b45309;margin-top:8px;">Save pasted sitting</button>
+      <div class="nav-section-label" style="color:#b45309;">Imported sittings</div>
+      <div id="sittings-list"></div>
+    </div>
+  </div>
+</div>
+
+<div class="split">
+  <div class="pane pane-display" id="pane-display"></div>
+  <div class="pane pane-teacher" id="pane-teacher"></div>
+</div>
+<div class="nav-row">
+  <button id="prev-btn">&larr; Previous Session</button>
+  <button id="next-btn">Next Session &rarr;</button>
+</div>
+
+<script src="data/daniel-scripture.js"></script>
+<script src="data/revelation-scripture.js"></script>
+<script src="data/john-scripture.js"></script>
+<script src="data/nrsvce-scripture.js"></script>
+<script src="data/cev-scripture.js"></script>
+<script src="data/rsvce-scripture.js"></script>
+<script src="data/nasb-scripture.js"></script>
+<script src="data/niv-scripture.js"></script>
+<script src="data/sessions.js"></script>
+<script src="js/atlas.js"></script>
+<script src="js/render.js"></script>
+<script src="js/reader.js"></script>
+<script src="js/search.js"></script>
+<script src="js/notes.js"></script>
+<script src="js/sittings.js"></script>
+<script src="js/popout.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
