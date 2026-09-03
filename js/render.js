@@ -204,7 +204,8 @@ const BOOK_AUTHORS = {
   'Daniel': 'the prophet Daniel',
   'Revelation': 'John',
   'John': 'John',
-  'Matthew': 'Matthew'
+  'Matthew': 'Matthew',
+  'Acts': 'Luke'
 };
 
 const BOOK_INTROS = {
@@ -215,7 +216,9 @@ const BOOK_INTROS = {
   'Revelation': `<p><strong>You just finished Daniel on purpose.</strong> John is going to spend this book rereading that one: a beast from the sea, a mouth that wears out the saints, times and half a time, a kingdom given to one like a son of man. When something in Revelation feels like a code, flip back to Daniel before you buy a chart.</p>
     <p>It was written by John — most likely the apostle — exiled on Patmos. Date is honestly disputed: Nero years (mid-60s) or Domitian years (mid-90s). Both dates change how some scenes land; we will not pretend that is settled. It is a letter to seven real churches in Asia Minor under pressure to bow to Rome. After this book we start John, where the same writer (or the same circle) tells you who the Lamb is before you ever met the throne.</p>`,
   'Matthew': `<p><strong>You just finished John on purpose, and now we're going back to the beginning of the story John assumed you already knew.</strong> Matthew is traditionally attributed to the apostle Matthew (Levi), the tax collector Jesus called in chapter 9 — most scholars place its writing sometime between AD 60–90, likely for a largely Jewish-Christian audience. Where John argues from seven signs, Matthew argues from fulfillment: watch for "this was to fulfill what was spoken by the prophet" running through the whole book, because Matthew is building the case that Jesus is the promised Son of David and Son of Abraham the Hebrew Scriptures were pointing to all along.</p>
-    <p>The book is built around five major teaching blocks — the Sermon on the Mount (5–7), the mission discourse (10), the kingdom parables (13), teaching on the church (18), and the Olivet Discourse on the end (24–25) — each one closed out with some version of "when Jesus had finished saying these things." That structure is worth naming for your group early: it is not a loose collection of stories, it is five deliberate blocks of teaching stitched together with narrative.</p>`
+    <p>The book is built around five major teaching blocks — the Sermon on the Mount (5–7), the mission discourse (10), the kingdom parables (13), teaching on the church (18), and the Olivet Discourse on the end (24–25) — each one closed out with some version of "when Jesus had finished saying these things." That structure is worth naming for your group early: it is not a loose collection of stories, it is five deliberate blocks of teaching stitched together with narrative.</p>`,
+  'Acts': `<p><strong>You just finished Matthew, the story of what Jesus did and taught.</strong> Acts is volume two of the same two-part work — written by Luke, the physician and travel companion of Paul, as a direct sequel to his own Gospel of Luke (Acts opens by referring back to "my former book"). Most scholars date it to the early-to-mid 60s AD, though some place it later. Where the Gospels tell you what Jesus began to do and teach, Acts tells you what Jesus kept doing and teaching through his followers, by the Holy Spirit, after he ascended. Watch the hinge verse early on — the risen Jesus tells the apostles they will be his witnesses "in Jerusalem, and in all Judea and Samaria, and to the end of the earth" — because that sentence is the outline of the entire book: the church starts in Jerusalem, breaks out into Judea and Samaria, and then follows Paul out into the Gentile world.</p>
+    <p>A quick honesty note for your group: this study currently runs Acts chapters 1 through 18 — from Pentecost through the Jerusalem council and the launch of Paul's third missionary journey. Chapters 19 through 28 (the riot at Ephesus, the arrests, the shipwreck, and Paul finally reaching Rome) aren't written yet, so the course will simply pause at chapter 18 for now.</p>`
 };
 
 function teacherHTML(s, seg){
