@@ -79,6 +79,22 @@
   .block.cross .block-label{ color:var(--purple); }
   .block.open .block-label{ color:var(--amber); }
   .scripture-link{ display:inline-block; background:#0369a1; color:#fff; text-decoration:none; padding:10px 16px; border-radius:8px; font-family:-apple-system,sans-serif; font-size:0.85rem; font-weight:700; }
+  .scripture-live-note{ font-family:-apple-system,sans-serif; font-size:0.75rem; color:#6b5c3c; font-style:italic; margin-bottom:10px; }
+  .recording-widget{ background:#fff7ed; border:2px solid #fdba74; border-radius:10px; padding:14px 18px; margin:14px 0; font-family:-apple-system,sans-serif; }
+  .recording-widget-label{ font-size:0.72rem; font-weight:700; letter-spacing:0.05em; text-transform:uppercase; color:#9a3412; margin-bottom:8px; }
+  .recording-widget-status{ font-size:0.85rem; color:#6b5c3c; font-style:italic; }
+  .recording-widget-jump{ background:#c2410c; color:#fff; border:none; padding:9px 14px; border-radius:8px; font-weight:700; font-size:0.85rem; cursor:pointer; }
+  .recording-widget-nocue{ font-size:0.8rem; color:#6b5c3c; font-style:italic; }
+  .recording-cue-row{ display:flex; align-items:center; gap:8px; margin-bottom:8px; font-family:-apple-system,sans-serif; font-size:0.85rem; }
+  .recording-cue-label{ flex:1; }
+  .recording-cue-input{ width:70px; padding:7px 8px; border-radius:6px; border:1px solid #ddd; font-size:0.85rem; }
+  .recording-cue-set-current{ background:#7c3aed; color:#fff; border:none; padding:7px 10px; border-radius:6px; font-size:0.75rem; font-weight:700; cursor:pointer; white-space:nowrap; }
+  .recording-cue-set-current:disabled{ opacity:0.5; cursor:default; }
+  .recording-text-row{ margin-bottom:14px; }
+  .recording-text-row-head{ font-size:0.85rem; margin-bottom:6px; }
+  .recording-text-input{ width:100%; min-height:70px; padding:8px 10px; border-radius:8px; border:1px solid #ddd; font-family:-apple-system,sans-serif; font-size:0.85rem; box-sizing:border-box; margin-bottom:6px; }
+  .recording-text-save, .recording-text-clear{ background:#0369a1; color:#fff; border:none; padding:7px 12px; border-radius:6px; font-size:0.78rem; font-weight:700; cursor:pointer; }
+  .recording-text-clear{ background:#b45309; }
   .scripture-text{ font-size:1.15rem; line-height:1.85; }
   .reader-bar{ display:flex; gap:8px; align-items:center; margin-bottom:14px; flex-wrap:wrap; }
   .verse-wrap.reading-now{ background:#fef3c7; border-radius:4px; box-shadow:0 0 0 3px #fef3c7; transition:background 0.3s; }
@@ -230,6 +246,7 @@
   </div>
   <button id="btn-open-planner" class="planner-launch-btn">📅 Build a Meeting Plan</button>
   <button id="btn-open-cohorts" class="planner-launch-btn" style="background:#7c3aed;">🗂️ My Classes</button>
+  <button id="btn-open-recordings" class="planner-launch-btn" style="background:#b45309;">🎧 My Recordings</button>
   <button id="btn-open-sittings" class="planner-launch-btn" style="background:#047857;">🎙️ Drive Notes / Sittings</button>
   <button id="btn-copy-student-link" class="planner-launch-btn" style="background:#0369a1;">🔗 Copy Student-Safe Link</button>
   <div class="nav-section-label">Continue your notes</div>
@@ -238,7 +255,7 @@
   <div class="nav-section-label">This Study</div>
   <div id="nav-lesson-list"></div>
   <div class="nav-section-label">Other Studies</div>
-  <div class="nav-drawer-note">Daniel, Revelation, and John are live. Between-the-Testaments / Apocrypha history sessions sit after Daniel. Gospels, epistles, Genesis, and the major prophets come next on the same pattern.</div>
+  <div class="nav-drawer-note">Daniel, Revelation, John, and Matthew are live. Between-the-Testaments / Apocrypha history sessions sit after Daniel, Matthew after John. Acts, epistles, Genesis, and the major prophets come next on the same pattern.</div>
 </div>
 <div id="nav-overlay" class="nav-overlay"></div>
 
@@ -260,7 +277,7 @@
       <select id="planner-scope">
         <option value="path:daniel">Daniel only — start now, through chapter 12</option>
         <option value="path:dan-rev">Daniel, then the two history hours, then Revelation</option>
-        <option value="all" selected>Whole path: Daniel → Revelation → John</option>
+        <option value="all" selected>Whole path: Daniel → Revelation → John → Matthew</option>
         <option value="custom">Custom range — pick start &amp; end lesson</option>
       </select>
       <div id="planner-custom-range" style="display:none;">
@@ -285,6 +302,19 @@
     <div class="planner-body">
       <p class="planner-future-note">Each class remembers its own cadence and exactly which meeting it's on — including which part of a chapter, if a chapter had to be split to fit. Build a plan under "Build a Meeting Plan" first, then save it here with a name.</p>
       <div id="cohorts-list"></div>
+    </div>
+  </div>
+</div>
+
+<div id="recordings-modal" class="planner-modal">
+  <div class="planner-box" style="max-width:640px;">
+    <div class="planner-header">
+      <span>My Recordings</span>
+      <button id="btn-recordings-close" type="button">&times;</button>
+    </div>
+    <div class="planner-body">
+      <p class="planner-future-note">Import one audio file per book (e.g. your own reading of the whole book of Daniel), mark where each chapter starts in it, and the lesson for that chapter will offer to jump straight there. You can also paste in your own text per chapter — that overrides any translation for that chapter, live lookup included.</p>
+      <div id="recordings-list"></div>
     </div>
   </div>
 </div>
@@ -330,8 +360,10 @@
 <script src="data/sessions/between-the-testaments.js"></script>
 <script src="data/sessions/revelation.js"></script>
 <script src="data/sessions/john.js"></script>
+<script src="data/sessions/matthew.js"></script>
 <script src="js/atlas.js"></script>
 <script src="js/render.js"></script>
+<script src="js/scripture-source.js"></script>
 <script src="js/versebox.js"></script>
 <script src="js/reader.js"></script>
 <script src="js/search.js"></script>
@@ -339,6 +371,7 @@
 <script src="js/sittings.js"></script>
 <script src="js/segments.js"></script>
 <script src="js/cohorts.js"></script>
+<script src="js/recordings.js"></script>
 <script src="js/popout.js"></script>
 <script src="js/main.js"></script>
 </body>

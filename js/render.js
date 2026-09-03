@@ -52,9 +52,52 @@ function linkifyReferences(text, localBooks){
   });
 }
 
+function scriptureLabelText(s){
+  const ch = s.chNum.replace(/[\u2013\u2014-].*/, '').trim();
+  if (typeof getChapterPersonalText === 'function' && getChapterPersonalText(s.book, ch)) {
+    return 'your own text';
+  }
+  if (typeof hasEmbeddedScripture === 'function' && hasEmbeddedScripture(s.book)) {
+    return (typeof CURRENT_TRANSLATION !== 'undefined') ? CURRENT_TRANSLATION : 'ASV';
+  }
+  if (typeof getCachedLiveChapter === 'function') {
+    const cached = getCachedLiveChapter(s.book, ch);
+    if (cached) return cached.translation + ' \u2014 live';
+  }
+  return 'looking up live text\u2026';
+}
+
 function renderScriptureBlock(s, seg){
   const ch = s.chNum.replace(/[\u2013\u2014-].*/, '').trim();
+
+  if (typeof getChapterPersonalText === 'function') {
+    const personal = getChapterPersonalText(s.book, ch);
+    if (personal) {
+      const paras = personal.split(/\n\s*\n/).filter(p => p.trim());
+      const versesJson = JSON.stringify(paras.length ? paras : [personal]).replace(/"/g, '&quot;');
+      const reader = `
+        <div class="reader-bar" data-verses="${versesJson}">
+          <select class="reader-voice"></select>
+          <button class="reader-play">\ud83d\udd0a Read Aloud</button>
+          <button class="reader-pause" style="display:none;">\u23f8 Pause</button>
+          <button class="reader-stop" style="display:none;">\u23f9 Stop</button>
+        </div>`;
+      return `<div class="scripture-live-note">This is your own text for this chapter, saved in "My Recordings" \u2014 not a translation.</div>` +
+        reader + '<div class="scripture-text">' + (paras.length ? paras : [personal]).map((p,i)=>`<span class="verse-wrap" data-vidx="${i}">${p} </span>`).join('') + '</div>';
+    }
+  }
+
   let verses = getVersesForChapter(s.book, ch);
+  let liveNote = '';
+  if (!verses && typeof getCachedLiveChapter === 'function') {
+    const cached = getCachedLiveChapter(s.book, ch);
+    if (cached) {
+      verses = cached.verses;
+      liveNote = `<div class="scripture-live-note">Live text from ${cached.translation}${cached.translation === 'BSB' ? ' (public domain)' : ''} \u2014 fetched live, not saved in this file.</div>`;
+    } else if (typeof kickOffLiveScriptureFetch === 'function') {
+      kickOffLiveScriptureFetch(s.book, ch);
+    }
+  }
   if (verses) {
     let startIdx = 0, endIdx = verses.length - 1, offset = 0;
     const scoped = seg && seg.total > 1 && seg.startVerseNum;
@@ -72,9 +115,10 @@ function renderScriptureBlock(s, seg){
         <button class="reader-pause" style="display:none;">⏸ Pause</button>
         <button class="reader-stop" style="display:none;">⏹ Stop</button>
       </div>`;
-    return reader + '<div class="scripture-text">' + slice.map((v,i)=>`<span class="verse-wrap" data-vidx="${i}"><span class="vn">${i+1+offset}</span> ${v} </span>`).join('') + '</div>';
+    return liveNote + reader + '<div class="scripture-text">' + slice.map((v,i)=>`<span class="verse-wrap" data-vidx="${i}"><span class="vn">${i+1+offset}</span> ${v} </span>`).join('') + '</div>';
   }
-  return `<a class="scripture-link" href="${bibleLink(s.book, s.chNum)}" target="_blank">Open ${s.book} ${s.chNum} to read aloud &rarr;</a>`;
+  return `<a class="scripture-link" href="${bibleLink(s.book, s.chNum)}" target="_blank">Open ${s.book} ${s.chNum} to read aloud &rarr;</a>
+    <div class="scripture-live-note" style="margin-top:8px;">Looking up live text online (BSB, or ESV if configured)&hellip; it'll appear here automatically once found.</div>`;
 }
 
 let current = 0;
@@ -134,7 +178,7 @@ function displayHTML(s, seg){
     ${heroImg}
     ${(!scoped && typeof visualsHTML === 'function') ? visualsHTML(s) : ''}
     <div class="block reading">
-      <div class="block-label"><span>Scripture (${(typeof CURRENT_TRANSLATION !== 'undefined') ? CURRENT_TRANSLATION : 'ASV'})</span></div>
+      <div class="block-label"><span>Scripture (${scriptureLabelText(s)})</span></div>
       ${renderScriptureBlock(s, seg)}
     </div>
     ${topicsHTML ? `<div class="topics-grid">${topicsHTML}</div>` : ''}
@@ -159,7 +203,8 @@ function displayHTML(s, seg){
 const BOOK_AUTHORS = {
   'Daniel': 'the prophet Daniel',
   'Revelation': 'John',
-  'John': 'John'
+  'John': 'John',
+  'Matthew': 'Matthew'
 };
 
 const BOOK_INTROS = {
@@ -168,7 +213,9 @@ const BOOK_INTROS = {
     <p><strong>The path for this room is Daniel, then Revelation, then John.</strong> Do not skip ahead to the churches or the thousand years until this book has been heard in order. Chapters 1–6 are court stories. Chapters 7–12 are visions in Daniel's own voice. We will name the main views when a text forks. We will not crown a camp on night one.</p>
     <p>Daniel was a young Jewish noble taken in 605 BC, the first of three deportations (605, 597, 586). He served under Nebuchadnezzar, Belshazzar, Darius, and into the year of Cyrus — a life that spans the whole exile. Tonight is chapter 1: a name change, a table, and a resolve.</p>`,
   'Revelation': `<p><strong>You just finished Daniel on purpose.</strong> John is going to spend this book rereading that one: a beast from the sea, a mouth that wears out the saints, times and half a time, a kingdom given to one like a son of man. When something in Revelation feels like a code, flip back to Daniel before you buy a chart.</p>
-    <p>It was written by John — most likely the apostle — exiled on Patmos. Date is honestly disputed: Nero years (mid-60s) or Domitian years (mid-90s). Both dates change how some scenes land; we will not pretend that is settled. It is a letter to seven real churches in Asia Minor under pressure to bow to Rome. After this book we start John, where the same writer (or the same circle) tells you who the Lamb is before you ever met the throne.</p>`
+    <p>It was written by John — most likely the apostle — exiled on Patmos. Date is honestly disputed: Nero years (mid-60s) or Domitian years (mid-90s). Both dates change how some scenes land; we will not pretend that is settled. It is a letter to seven real churches in Asia Minor under pressure to bow to Rome. After this book we start John, where the same writer (or the same circle) tells you who the Lamb is before you ever met the throne.</p>`,
+  'Matthew': `<p><strong>You just finished John on purpose, and now we're going back to the beginning of the story John assumed you already knew.</strong> Matthew is traditionally attributed to the apostle Matthew (Levi), the tax collector Jesus called in chapter 9 — most scholars place its writing sometime between AD 60–90, likely for a largely Jewish-Christian audience. Where John argues from seven signs, Matthew argues from fulfillment: watch for "this was to fulfill what was spoken by the prophet" running through the whole book, because Matthew is building the case that Jesus is the promised Son of David and Son of Abraham the Hebrew Scriptures were pointing to all along.</p>
+    <p>The book is built around five major teaching blocks — the Sermon on the Mount (5–7), the mission discourse (10), the kingdom parables (13), teaching on the church (18), and the Olivet Discourse on the end (24–25) — each one closed out with some version of "when Jesus had finished saying these things." That structure is worth naming for your group early: it is not a loose collection of stories, it is five deliberate blocks of teaching stitched together with narrative.</p>`
 };
 
 function teacherHTML(s, seg){
@@ -191,7 +238,9 @@ function teacherHTML(s, seg){
   script += `<p>Go ahead and read ${scoped ? 'this part' : 'the full chapter'} aloud now, straight from the screen — either you read it, or invite someone in the group to read it. Don't summarize it first. Let them hear it in ${bookName}'s own words before we talk about any of it.</p>`;
 
   const scriptureForTeacher = renderScriptureBlock(s, seg);
-  script += `<div class="teacher-scripture-block"><div class="teacher-scripture-label">Scripture (${(typeof CURRENT_TRANSLATION !== 'undefined') ? CURRENT_TRANSLATION : 'ASV'}) — for your own reference</div>${scriptureForTeacher}</div>`;
+  script += `<div class="teacher-scripture-block"><div class="teacher-scripture-label">Scripture (${scriptureLabelText(s)}) — for your own reference</div>${scriptureForTeacher}</div>`;
+
+  if (typeof bookRecordingWidgetHTML === 'function') script += bookRecordingWidgetHTML(s);
 
   const myNotesKey = `lw-notes-${s.book}-${s.chNum}`;
   let myNotes = [];

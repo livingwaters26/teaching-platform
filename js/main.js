@@ -5,6 +5,16 @@ function updateTranslationSelect(){
   const available = (typeof getAvailableTranslations === 'function') ? getAvailableTranslations(s.book) : ['ASV'];
   const prevValue = CURRENT_TRANSLATION;
   sel.innerHTML = '';
+  if (!available.length) {
+    // No embedded translation file for this book (e.g. Matthew) — it's on the live
+    // ESV/BSB lookup instead (see js/scripture-source.js), so there's nothing to pick.
+    const opt = document.createElement('option');
+    opt.value = '';
+    opt.textContent = 'Live text (BSB / ESV)';
+    opt.disabled = true;
+    sel.appendChild(opt);
+    return;
+  }
   available.forEach(t => {
     const opt = document.createElement('option');
     opt.value = t;
@@ -14,7 +24,7 @@ function updateTranslationSelect(){
   // Keep the user's chosen translation if this book has it; otherwise fall back to first available
   if (available.includes(prevValue)) {
     sel.value = prevValue;
-  } else if (available.length) {
+  } else {
     window.CURRENT_TRANSLATION = available[0];
     sel.value = available[0];
   }
@@ -44,6 +54,7 @@ function render(){
   wireQASection();
   if (typeof renderSittingsDesk === 'function') renderSittingsDesk();
   if (typeof wireCohortsDesk === 'function') wireCohortsDesk();
+  if (typeof wireBookRecordingWidget === 'function') wireBookRecordingWidget();
   if (typeof wirePreloadBar === 'function') wirePreloadBar(s);
 }
 
@@ -100,6 +111,15 @@ if (btnCohortsClose) btnCohortsClose.onclick = closeCohorts;
 const cohortsModal = document.getElementById('cohorts-modal');
 if (cohortsModal) cohortsModal.addEventListener('click', function(e){ if (e.target === cohortsModal) closeCohorts(); });
 if (typeof wireCohortsDesk === 'function') wireCohortsDesk();
+
+function openRecordings(){ document.getElementById('recordings-modal').classList.add('open'); closeDrawer(); if (typeof wireRecordingsDesk === 'function') wireRecordingsDesk(); else if (typeof renderRecordingsList === 'function') renderRecordingsList(); }
+function closeRecordings(){ document.getElementById('recordings-modal').classList.remove('open'); }
+const btnRecordings = document.getElementById('btn-open-recordings');
+if (btnRecordings) btnRecordings.onclick = openRecordings;
+const btnRecordingsClose = document.getElementById('btn-recordings-close');
+if (btnRecordingsClose) btnRecordingsClose.onclick = closeRecordings;
+const recordingsModal = document.getElementById('recordings-modal');
+if (recordingsModal) recordingsModal.addEventListener('click', function(e){ if (e.target === recordingsModal) closeRecordings(); });
 
 (function buildBookScopeOptions(){
   const scopeSel = document.getElementById('planner-scope');

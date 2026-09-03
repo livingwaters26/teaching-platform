@@ -30,6 +30,7 @@ function buildPopoutHTML(s, seg){
       .session-head .eyebrow{ font-family:-apple-system,sans-serif; font-size:0.8rem; letter-spacing:0.1em; text-transform:uppercase; color:#b45309; font-weight:700; }
       .session-head h1{ font-size:2.2rem; margin:8px 0; }
       .scripture-text{ font-size:1.4rem; line-height:2; max-width:750px; margin:0 auto; }
+      .scripture-live-note{ font-family:-apple-system,sans-serif; font-size:0.85rem; color:#6b5c3c; font-style:italic; max-width:750px; margin:0 auto 10px; text-align:center; }
       .reader-bar{ max-width:750px; margin:0 auto 16px; display:flex; gap:8px; align-items:center; flex-wrap:wrap; }
       .verse-wrap.reading-now{ background:#fef3c7; border-radius:4px; box-shadow:0 0 0 3px #fef3c7; transition:background 0.3s; }
       .reader-bar select{ padding:8px 10px; border-radius:6px; border:1px solid #ccc; font-family:-apple-system,sans-serif; font-size:0.82rem; max-width:220px; }
