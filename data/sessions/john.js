@@ -1,8 +1,8 @@
 // John — 21 sessions.
 // Part of the SESSIONS array, split by book so different books can be edited/committed
-// independently (was previously one giant data/sessions.js). Load order in index.html
-// determines final SESSIONS order — keep this file loaded in the same book sequence
-// as before (Daniel, Between the Testaments, Revelation, John) or lesson numbering shifts.
+// independently. Load order in index.html determines final SESSIONS order — keep this file
+// loaded in the same book sequence as before (Daniel, Between the Testaments, Revelation, John)
+// or lesson numbering shifts.
 window.SESSIONS = window.SESSIONS || [];
 window.SESSIONS.push(
 {
@@ -586,8 +586,8 @@ window.SESSIONS.push(
     "John 3 — another night conversation about seeing the kingdom."
   ],
   "hist": [
-    "John is writing late enough that synagogue expulsion is a lived memory for his readers. These chapters assume a community that has already paid for confession.",
-    "A sign that splits a city. Sight is given. The people who can see already will not."
+    "The parents' fear of \"confession\" (9:22) reflects a real synagogue practice by John's own time — formal exclusion (aposynagogos) for confessing Jesus as Messiah; John's first readers were likely living with this exact cost, which is why the parents' evasiveness in this scene would have landed as painfully familiar rather than merely dramatic.",
+    "Blindness from birth (9:1) carried steep social and economic cost in the ancient world — no alternative except begging (9:8) — which is why the disciples' opening question assumes some cause must be found to explain it; Jesus' answer in 9:3 refuses the entire premise of the question."
   ],
   "opens": [
     "Where did you feel the most resistance in this chapter — not confusion, resistance?",
@@ -595,31 +595,31 @@ window.SESSIONS.push(
   ],
   "topics": [
     {
-      "title": "Stay in the scene",
-      "icon": "👣",
-      "body": "John writes conversations, not outlines. Let the people in the chapter finish talking before we start outlining them."
+      "title": "A Trial With a Beggar on the Stand",
+      "icon": "⚖️",
+      "body": "The chapter is structured like a legal proceeding — the man is interrogated twice (9:15,24), his parents are questioned separately, and the verdict (excommunication) is handed down before the real defendant, Jesus, ever appears again. Worth walking your group through it as a trial, not a healing story with some drama attached."
     },
     {
-      "title": "Signs and words",
-      "icon": "✨",
-      "body": "In this Gospel a sign is never just a wonder. It is a claim. Ask what the sign is saying about who he is."
+      "title": "Progressive Sight, Progressive Confession",
+      "icon": "👁️",
+      "body": "Track how the healed man's own words about Jesus develop across the chapter: \"the man called Jesus\" (9:11), \"a prophet\" (9:17), one \"from God\" (9:33), and finally \"Lord, I believe\" with worship (9:38). His physical healing is instant; his theological sight develops in real time under pressure — worth pointing out he teaches his own interrogators along the way (9:27,30-33)."
     }
   ],
   "wordStudies": [
     {
-      "word": "Believe",
-      "orig": "Greek pisteuo",
-      "meaning": "Not a vague warmth. In John it is trust that moves toward Jesus — sometimes slowly, sometimes after an argument."
+      "word": "Aposynagogos",
+      "orig": "Greek: ἀποσυνάγωγος",
+      "meaning": "\"Put out of the synagogue\" (9:22, also 12:42, 16:2) — a term found only in John among all of the New Testament, describing a real and formal exclusion, not vague social awkwardness. This single word is likely the closest thing John's Gospel has to a description of its own first readers' situation."
     },
     {
-      "word": "Glory",
-      "orig": "Greek doxa",
-      "meaning": "In this book glory keeps showing up at the cross. If your definition of glory cannot survive chapter 19, it is not John's."
+      "word": "Typhlos",
+      "orig": "Greek: τυφλός",
+      "meaning": "\"Blind\" (used repeatedly through the chapter, culminating in 9:39-41) — John lets the word slide from a physical to a spiritual sense by the chapter's end, where the ones who claim to see are told their sin remains precisely because of that claim."
     },
     {
-      "word": "World",
-      "orig": "Greek kosmos",
-      "meaning": "The created order God loves (3:16) and the system that hates the light. Check which sense the sentence needs."
+      "word": "Ek Genetes",
+      "orig": "Greek: ἐκ γενετῆς",
+      "meaning": "\"From birth\" (9:1) — ruling out any accident or event as the cause, which is exactly why the disciples reach for sin (his own or his parents') as the only remaining explanation. Jesus' answer reframes the question about suffering entirely, rather than just answering it differently."
     }
   ],
   "doctrinal": "John's high claims ('I AM,' 'the Father and I are one,' 'my Lord and my God') are the beating heart of Christian faith across camps. The fork in these chapters is rarely whether Jesus is Lord. It is how his kingdom and his people relate to Israel, the nations, and the end of the story. Keep that fork honest. Do not smuggle a chart into a foot-washing.",
@@ -660,8 +660,8 @@ window.SESSIONS.push(
     "Psalm 82 — the text Jesus cites when they reach for stones."
   ],
   "hist": [
-    "John is writing late enough that synagogue expulsion is a lived memory for his readers. These chapters assume a community that has already paid for confession.",
-    "Two 'I AM' images: door and shepherd. Then a winter feast and a claim that puts stones in the air again."
+    "Shepherding was genuinely looked down on as a low-status occupation in first-century Judea (a shepherd's testimony wasn't even admissible in some rabbinic courts) even while Israel's own kings and God himself were regularly described with shepherd imagery (Psalm 23; Ezekiel 34) — Jesus claiming this identity is simultaneously humble and enormous.",
+    "The Feast of Dedication (10:22, Hanukkah) commemorated the Maccabean rededication of the temple after Antiochus IV Epiphanes had defiled it — a feast specifically about faithful resistance to a pagan ruler's blasphemous claims, a loaded setting for Jesus to make his own highest claim to deity (10:30) and be accused of blasphemy in return."
   ],
   "opens": [
     "Where did you feel the most resistance in this chapter — not confusion, resistance?",
@@ -669,31 +669,31 @@ window.SESSIONS.push(
   ],
   "topics": [
     {
-      "title": "Stay in the scene",
-      "icon": "👣",
-      "body": "John writes conversations, not outlines. Let the people in the chapter finish talking before we start outlining them."
+      "title": "Sheep Who Actually Know a Voice",
+      "icon": "🐑",
+      "body": "Middle-Eastern shepherds in this period commonly kept several flocks together overnight in one communal pen, then called their own sheep out by voice in the morning — each flock reliably separating out and following only its own shepherd. 10:3-5's image isn't a general metaphor about obedience; it describes an actual, observable shepherding practice."
     },
     {
-      "title": "Signs and words",
-      "icon": "✨",
-      "body": "In this Gospel a sign is never just a wonder. It is a claim. Ask what the sign is saying about who he is."
+      "title": "\"I Lay It Down Myself\"",
+      "icon": "🛡️",
+      "body": "10:17-18 is one of the most important single statements in the Gospel for how the cross is understood: \"No one takes it from me, but I lay it down of myself... I have power to lay it down, and I have power to take it again.\" Worth pausing here — this insists the cross is something Jesus does, not merely something done to him."
     }
   ],
   "wordStudies": [
     {
-      "word": "Believe",
-      "orig": "Greek pisteuo",
-      "meaning": "Not a vague warmth. In John it is trust that moves toward Jesus — sometimes slowly, sometimes after an argument."
+      "word": "Poimen Kalos",
+      "orig": "Greek: ποιμὴν καλός",
+      "meaning": "\"Good shepherd\" (10:11,14) — kalos here leans toward \"genuine/model,\" not merely morally nice. Set against \"hired hand\" (10:12-13), the contrast is about who actually owns the sheep and has something at stake, not just who is kinder."
     },
     {
-      "word": "Glory",
-      "orig": "Greek doxa",
-      "meaning": "In this book glory keeps showing up at the cross. If your definition of glory cannot survive chapter 19, it is not John's."
+      "word": "Aule",
+      "orig": "Greek: αὐλή",
+      "meaning": "\"Fold/courtyard\" (10:1,16) — the same word used for the high priest's courtyard where Peter later warms himself (18:15). \"One flock\" (10:16) breaking out of \"this fold\" matters more against that backdrop: the flock was never meant to stay bounded by Israel's existing courtyard."
     },
     {
-      "word": "World",
-      "orig": "Greek kosmos",
-      "meaning": "The created order God loves (3:16) and the system that hates the light. Check which sense the sentence needs."
+      "word": "Harpazo",
+      "orig": "Greek: ἁρπάζω",
+      "meaning": "\"To snatch/seize by force\" (10:28-29, \"neither shall any man pluck them out of my hand\") — a strong verb for forceful removal, not gentle wandering away. The security promised here is against hostile seizure specifically, worth having ready given how often this verse gets used in security-of-salvation debates."
     }
   ],
   "doctrinal": "John's high claims ('I AM,' 'the Father and I are one,' 'my Lord and my God') are the beating heart of Christian faith across camps. The fork in these chapters is rarely whether Jesus is Lord. It is how his kingdom and his people relate to Israel, the nations, and the end of the story. Keep that fork honest. Do not smuggle a chart into a foot-washing.",
@@ -734,7 +734,7 @@ window.SESSIONS.push(
     "John 5:28–29 — an hour when all in the tombs will hear his voice."
   ],
   "hist": [
-    "John is writing late enough that synagogue expulsion is a lived memory for his readers. These chapters assume a community that has already paid for confession.",
+    "Jewish burial customs of the period placed heavy weight on the first three days after death, with some belief that a person's spirit lingered near the body for that long before departing for good — Martha's comment about the smell \"the fourth day\" (11:39) signals decomposition had genuinely set in, ruling out any claim that Lazarus was merely resuscitated from a coma.",
     "The last great sign before the week of the cross. Love delays. Then a grave loses."
   ],
   "opens": [
@@ -743,31 +743,31 @@ window.SESSIONS.push(
   ],
   "topics": [
     {
-      "title": "Stay in the scene",
-      "icon": "👣",
-      "body": "John writes conversations, not outlines. Let the people in the chapter finish talking before we start outlining them."
+      "title": "Two Sisters, Two Approaches to the Same Grief",
+      "icon": "🕊️",
+      "body": "Martha meets Jesus on the road with theology already intact (\"I know that he shall rise again in the resurrection at the last day,\" 11:24) while Mary stays home until called, then falls at his feet with the identical opening line as her sister (11:32) but no theological follow-up. Worth letting your group notice Jesus responds differently to each — correcting/deepening Martha's theology, but simply weeping with Mary (11:33-35)."
     },
     {
-      "title": "Signs and words",
-      "icon": "✨",
-      "body": "In this Gospel a sign is never just a wonder. It is a claim. Ask what the sign is saying about who he is."
+      "title": "Why Jesus Weeps for Someone He's About to Raise",
+      "icon": "😢",
+      "body": "11:33 says Jesus was \"groaned in the spirit, and was troubled\" — a strong word (embrimaomai) closer to indignation or agitation than quiet sorrow, arguably at death itself as an enemy, before he does anything to reverse it. Worth resisting the urge to explain away the weeping just because the ending is happy."
     }
   ],
   "wordStudies": [
     {
-      "word": "Believe",
-      "orig": "Greek pisteuo",
-      "meaning": "Not a vague warmth. In John it is trust that moves toward Jesus — sometimes slowly, sometimes after an argument."
+      "word": "Embrimaomai",
+      "orig": "Greek: ἐμβριμάομαι",
+      "meaning": "\"Deeply moved/groaned\" (11:33,38) — used elsewhere for anger or stern warning (Matthew 9:30), a far stronger word than ordinary sadness. Jesus' reaction to Lazarus's grave reads as outrage at death itself, not only grief."
     },
     {
-      "word": "Glory",
-      "orig": "Greek doxa",
-      "meaning": "In this book glory keeps showing up at the cross. If your definition of glory cannot survive chapter 19, it is not John's."
+      "word": "Anastasis",
+      "orig": "Greek: ἀνάστασις",
+      "meaning": "\"Resurrection\" (11:24-25) — Martha states correct doctrine about a future event; Jesus' reply (\"I am the resurrection\") relocates the doctrine into a person standing in front of her right now."
     },
     {
-      "word": "World",
-      "orig": "Greek kosmos",
-      "meaning": "The created order God loves (3:16) and the system that hates the light. Check which sense the sentence needs."
+      "word": "Doxa",
+      "orig": "Greek: δόξα",
+      "meaning": "\"Glory\" (11:4,40) — Jesus frames Lazarus's illness from the outset as being \"for the glory of God,\" the same word that will define the cross three chapters later (12:23; 13:31). Even here, glory and death are already linked before the cross arrives."
     }
   ],
   "doctrinal": "John's high claims ('I AM,' 'the Father and I are one,' 'my Lord and my God') are the beating heart of Christian faith across camps. The fork in these chapters is rarely whether Jesus is Lord. It is how his kingdom and his people relate to Israel, the nations, and the end of the story. Keep that fork honest. Do not smuggle a chart into a foot-washing.",
@@ -804,7 +804,7 @@ window.SESSIONS.push(
     "Isaiah 53 — a servant lifted up, and the arm of the Lord revealed."
   ],
   "hist": [
-    "John is writing late enough that synagogue expulsion is a lived memory for his readers. These chapters assume a community that has already paid for confession.",
+    "Anointing a guest's feet (rather than the more customary head) with a costly perfume, then wiping it with one's own hair, was an extraordinary and socially exposing act — the value cited (roughly a year's wages) makes Judas's outrage at least superficially plausible, which is part of why John bothers naming his real motive directly (12:6).",
     "Bethany perfume, a borrowed donkey, Greeks at the feast, and a voice from heaven."
   ],
   "opens": [
@@ -813,31 +813,31 @@ window.SESSIONS.push(
   ],
   "topics": [
     {
-      "title": "Stay in the scene",
-      "icon": "👣",
-      "body": "John writes conversations, not outlines. Let the people in the chapter finish talking before we start outlining them."
+      "title": "A King Who Chooses the Wrong Animal on Purpose",
+      "icon": "🐴",
+      "body": "Entering on a young donkey rather than a warhorse (12:14-15, deliberately citing Zechariah 9:9) was a calculated, symbolic choice available to Jesus at this exact moment of maximum public attention — a king announcing what kind of king he intends to be, in the middle of a crowd already primed by the Lazarus story to expect conquest."
     },
     {
-      "title": "Signs and words",
-      "icon": "✨",
-      "body": "In this Gospel a sign is never just a wonder. It is a claim. Ask what the sign is saying about who he is."
+      "title": "Believing Secretly (12:42-43)",
+      "icon": "🤐",
+      "body": "John closes the public ministry by naming \"many even of the rulers\" who believed but wouldn't confess it \"for fear of the Pharisees... for they loved the praise of men more than the praise of God.\" Worth sitting with this specific, uncomfortable diagnosis rather than moving past it quickly — it's aimed at religious insiders, not outsiders."
     }
   ],
   "wordStudies": [
     {
-      "word": "Believe",
-      "orig": "Greek pisteuo",
-      "meaning": "Not a vague warmth. In John it is trust that moves toward Jesus — sometimes slowly, sometimes after an argument."
+      "word": "Myron",
+      "orig": "Greek: μύρον",
+      "meaning": "\"Ointment/perfume\" (12:3) — specifically spikenard, an imported, genuinely expensive aromatic oil. John notes \"the house was filled with the odor\" — a detail that puts a reader physically in the room, not just conceptually."
     },
     {
-      "word": "Glory",
-      "orig": "Greek doxa",
-      "meaning": "In this book glory keeps showing up at the cross. If your definition of glory cannot survive chapter 19, it is not John's."
+      "word": "Hora",
+      "orig": "Greek: ὥρα",
+      "meaning": "\"Hour\" (12:23,27) — tracked across the whole Gospel (2:4; 7:30; 8:20; 13:1), always \"not yet,\" until here, where it finally arrives: \"the hour is come, that the Son of man should be glorified.\""
     },
     {
-      "word": "World",
-      "orig": "Greek kosmos",
-      "meaning": "The created order God loves (3:16) and the system that hates the light. Check which sense the sentence needs."
+      "word": "Krisis",
+      "orig": "Greek: κρίσις",
+      "meaning": "\"Judgment\" (12:31,48) — \"now is the judgment of this world\" ties the cross itself to judgment already underway, not only a future courtroom scene; the word he has spoken becomes the standard by which that judgment proceeds."
     }
   ],
   "doctrinal": "John's high claims ('I AM,' 'the Father and I are one,' 'my Lord and my God') are the beating heart of Christian faith across camps. The fork in these chapters is rarely whether Jesus is Lord. It is how his kingdom and his people relate to Israel, the nations, and the end of the story. Keep that fork honest. Do not smuggle a chart into a foot-washing.",
@@ -874,7 +874,7 @@ window.SESSIONS.push(
     "1 John 3:16 — this same circle of writers defining love by the laid-down life."
   ],
   "hist": [
-    "John is writing late enough that synagogue expulsion is a lived memory for his readers. These chapters assume a community that has already paid for confession.",
+    "Foot-washing was ordinarily a task for the lowest household servant (sometimes specifically a non-Israelite slave, since it was considered particularly degrading) — exactly why Peter's resistance (13:6,8) reads as a real, instinctive social objection, not stubbornness for its own sake; Jesus performs a status reversal his disciples would have felt immediately, not just heard described.",
     "A towel, a heel, a new command. The hour has come."
   ],
   "opens": [
@@ -883,31 +883,31 @@ window.SESSIONS.push(
   ],
   "topics": [
     {
-      "title": "Stay in the scene",
-      "icon": "👣",
-      "body": "John writes conversations, not outlines. Let the people in the chapter finish talking before we start outlining them."
+      "title": "He Knew, and Did It Anyway",
+      "icon": "🧺",
+      "body": "13:1-3 stacks up everything Jesus \"knew\" before he ever picks up the towel — his hour had come, the Father had given all things into his hands, he came from God and was going to God. The foot-washing isn't performed from weakness or naivety about what's coming; it's performed by someone who fully knows exactly who he is and does it anyway."
     },
     {
-      "title": "Signs and words",
-      "icon": "✨",
-      "body": "In this Gospel a sign is never just a wonder. It is a claim. Ask what the sign is saying about who he is."
+      "title": "A New Command, Measured Backward",
+      "icon": "❤️",
+      "body": "\"As I have loved you\" (13:34) only becomes a real, gettable command once your group has actually watched what that love looked like in this same chapter — a basin, a towel, and, in a few hours, a cross. The \"newness\" isn't the command to love; it's the specific measure now attached to it."
     }
   ],
   "wordStudies": [
     {
-      "word": "Believe",
-      "orig": "Greek pisteuo",
-      "meaning": "Not a vague warmth. In John it is trust that moves toward Jesus — sometimes slowly, sometimes after an argument."
+      "word": "Nipto",
+      "orig": "Greek: νίπτω",
+      "meaning": "\"To wash\" (13:5,6,8,10,12,14) — used specifically for washing a part of the body (as opposed to a full bath, louo), repeated so often in these few verses that the act itself becomes impossible to skim past quickly when reading the Greek."
     },
     {
-      "word": "Glory",
-      "orig": "Greek doxa",
-      "meaning": "In this book glory keeps showing up at the cross. If your definition of glory cannot survive chapter 19, it is not John's."
+      "word": "Paradidomi",
+      "orig": "Greek: παραδίδωμι",
+      "meaning": "\"To hand over/betray\" (13:2,11,21) — the same verb used elsewhere for handing down tradition or delivering a message; John's choice of this ordinary transactional word for Judas's betrayal is deliberately understated rather than melodramatic."
     },
     {
-      "word": "World",
-      "orig": "Greek kosmos",
-      "meaning": "The created order God loves (3:16) and the system that hates the light. Check which sense the sentence needs."
+      "word": "Doxazo",
+      "orig": "Greek: δοξάζω",
+      "meaning": "\"To glorify\" (13:31-32, used five times in two verses) — the density of the word right at the moment Judas exits into the night is striking; John frames the betrayal's beginning as simultaneously the glorification's beginning."
     }
   ],
   "doctrinal": "John's high claims ('I AM,' 'the Father and I are one,' 'my Lord and my God') are the beating heart of Christian faith across camps. The fork in these chapters is rarely whether Jesus is Lord. It is how his kingdom and his people relate to Israel, the nations, and the end of the story. Keep that fork honest. Do not smuggle a chart into a foot-washing.",
@@ -944,7 +944,7 @@ window.SESSIONS.push(
     "Acts 1:11 — the same Jesus will come as you saw him go. How 14:3 and Acts 1 sit together is a live question."
   ],
   "hist": [
-    "John is writing late enough that synagogue expulsion is a lived memory for his readers. These chapters assume a community that has already paid for confession.",
+    "\"In my Father's house are many rooms/mansions\" (14:2) uses language (monai) that likely pictures a large household with multiple permanent dwelling-places for an extended family, rather than temporary lodging — first-century hearers familiar with multi-generational households living under one roof would have heard this as a promise of permanent belonging, not a hotel reservation.",
     "Troubled hearts, a prepared place, and the Spirit promised."
   ],
   "opens": [
@@ -953,31 +953,31 @@ window.SESSIONS.push(
   ],
   "topics": [
     {
-      "title": "Stay in the scene",
-      "icon": "👣",
-      "body": "John writes conversations, not outlines. Let the people in the chapter finish talking before we start outlining them."
+      "title": "Three Questions, One Answer",
+      "icon": "❓",
+      "body": "Thomas (\"we know not whither thou goest,\" 14:5), Philip (\"shew us the Father,\" 14:8), and Judas — not Iscariot (\"how is it that thou wilt manifest thyself unto us, and not unto the world?\" 14:22) — each interrupt with a real, understandable confusion. Jesus' answers to all three keep circling back to the same center: himself, seen rightly, is the answer to each different question."
     },
     {
-      "title": "Signs and words",
-      "icon": "✨",
-      "body": "In this Gospel a sign is never just a wonder. It is a claim. Ask what the sign is saying about who he is."
+      "title": "A Helper Who Stays",
+      "icon": "🕊️",
+      "body": "\"Another Comforter\" (14:16, allos parakletos) implies Jesus himself has been operating as the first — the Spirit's coming isn't a downgrade from having Jesus physically present, it's continuity of the same kind of help in a form that (per 14:17) \"dwelleth with you, and shall be in you\" rather than merely alongside."
     }
   ],
   "wordStudies": [
     {
-      "word": "Believe",
-      "orig": "Greek pisteuo",
-      "meaning": "Not a vague warmth. In John it is trust that moves toward Jesus — sometimes slowly, sometimes after an argument."
+      "word": "Monai",
+      "orig": "Greek: μοναί",
+      "meaning": "\"Rooms/mansions/dwelling-places\" (14:2) — from the same root as meno (\"abide\"), the verb that dominates chapter 15. Even the noun for these rooms carries the sense of a settled, ongoing dwelling rather than a brief stay."
     },
     {
-      "word": "Glory",
-      "orig": "Greek doxa",
-      "meaning": "In this book glory keeps showing up at the cross. If your definition of glory cannot survive chapter 19, it is not John's."
+      "word": "Parakletos",
+      "orig": "Greek: παράκλητος",
+      "meaning": "\"Comforter/Helper/Advocate\" (14:16,26) — a legal-flavored word for someone called alongside to help, sometimes in a courtroom sense. No single English word captures it fully, which is why translations vary so widely (Comforter, Counselor, Advocate, Helper)."
     },
     {
-      "word": "World",
-      "orig": "Greek kosmos",
-      "meaning": "The created order God loves (3:16) and the system that hates the light. Check which sense the sentence needs."
+      "word": "Eirene",
+      "orig": "Greek: εἰρήνη",
+      "meaning": "\"Peace\" (14:27) — \"not as the world giveth\" distinguishes this from a mere absence of conflict or trouble; it's peace given as a possession (\"my peace I give\"), meant to hold up specifically under the trouble about to arrive."
     }
   ],
   "doctrinal": "John's high claims ('I AM,' 'the Father and I are one,' 'my Lord and my God') are the beating heart of Christian faith across camps. The fork in these chapters is rarely whether Jesus is Lord. It is how his kingdom and his people relate to Israel, the nations, and the end of the story. Keep that fork honest. Do not smuggle a chart into a foot-washing.",
@@ -988,12 +988,12 @@ window.SESSIONS.push(
   "starterNotes": [],
   "views": [
     {
-      "name": "High Christology (all orthodox camps)",
-      "body": "Jesus takes the name God gave Moses in Exodus 3:14. The crowd hears blasphemy if he is only a man — and that is why they reach for stones. This is not a mood. It is a claim."
+      "name": "A future, distinct gathering of the church (dispensational premillennial)",
+      "body": "\"I will come again, and receive you unto myself\" (14:3) is read as a distinct future event — Christ returning specifically for the church, gathering believers to himself, prior to and distinguished from his later visible return to earth."
     },
     {
-      "name": "How groups then argue about it",
-      "body": "Some readers stress the Greek ego eimi as a theophanic name. Others say it can be ordinary Greek for 'I am he' and the shock is the whole sentence: before Abraham was, I am. Either way the chapter ends with stones, not a shrug."
+      "name": "Already-begun fulfillment through the cross, resurrection, and Spirit (historic premillennial, amillennial, preterist)",
+      "body": "Other readings hear 14:2-3 primarily fulfilled already, in Jesus's death, resurrection, ascension, and the Spirit's coming (developed through the rest of this same discourse, 14:16-18) — \"I will come again\" describing his return in the Spirit and ultimately at history's end, not a separate, earlier rapture event."
     }
   ],
   "hero": null
@@ -1018,7 +1018,7 @@ window.SESSIONS.push(
     "Ezekiel 15 — a vine useful only if it stays a vine."
   ],
   "hist": [
-    "John is writing late enough that synagogue expulsion is a lived memory for his readers. These chapters assume a community that has already paid for confession.",
+    "Israel as a vine or vineyard that disappointed its owner is one of the Old Testament's most developed extended metaphors (Isaiah 5:1-7; Psalm 80:8-16; Jeremiah 2:21; Ezekiel 15, 19:10-14) — by claiming to be \"the true vine\" (15:1), Jesus steps into Israel's own most familiar self-description and claims to finally be what it was always meant to be.",
     "Abide, fruit, hate, and a Spirit who testifies."
   ],
   "opens": [
@@ -1027,31 +1027,31 @@ window.SESSIONS.push(
   ],
   "topics": [
     {
-      "title": "Stay in the scene",
-      "icon": "👣",
-      "body": "John writes conversations, not outlines. Let the people in the chapter finish talking before we start outlining them."
+      "title": "Pruned, Not Just Cut Off",
+      "icon": "✂️",
+      "body": "15:2 describes two different actions on two different kinds of branches: a fruitless branch is taken away, but a fruit-bearing branch is \"purged\" (pruned) so it bears more. The same gardener's knife means something entirely different depending on which branch it touches — worth not flattening these into one generic \"discipline\" point."
     },
     {
-      "title": "Signs and words",
-      "icon": "✨",
-      "body": "In this Gospel a sign is never just a wonder. It is a claim. Ask what the sign is saying about who he is."
+      "title": "Chosen for a Task, Not Just a Feeling",
+      "icon": "🎯",
+      "body": "\"Ye have not chosen me, but I have chosen you, and ordained you, that ye should go and bring forth fruit\" (15:16) frames friendship with Jesus (15:14-15) as inseparable from being sent out with a purpose — not a private, static relationship but one built around a job still to be done."
     }
   ],
   "wordStudies": [
     {
-      "word": "Believe",
-      "orig": "Greek pisteuo",
-      "meaning": "Not a vague warmth. In John it is trust that moves toward Jesus — sometimes slowly, sometimes after an argument."
+      "word": "Meno",
+      "orig": "Greek: μένω",
+      "meaning": "\"To abide/remain\" (used ten times in 15:4-10 alone) — the single most repeated word in the chapter. Whatever else this passage is about, it's built entirely around this one verb; a teaching plan that doesn't slow down on meno has missed the chapter's own center of gravity."
     },
     {
-      "word": "Glory",
-      "orig": "Greek doxa",
-      "meaning": "In this book glory keeps showing up at the cross. If your definition of glory cannot survive chapter 19, it is not John's."
+      "word": "Kathairo",
+      "orig": "Greek: καθαίρω",
+      "meaning": "\"To prune/cleanse\" (15:2) — the same root behind katharos (\"clean,\" used of the disciples in 15:3). Pruning and cleansing are presented as the same action described two ways: painful in the moment, purifying in effect."
     },
     {
-      "word": "World",
-      "orig": "Greek kosmos",
-      "meaning": "The created order God loves (3:16) and the system that hates the light. Check which sense the sentence needs."
+      "word": "Philos",
+      "orig": "Greek: φίλος",
+      "meaning": "\"Friend\" (15:13-15) — a real status upgrade from \"servant,\" explicitly grounded in Jesus having made known \"all things that I have heard of my Father.\" Friendship here is defined by shared knowledge and purpose, not simply warm feeling."
     }
   ],
   "doctrinal": "John's high claims ('I AM,' 'the Father and I are one,' 'my Lord and my God') are the beating heart of Christian faith across camps. The fork in these chapters is rarely whether Jesus is Lord. It is how his kingdom and his people relate to Israel, the nations, and the end of the story. Keep that fork honest. Do not smuggle a chart into a foot-washing.",
@@ -1088,7 +1088,7 @@ window.SESSIONS.push(
     "Acts 2 — the Helper actually arriving."
   ],
   "hist": [
-    "John is writing late enough that synagogue expulsion is a lived memory for his readers. These chapters assume a community that has already paid for confession.",
+    "A woman's labor pains followed by joy at a child's birth (16:21) was an established Old Testament image for national distress followed by restoration (Isaiah 26:17-19; 66:7-14) — Jesus reaches for Israel's own prophetic vocabulary to describe what the disciples are about to go through.",
     "A warning, a promise of the Spirit's work, and a sentence that overcomes the world."
   ],
   "opens": [
@@ -1097,31 +1097,31 @@ window.SESSIONS.push(
   ],
   "topics": [
     {
-      "title": "Stay in the scene",
-      "icon": "👣",
-      "body": "John writes conversations, not outlines. Let the people in the chapter finish talking before we start outlining them."
+      "title": "Three Specific Charges, Not a Vague Guilt-Feeling",
+      "icon": "⚖️",
+      "body": "16:8-11 gives the Spirit's conviction work three distinct, named targets — sin (because they don't believe), righteousness (because Jesus goes to the Father, unseen), and judgment (because the ruler of this world is already judged). Worth walking through these one at a time rather than treating \"conviction of sin\" as one undifferentiated idea."
     },
     {
-      "title": "Signs and words",
-      "icon": "✨",
-      "body": "In this Gospel a sign is never just a wonder. It is a claim. Ask what the sign is saying about who he is."
+      "title": "Plain Speech, Finally",
+      "icon": "🗣️",
+      "body": "16:25,29 marks a real turning point in how Jesus has been talking: \"these things have I spoken unto you in proverbs... I shall shew you plainly.\" The disciples themselves notice and say so (\"now speakest thou plainly,\" 16:29) — worth having your group notice this shift too, not just the content of what's said."
     }
   ],
   "wordStudies": [
     {
-      "word": "Believe",
-      "orig": "Greek pisteuo",
-      "meaning": "Not a vague warmth. In John it is trust that moves toward Jesus — sometimes slowly, sometimes after an argument."
+      "word": "Elencho",
+      "orig": "Greek: ἐλέγχω",
+      "meaning": "\"To convict/expose\" (16:8) — a courtroom word for cross-examination that exposes the truth of a matter, not merely making someone feel bad. The Spirit's work described here is closer to a prosecutor's case than an emotional nudge."
     },
     {
-      "word": "Glory",
-      "orig": "Greek doxa",
-      "meaning": "In this book glory keeps showing up at the cross. If your definition of glory cannot survive chapter 19, it is not John's."
+      "word": "Thlipsis",
+      "orig": "Greek: θλῖψις",
+      "meaning": "\"Tribulation/distress\" (16:33, \"in the world ye shall have tribulation\") — the same word Revelation later uses for its own tribulation language (Revelation 7:14), spoken here first as a plain, expected feature of ordinary discipleship, not only a distant future crisis."
     },
     {
-      "word": "World",
-      "orig": "Greek kosmos",
-      "meaning": "The created order God loves (3:16) and the system that hates the light. Check which sense the sentence needs."
+      "word": "Nikao",
+      "orig": "Greek: νικάω",
+      "meaning": "\"To conquer/overcome\" (16:33) — \"I have overcome the world,\" stated in the perfect tense, describing an already-completed action with continuing effect, spoken before the arrest and cross even happen."
     }
   ],
   "doctrinal": "John's high claims ('I AM,' 'the Father and I are one,' 'my Lord and my God') are the beating heart of Christian faith across camps. The fork in these chapters is rarely whether Jesus is Lord. It is how his kingdom and his people relate to Israel, the nations, and the end of the story. Keep that fork honest. Do not smuggle a chart into a foot-washing.",
@@ -1158,7 +1158,7 @@ window.SESSIONS.push(
     "Hebrews 7:25 — he always lives to intercede. This chapter is that work begun out loud."
   ],
   "hist": [
-    "John is writing late enough that synagogue expulsion is a lived memory for his readers. These chapters assume a community that has already paid for confession.",
+    "Jewish prayers of this length and formality, spoken aloud with a gathered group listening, were not unusual in synagogue or household settings — but praying about oneself in the third person (\"glorify thy Son,\" 17:1) while asking on behalf of a specific, named group of others (17:9,20) gives this prayer an unusual, dual structure: worship and intercession happening in the same breath, with an audience present the whole time.",
     "The Son speaks to the Father with the disciples listening. This is holy ground. Do not rush it."
   ],
   "opens": [
@@ -1167,31 +1167,31 @@ window.SESSIONS.push(
   ],
   "topics": [
     {
-      "title": "Stay in the scene",
-      "icon": "👣",
-      "body": "John writes conversations, not outlines. Let the people in the chapter finish talking before we start outlining them."
+      "title": "Three Circles of the Same Prayer",
+      "icon": "⭕",
+      "body": "The prayer moves in widening circles: Jesus and the Father (17:1-5), the eleven disciples specifically (17:6-19), then \"them also which shall believe on me through their word\" (17:20-26) — everyone who would ever become a Christian through their testimony, including your own group tonight. Worth pointing out explicitly that the room is, in a real sense, being prayed for in verse 20."
     },
     {
-      "title": "Signs and words",
-      "icon": "✨",
-      "body": "In this Gospel a sign is never just a wonder. It is a claim. Ask what the sign is saying about who he is."
+      "title": "Unity as Evidence, Not Just Harmony",
+      "icon": "🤝",
+      "body": "\"That they all may be one... that the world may believe\" (17:21) makes the disciples' unity functional, not merely pleasant — it's presented as part of the evidence the world will use to evaluate whether the Father actually sent the Son. Worth letting that weight land rather than reducing it to a general appeal for getting along."
     }
   ],
   "wordStudies": [
     {
-      "word": "Believe",
-      "orig": "Greek pisteuo",
-      "meaning": "Not a vague warmth. In John it is trust that moves toward Jesus — sometimes slowly, sometimes after an argument."
+      "word": "Hagiazo",
+      "orig": "Greek: ἁγιάζω",
+      "meaning": "\"To sanctify/set apart\" (17:17,19) — \"sanctify them through thy truth\" and \"for their sakes I sanctify myself\" use the same verb for both Jesus's self-dedication and the disciples' being set apart — his consecration and theirs are linked by the same word."
     },
     {
-      "word": "Glory",
-      "orig": "Greek doxa",
-      "meaning": "In this book glory keeps showing up at the cross. If your definition of glory cannot survive chapter 19, it is not John's."
+      "word": "Ginosko",
+      "orig": "Greek: γινώσκω",
+      "meaning": "\"To know\" (17:3,25) — \"this is life eternal, that they might know thee\" defines eternal life relationally rather than merely durationally; the same verb elsewhere in Scripture (e.g. Genesis 4:1, Hebrew yada) can carry the weight of intimate, personal knowledge, not simple factual awareness."
     },
     {
-      "word": "World",
-      "orig": "Greek kosmos",
-      "meaning": "The created order God loves (3:16) and the system that hates the light. Check which sense the sentence needs."
+      "word": "Teleioo",
+      "orig": "Greek: τελειόω",
+      "meaning": "\"To finish/perfect/complete\" (17:4,23) — \"I have finished the work\" anticipates 19:30's tetelestai (\"it is finished\") from the same root; the prayer already speaks of the cross's completed work before it has happened."
     }
   ],
   "doctrinal": "John's high claims ('I AM,' 'the Father and I are one,' 'my Lord and my God') are the beating heart of Christian faith across camps. The fork in these chapters is rarely whether Jesus is Lord. It is how his kingdom and his people relate to Israel, the nations, and the end of the story. Keep that fork honest. Do not smuggle a chart into a foot-washing.",
@@ -1228,7 +1228,7 @@ window.SESSIONS.push(
     "Psalm 2 — kings of the earth, a plot, a King they did not elect."
   ],
   "hist": [
-    "John is writing late enough that synagogue expulsion is a lived memory for his readers. These chapters assume a community that has already paid for confession.",
+    "A Roman cohort (18:3,12, potentially several hundred soldiers, though likely a smaller detachment in practice) being sent to arrest one unarmed teacher in a garden at night is a strikingly disproportionate show of force — suggesting real fear, on someone's part, that this arrest might not go quietly or might draw a crowd.",
     "He steps forward. Peter swings a blade. A fire in the courtyard does more damage."
   ],
   "opens": [
@@ -1237,31 +1237,31 @@ window.SESSIONS.push(
   ],
   "topics": [
     {
-      "title": "Stay in the scene",
-      "icon": "👣",
-      "body": "John writes conversations, not outlines. Let the people in the chapter finish talking before we start outlining them."
+      "title": "A Trial With No Real Charge",
+      "icon": "⚖️",
+      "body": "Annas questions Jesus about \"his disciples, and of his doctrine\" (18:19) — not about any specific accusation — and Jesus points out the irregularity directly (18:20-21): he's taught publicly, openly, always in synagogues and the temple; ask those who heard him. The interrogation itself is already procedurally strange, worth naming to your group before moving to the more famous Pilate scene."
     },
     {
-      "title": "Signs and words",
-      "icon": "✨",
-      "body": "In this Gospel a sign is never just a wonder. It is a claim. Ask what the sign is saying about who he is."
+      "title": "Two Kingdoms in the Same Room",
+      "icon": "👑",
+      "body": "18:33-38 stages an extended conversation between two very different definitions of kingship and truth — Pilate representing Rome's practical, force-backed authority, Jesus describing a kingdom whose citizens don't fight for it (18:36) and a truth people either hear or don't (18:37). Pilate's \"what is truth?\" (18:38) is asked to someone who is, per 14:6, the answer standing in front of him."
     }
   ],
   "wordStudies": [
     {
-      "word": "Believe",
-      "orig": "Greek pisteuo",
-      "meaning": "Not a vague warmth. In John it is trust that moves toward Jesus — sometimes slowly, sometimes after an argument."
+      "word": "Speira",
+      "orig": "Greek: σπεῖρα",
+      "meaning": "\"Band/cohort\" (18:3,12) — Roman military terminology, potentially a large detachment. Its presence at all signals this arrest was treated as a serious security operation, not a quiet religious matter handled internally."
     },
     {
-      "word": "Glory",
-      "orig": "Greek doxa",
-      "meaning": "In this book glory keeps showing up at the cross. If your definition of glory cannot survive chapter 19, it is not John's."
+      "word": "Basileia",
+      "orig": "Greek: βασιλεία",
+      "meaning": "\"Kingdom\" (18:36, repeated three times in one verse) — \"my kingdom is not of [ek, 'out of/from'] this world\" describes its source and character, not necessarily excluding a future earthly reign entirely; the Greek preposition is worth flagging directly given how much weight different traditions put on this exact verse."
     },
     {
-      "word": "World",
-      "orig": "Greek kosmos",
-      "meaning": "The created order God loves (3:16) and the system that hates the light. Check which sense the sentence needs."
+      "word": "Aletheia",
+      "orig": "Greek: ἀλήθεια",
+      "meaning": "\"Truth\" (18:37-38) — used roughly 25 times across John's Gospel, almost always tied to Jesus's own person and words rather than abstract accuracy. Pilate's question lands as tragically literal: the truth he's asking about is standing in front of him, unrecognized."
     }
   ],
   "doctrinal": "John's high claims ('I AM,' 'the Father and I are one,' 'my Lord and my God') are the beating heart of Christian faith across camps. The fork in these chapters is rarely whether Jesus is Lord. It is how his kingdom and his people relate to Israel, the nations, and the end of the story. Keep that fork honest. Do not smuggle a chart into a foot-washing.",
@@ -1302,7 +1302,7 @@ window.SESSIONS.push(
     "Psalm 22 — the divided garments and the public shame."
   ],
   "hist": [
-    "John is writing late enough that synagogue expulsion is a lived memory for his readers. These chapters assume a community that has already paid for confession.",
+    "Crucifixion in the Roman world was deliberately public and deliberately shaming — carried out along busy roads, victims typically left exposed, inscriptions of the charge displayed precisely so onlookers understood exactly why someone was being executed (19:19-22 is that standard practice, not a unique detail invented for Jesus).",
     "Behold the man. It is finished. A side is opened. A garden tomb."
   ],
   "opens": [
@@ -1311,31 +1311,31 @@ window.SESSIONS.push(
   ],
   "topics": [
     {
-      "title": "Stay in the scene",
-      "icon": "👣",
-      "body": "John writes conversations, not outlines. Let the people in the chapter finish talking before we start outlining them."
+      "title": "A Charge Written in Three Languages",
+      "icon": "📜",
+      "body": "\"THE KING OF THE JEWS,\" in Hebrew, Latin, and Greek (19:19-20) meant the charge — and, unintentionally, the confession — could be read by everyone present regardless of background. Pilate refuses to change the wording when asked (19:21-22), for reasons John lets stay slightly mysterious."
     },
     {
-      "title": "Signs and words",
-      "icon": "✨",
-      "body": "In this Gospel a sign is never just a wonder. It is a claim. Ask what the sign is saying about who he is."
+      "title": "Not a Single Bone Broken",
+      "icon": "🦴",
+      "body": "19:31-37 slows down deliberately to note the soldiers breaking the other victims' legs (to hasten death) but finding Jesus already dead, then piercing his side instead — and John explicitly ties this to two Scriptures (Exodus 12:46/Psalm 34:20 and Zechariah 12:10). Worth showing your group that John is doing careful, cited theological work in the middle of reporting a battlefield-level detail."
     }
   ],
   "wordStudies": [
     {
-      "word": "Believe",
-      "orig": "Greek pisteuo",
-      "meaning": "Not a vague warmth. In John it is trust that moves toward Jesus — sometimes slowly, sometimes after an argument."
+      "word": "Tetelestai",
+      "orig": "Greek: τετέλεσται",
+      "meaning": "\"It is finished\" (19:30) — a perfect-tense verb, often noted (accurately) to have carried a sense of \"paid in full\" on commercial receipts of the period. A completed transaction, not merely an ending."
     },
     {
-      "word": "Glory",
-      "orig": "Greek doxa",
-      "meaning": "In this book glory keeps showing up at the cross. If your definition of glory cannot survive chapter 19, it is not John's."
+      "word": "Basileus",
+      "orig": "Greek: βασιλεύς",
+      "meaning": "\"King\" — used repeatedly through this chapter (19:3,12,14,15,19,21), almost entirely by people mocking or accusing, until the inscription makes the mockery permanent and public in three languages at once."
     },
     {
-      "word": "World",
-      "orig": "Greek kosmos",
-      "meaning": "The created order God loves (3:16) and the system that hates the light. Check which sense the sentence needs."
+      "word": "Nyssein",
+      "orig": "Greek: (from νύσσω)",
+      "meaning": "\"To pierce\" (19:34) — the soldier's spear thrust that produces \"blood and water,\" a detail John insists he personally witnessed (19:35) and ties directly to Zechariah 12:10's \"they shall look on him whom they pierced,\" quoted again later in Revelation 1:7."
     }
   ],
   "doctrinal": "John's high claims ('I AM,' 'the Father and I are one,' 'my Lord and my God') are the beating heart of Christian faith across camps. The fork in these chapters is rarely whether Jesus is Lord. It is how his kingdom and his people relate to Israel, the nations, and the end of the story. Keep that fork honest. Do not smuggle a chart into a foot-washing.",
@@ -1372,7 +1372,7 @@ window.SESSIONS.push(
     "John 1:18 — the only Son who has made the Father known. Thomas's 'my Lord and my God' is that verse becoming a confession."
   ],
   "hist": [
-    "John is writing late enough that synagogue expulsion is a lived memory for his readers. These chapters assume a community that has already paid for confession.",
+    "A woman's testimony carried limited legal weight in first-century Jewish courts — which makes it striking, and generally regarded by scholars as a mark of authenticity, that all four Gospels have women (Mary Magdalene here specifically) as the first witnesses to the empty tomb; no one inventing a resurrection story from scratch in that culture would likely have chosen this detail.",
     "An empty cloth, a name spoken in a garden, locked doors, and a confession."
   ],
   "opens": [
@@ -1381,31 +1381,31 @@ window.SESSIONS.push(
   ],
   "topics": [
     {
-      "title": "Stay in the scene",
-      "icon": "👣",
-      "body": "John writes conversations, not outlines. Let the people in the chapter finish talking before we start outlining them."
+      "title": "Order, Not Chaos, in the Tomb",
+      "icon": "🧵",
+      "body": "20:6-7 specifically notes the grave clothes lying in place and the face-cloth \"wrapped together in a place by itself\" — details that argue against a hurried grave-robbery (who unwraps and neatly folds cloth while stealing a body?) and toward something else entirely having happened."
     },
     {
-      "title": "Signs and words",
-      "icon": "✨",
-      "body": "In this Gospel a sign is never just a wonder. It is a claim. Ask what the sign is saying about who he is."
+      "title": "A Sending, Not Just a Reunion",
+      "icon": "📤",
+      "body": "20:21 pairs the greeting of peace directly with commission: \"as my Father hath sent me, even so send I you\" — before breathing on them (20:22). The resurrection appearances in this chapter keep ending in mission, not merely in comfort or proof."
     }
   ],
   "wordStudies": [
     {
-      "word": "Believe",
-      "orig": "Greek pisteuo",
-      "meaning": "Not a vague warmth. In John it is trust that moves toward Jesus — sometimes slowly, sometimes after an argument."
+      "word": "Kepouros",
+      "orig": "Greek: κηπουρός",
+      "meaning": "\"Gardener\" (20:15) — Mary's mistaken guess, which John may intend as a quiet echo of Genesis 2's garden, the risen Jesus appearing in a garden as a kind of second Adam undoing the first garden's catastrophe."
     },
     {
-      "word": "Glory",
-      "orig": "Greek doxa",
-      "meaning": "In this book glory keeps showing up at the cross. If your definition of glory cannot survive chapter 19, it is not John's."
+      "word": "Emphysao",
+      "orig": "Greek: ἐμφυσάω",
+      "meaning": "\"To breathe on/into\" (20:22) — the exact verb used in the Greek Old Testament (Septuagint) of Genesis 2:7, where God breathes life into Adam. The word choice ties new creation directly and deliberately to the first one."
     },
     {
-      "word": "World",
-      "orig": "Greek kosmos",
-      "meaning": "The created order God loves (3:16) and the system that hates the light. Check which sense the sentence needs."
+      "word": "Pisteuo",
+      "orig": "Greek: πιστεύω",
+      "meaning": "\"To believe\" (20:29,31) — the Gospel's own stated purpose (20:31, \"these are written, that ye might believe\") lands on this exact word, right after Thomas's confession, making 20:30-31 read as the book's own thesis statement rather than a random postscript."
     }
   ],
   "doctrinal": "John's high claims ('I AM,' 'the Father and I are one,' 'my Lord and my God') are the beating heart of Christian faith across camps. The fork in these chapters is rarely whether Jesus is Lord. It is how his kingdom and his people relate to Israel, the nations, and the end of the story. Keep that fork honest. Do not smuggle a chart into a foot-washing.",
@@ -1442,7 +1442,7 @@ window.SESSIONS.push(
     "2 Peter 1:14 — Peter later writes as a man who knows his tent will come down."
   ],
   "hist": [
-    "John is writing late enough that synagogue expulsion is a lived memory for his readers. These chapters assume a community that has already paid for confession.",
+    "A charcoal fire (anthrakia, 21:9) is mentioned only twice in the entire New Testament — here, and at 18:18, where Peter warmed himself while denying Jesus three times. John's choice to repeat this exact, specific detail is almost certainly deliberate: the smell itself becomes part of Peter's restoration.",
     "A third appearing, a catch of fish, and a three-fold restore."
   ],
   "opens": [
@@ -1451,31 +1451,31 @@ window.SESSIONS.push(
   ],
   "topics": [
     {
-      "title": "Stay in the scene",
-      "icon": "👣",
-      "body": "John writes conversations, not outlines. Let the people in the chapter finish talking before we start outlining them."
+      "title": "153 Fish and an Unbroken Net",
+      "icon": "🎣",
+      "body": "21:11's oddly specific number has attracted centuries of symbolic speculation, but the simpler, text-supported point may be the pairing itself: an overwhelming catch (153 large fish) alongside a net that \"was not... broken\" — abundance that doesn't come apart at the seams, worth contrasting with the disciples' earlier failed night of fishing nothing at all (21:3)."
     },
     {
-      "title": "Signs and words",
-      "icon": "✨",
-      "body": "In this Gospel a sign is never just a wonder. It is a claim. Ask what the sign is saying about who he is."
+      "title": "Three Denials, Three Restorations",
+      "icon": "🔥",
+      "body": "Jesus asks Peter \"lovest thou me\" three times (21:15-17), matching Peter's three denials (18:17,25-27) precisely enough that the parallel is almost certainly intentional. Worth noting the shift in Peter's own answers — humbled, no longer boasting he loves Jesus \"more than these\" (compare 13:37) — before landing on the commission itself: feed my sheep."
     }
   ],
   "wordStudies": [
     {
-      "word": "Believe",
-      "orig": "Greek pisteuo",
-      "meaning": "Not a vague warmth. In John it is trust that moves toward Jesus — sometimes slowly, sometimes after an argument."
+      "word": "Anthrakia",
+      "orig": "Greek: ἀνθρακιά",
+      "meaning": "\"Charcoal fire\" — used in the entire New Testament only here (21:9) and at 18:18, Peter's denial scene. The rare, specific word itself is the link between the two scenes, more than any explicit statement connecting them."
     },
     {
-      "word": "Glory",
-      "orig": "Greek doxa",
-      "meaning": "In this book glory keeps showing up at the cross. If your definition of glory cannot survive chapter 19, it is not John's."
+      "word": "Phileo / Agapao",
+      "orig": "Greek: φιλέω / ἀγαπάω",
+      "meaning": "\"To love\" (21:15-17) — Jesus's first two questions use agapao, Peter answers with phileo each time; the third question switches to phileo as well. Whether this word-swap carries real theological weight or is simply stylistic variation (common elsewhere in John) is a genuinely debated point worth naming rather than over-reading confidently either way."
     },
     {
-      "word": "World",
-      "orig": "Greek kosmos",
-      "meaning": "The created order God loves (3:16) and the system that hates the light. Check which sense the sentence needs."
+      "word": "Bosko / Poimaino",
+      "orig": "Greek: βόσκω / ποιμαίνω",
+      "meaning": "\"Feed\" and \"tend/shepherd\" (21:15-17, alternating) — feeding (giving food) and shepherding (the fuller task of oversight and care) are both given to Peter across the threefold commission, a broader charge than feeding alone would suggest."
     }
   ],
   "doctrinal": "John's high claims ('I AM,' 'the Father and I are one,' 'my Lord and my God') are the beating heart of Christian faith across camps. The fork in these chapters is rarely whether Jesus is Lord. It is how his kingdom and his people relate to Israel, the nations, and the end of the story. Keep that fork honest. Do not smuggle a chart into a foot-washing.",

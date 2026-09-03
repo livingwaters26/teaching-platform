@@ -1,8 +1,8 @@
 // Revelation — 21 sessions.
 // Part of the SESSIONS array, split by book so different books can be edited/committed
-// independently (was previously one giant data/sessions.js). Load order in index.html
-// determines final SESSIONS order — keep this file loaded in the same book sequence
-// as before (Daniel, Between the Testaments, Revelation, John) or lesson numbering shifts.
+// independently. Load order in index.html determines final SESSIONS order — keep this file
+// loaded in the same book sequence as before (Daniel, Between the Testaments, Revelation, John)
+// or lesson numbering shifts.
 window.SESSIONS = window.SESSIONS || [];
 window.SESSIONS.push(
 {
@@ -57,9 +57,9 @@ window.SESSIONS.push(
       "meaning": "\"Shortly\" (1:1) and \"at hand\" (1:3) — genuinely debated terms. Worth being honest with your group: does this mean the events are chronologically soon, or that they'll unfold swiftly once they start? Careful readers land differently here, and it shapes a lot of how the rest of the book gets read."
     },
     {
-      "word": "Covenant",
-      "orig": "Hebrew berith; Greek diatheke",
-      "meaning": "A binding arrangement God makes and keeps. When a chapter says covenant, ask who the parties are — not just what the word feels like in English."
+      "word": "Pantokrator",
+      "orig": "Greek: παντοκράτωρ",
+      "meaning": "\"Almighty\" (1:8) — a title Revelation uses nine times, more than the rest of the New Testament combined. Whatever else this book depicts, it keeps grounding itself back in this one claim: God, not the beast or the empire, actually holds all power."
     }
   ],
   "doctrinal": "Verse 19 (\"what you have seen, what is now, what will be\") is often read as the book's own three-part outline — chapter 1 the past, 2–3 the present, 4–22 the future. That's a real, common futurist reading, but other traditions read the phrase as a standard apocalyptic formula, not a structural key. Worth naming both before your group assumes the timeline reading is the only one.",
@@ -92,13 +92,13 @@ window.SESSIONS.push(
   "chapterLabel": "Chapters 2–3 — The Seven Churches",
   "chNum": "2–3",
   "points": [
-    "Read Revelation 2–3 with Daniel open. Ask which image you have already seen: a beast, a horn, a court, a time-limit, a book of names.",
-    "Stay with the scene in Chapters 2–3 — The Seven Churches long enough to name who is speaking and who is under pressure. John is still writing to churches, not to a hobby.",
-    "Where heaven sings, let the group hear the song before you decode the furniture.",
-    "Where judgment falls, ask what was refused first — worship, repentance, or the Lamb.",
-    "Do not spend the hour mapping this chapter onto a single modern headline. Headlines rot. The text does not.",
-    "If a number appears, put it next to Daniel 7 and 12 before you invent a new math.",
-    "End by asking what this chapter wants a tired congregation to do tomorrow morning."
+    "2:1-7 — Ephesus: sound doctrine, tireless work, zero tolerance for false apostles (2:2) — and yet the one thing missing is love. \"Thou hast left thy first love\" (2:4) is answered not by manufacturing feeling but by \"do the first works\" (2:5); the promise is the tree of life (2:7), reaching back to Eden and forward to 22:2.",
+    "2:8-11 — Smyrna: the only letter with no rebuke at all, written to a church already poor and afflicted. \"Be thou faithful unto death, and I will give thee a crown of life\" (2:10) and \"shall not be hurt of the second death\" (2:11) frame the whole letter around a trade most churches never have to actually make.",
+    "2:12-17 — Pergamum: \"where Satan's seat is\" (2:13, a real, physical altar-city — see hist) — commended for holding the name, rebuked for tolerating \"the doctrine of Balaam\" (2:14), a named Old Testament strategy (Numbers 25, 31:16) of compromise through intermarriage with pagan culture, not a new sin invented for this city.",
+    "2:18-29 — Thyatira: the longest letter to the smallest city, tolerating \"that woman Jezebel\" (2:20) — a real teacher given a symbolic name recalling Ahab's queen, who pushed Baal worship and killed prophets (1 Kings 16:31; 18:4; 21). The promise of ruling the nations \"with a rod of iron\" (2:26-27) quotes Psalm 2:8-9 directly onto a persecuted minority in a backwater city.",
+    "3:1-6 — Sardis: a reputation for being alive, actually dead (3:1) — the only church given zero commendation. \"I have not found thy works perfect [fulfilled] before God\" (3:2) names incomplete obedience, not open rebellion, as its own kind of death. White garments (3:4-5) reach forward to the white-robed multitude of 7:9,14.",
+    "3:7-13 — Philadelphia: the other church with no rebuke — \"little strength,\" yet given \"an open door, and no man can shut it\" (3:8), echoing Isaiah 22:22's key of David quoted directly in 3:7. \"I will keep thee from the hour of temptation\" (3:10) is one of the single most contested verses in the whole book for tribulation-timing questions.",
+    "3:14-22 — Laodicea: neither cold nor hot (3:15-16, its own actual water supply — see hist), self-assessed rich, actually \"wretched, and miserable, and poor, and blind, and naked\" (3:17). Christ stands outside knocking (3:20) at a church he is about to spit out of his mouth — not, in context, at an unbeliever's heart."
   ],
   "refs": [
     "1:12–16 (within Revelation itself) — each letter's opening description of Christ is drawn back out of the chapter 1 vision, applied differently to fit what each specific church needs to hear.",
@@ -208,14 +208,14 @@ window.SESSIONS.push(
       "meaning": "\"Elder\" — used everywhere else in the New Testament for a human church office, never for angels (Acts 14:23, Titus 1:5, 1 Peter 5:1). A real, consistent pattern worth knowing, since it's the strongest textual evidence for reading the 24 elders as redeemed people rather than a class of angelic being."
     },
     {
-      "word": "Saints",
-      "orig": "Aramaic qaddishin; Greek hagioi",
-      "meaning": "Holy ones. In Daniel it can mean heavenly beings or holy people. In Revelation it usually means the faithful on earth. Check the sentence."
+      "word": "Doxa kai Time",
+      "orig": "Greek: δόξα καὶ τιμή",
+      "meaning": "\"Glory and honor\" (4:9,11) — court language, the same pairing given to a Roman emperor in official acclamations. The twenty-four elders cast their crowns and give Caesar's own vocabulary to someone else entirely."
     },
     {
-      "word": "Covenant",
-      "orig": "Hebrew berith; Greek diatheke",
-      "meaning": "A binding arrangement God makes and keeps. When a chapter says covenant, ask who the parties are — not just what the word feels like in English."
+      "word": "Ktizo",
+      "orig": "Greek: κτίζω",
+      "meaning": "\"To create\" (4:11) — the elders' worship is grounded specifically in creation (\"for thou hast created all things\"), not merely redemption. Before Revelation ever reaches a cross or an empty tomb, worship here is owed simply because God made everything that exists."
     }
   ],
   "doctrinal": "Keep the method in front of the system: word, context, book, whole story, then views. Your millennial hope is allowed in the room as a reading with verses. It is not the caption under every passage.",
@@ -244,13 +244,13 @@ window.SESSIONS.push(
   "chapterLabel": "Chapter 5 — The Sealed Scroll and the Lamb",
   "chNum": "5",
   "points": [
-    "Read Revelation 5 with Daniel open. Ask which image you have already seen: a beast, a horn, a court, a time-limit, a book of names.",
-    "Stay with the scene in Chapter 5 — The Sealed Scroll and the Lamb long enough to name who is speaking and who is under pressure. John is still writing to churches, not to a hobby.",
-    "Where heaven sings, let the group hear the song before you decode the furniture.",
-    "Where judgment falls, ask what was refused first — worship, repentance, or the Lamb.",
-    "Do not spend the hour mapping this chapter onto a single modern headline. Headlines rot. The text does not.",
-    "If a number appears, put it next to Daniel 7 and 12 before you invent a new math.",
-    "End by asking what this chapter wants a tired congregation to do tomorrow morning."
+    "5:1 — A scroll sealed with seven seals, in the right hand of the one on the throne. Ezekiel's own scroll (Ezekiel 2:9-10) was also written on both sides and full of judgment; this scroll's seals will not finish breaking until 8:1.",
+    "5:2-4 — No one in heaven, earth, or under the earth is found worthy to open it, and John weeps — genuinely, not decoratively. The scroll is best read as a title-deed to creation itself; if it never opens, redemption never lands.",
+    "5:5 — \"Weep not: behold, the Lion of the tribe of Juda... hath prevailed\" — Genesis 49:9-10's blessing on Judah, first heard here as pure conquest language.",
+    "5:6 — John turns to look for the Lion and sees instead \"a Lamb as it had been slain\" standing in the midst of the throne. That pivot from hearing to seeing is arguably the single most important interpretive move in the entire book: every later war, beast, and victory has to be read back through a slaughtered Lamb who is somehow standing.",
+    "5:7-8 — The Lamb takes the scroll; the four living creatures and twenty-four elders fall down with harps and golden bowls of incense, \"which are the prayers of saints\" — every prayer ever prayed for God's kingdom to come is sitting in this room.",
+    "5:9-10 — A \"new song\": redeemed \"out of every kindred, and tongue, and people, and nation,\" made \"kings and priests\" — Exodus 19:6's promise to Israel, now extended to a multi-ethnic redeemed people through the Lamb's blood rather than through the law.",
+    "5:11-14 — \"Ten thousand times ten thousand, and thousands of thousands\" reuses Daniel 7:10's own courtroom numbering for the Lamb's coronation. Every creature in heaven, earth, sea, and under the earth joins in — the chapter that opened in total silence because no one was worthy ends with the whole universe singing to the one who was."
   ],
   "refs": [
     "Ezekiel 2:9–10 — a scroll written on both sides, full of lamentation — the likely model for the scroll's unusual form.",
@@ -260,8 +260,8 @@ window.SESSIONS.push(
     "Daniel 7:10 — \"thousand thousands... ten thousand times ten thousand,\" the source of the angelic-multitude language in 5:11."
   ],
   "hist": [
-    "Date and empire matter here. Put the chapter back in its century before you ask it to settle ours.",
-    "First readers did not have our study notes. They had a letter, a synagogue, and a memory of Israel’s story."
+    "Ancient legal documents — deeds, wills, contracts — were often sealed with multiple witnesses' seals so no single party could open or alter them alone. A scroll sealed seven times over is a real, legally-weighted instrument in its own world, not a prop invented for the vision — which is part of why \"who is worthy to open\" carries actual stakes.",
+    "The twenty-four elders most plausibly draw on the twenty-four priestly and Levitical courses of 1 Chronicles 24-25 — representative worship leadership organized in rotating divisions — rather than a number picked for no reason."
   ],
   "opens": [
     "What in this chapter only makes sense if you still have Daniel in your ear?",
@@ -291,9 +291,9 @@ window.SESSIONS.push(
       "meaning": "\"To conquer\" or \"to overcome\" — used of the Lamb here (5:5) and later of the beast (13:7). The same word for victory gets applied to both; the book is quietly redefining what real conquest looks like by who's doing it and how."
     },
     {
-      "word": "Covenant",
-      "orig": "Hebrew berith; Greek diatheke",
-      "meaning": "A binding arrangement God makes and keeps. When a chapter says covenant, ask who the parties are — not just what the word feels like in English."
+      "word": "Axios",
+      "orig": "Greek: ἄξιος",
+      "meaning": "\"Worthy\" — the word the whole chapter turns on (5:2,4,9,12). Being weighed and found sufficient, not merely being liked or chosen; the Lamb is axios because of what the blood accomplished (5:9), not by default."
     }
   ],
   "doctrinal": "Keep the method in front of the system: word, context, book, whole story, then views. Your millennial hope is allowed in the room as a reading with verses. It is not the caption under every passage.",
@@ -326,8 +326,8 @@ window.SESSIONS.push(
     "Daniel 12:6–7 — how long until the end of these wonders?"
   ],
   "hist": [
-    "Date and empire matter here. Put the chapter back in its century before you ask it to settle ours.",
-    "First readers did not have our study notes. They had a letter, a synagogue, and a memory of Israel’s story."
+    "Zechariah's four chariots and colored horses (Zechariah 6:1-8) patrol the earth in the very next chapter after his vision of a flying scroll and a woman in a basket — Revelation 6 continues a vision-cycle its first readers would likely have recognized from Zechariah directly, not an image invented from nothing.",
+    "A denarius (6:6) was roughly a day's wage for common labor — pricing \"a measure of wheat for a penny, and three measures of barley for a penny\" describes famine-level scarcity, food costing several times its normal rate, while oil and wine (luxury goods) are pointedly spared — a judgment that crushes the poor's staples while sparing the wealthy's comforts."
   ],
   "opens": [
     "If the martyrs are told to wait, what does that do to a faith that wants every injustice settled this week?",
@@ -347,19 +347,19 @@ window.SESSIONS.push(
   ],
   "wordStudies": [
     {
-      "word": "Kingdom",
-      "orig": "Aramaic/Hebrew malku / malkuth; Greek basileia",
-      "meaning": "Reign as much as realm. Ask whether the writer is talking about a territory, a government, or the fact that God is actually in charge."
+      "word": "Thanatos",
+      "orig": "Greek: θάνατος",
+      "meaning": "\"Death\" (6:8), riding as the fourth horse's own name with Hades following behind — personified and given specific, limited authority (\"power was given unto them\") over a quarter of the earth, not an unbounded abstraction."
     },
     {
-      "word": "Saints",
-      "orig": "Aramaic qaddishin; Greek hagioi",
-      "meaning": "Holy ones. In Daniel it can mean heavenly beings or holy people. In Revelation it usually means the faithful on earth. Check the sentence."
+      "word": "Choinix",
+      "orig": "Greek: χοῖνιξ",
+      "meaning": "A dry measure (6:6), roughly one day's grain ration for one person. Pricing a whole day's food at a whole day's wage names famine bluntly, in units a first-century audience would have felt immediately."
     },
     {
-      "word": "Covenant",
-      "orig": "Hebrew berith; Greek diatheke",
-      "meaning": "A binding arrangement God makes and keeps. When a chapter says covenant, ask who the parties are — not just what the word feels like in English."
+      "word": "Ekdikeo",
+      "orig": "Greek: ἐκδικέω",
+      "meaning": "\"To avenge\" (6:10) — the martyrs' cry \"how long... dost thou not judge and avenge\" asks God to act as a wronged party's legal advocate, not merely to feel their loss. The same root returns when the answer comes, in 19:2."
     }
   ],
   "doctrinal": "This is the real starting point of the book's oldest interpretive question: do the seals, trumpets, and bowls (three sets of seven, running through chapter 16) happen consecutively, escalating toward one climax — or do they recapitulate the same period three times from different angles? Both readings have serious, careful defenders. Worth naming this now, since it shapes how you teach every chapter through 16.",
@@ -372,6 +372,16 @@ window.SESSIONS.push(
     "The symbolism of the red, black, and pale horses, including economic scarcity, famine, and death",
     "The identity of the martyrs under the altar",
     "The catastrophic earthquake and cosmic upsets"
+  ],
+  "views": [
+    {
+      "name": "Pretribulational rapture (dispensational premillennial)",
+      "body": "The church has already been removed before 4:1's \"come up hither,\" so the seals and the visible wrath beginning here in 6:1-17 fall on a world the church no longer occupies — consistent with 6:17 describing wrath falling on \"them that dwell on the earth,\" language Revelation elsewhere reserves for the unbelieving world."
+    },
+    {
+      "name": "Mid-tribulation, pre-wrath, post-tribulation, or no distinct rapture event (historic premillennial, amillennial, preterist)",
+      "body": "Other readings place the church through some or all of the seals — pointing to 6:9-11's martyrs, who are explicitly believers suffering under these very judgments — and reserve the sharpest \"wrath\" language for the bowls (chapter 16) or for events still future to this chapter."
+    }
   ]
 },
 {
@@ -380,13 +390,13 @@ window.SESSIONS.push(
   "chapterLabel": "Chapter 7 — The 144,000 and the Great Multitude",
   "chNum": "7",
   "points": [
-    "Read Revelation 7 with Daniel open. Ask which image you have already seen: a beast, a horn, a court, a time-limit, a book of names.",
-    "Stay with the scene in Chapter 7 — The 144,000 and the Great Multitude long enough to name who is speaking and who is under pressure. John is still writing to churches, not to a hobby.",
-    "Where heaven sings, let the group hear the song before you decode the furniture.",
-    "Where judgment falls, ask what was refused first — worship, repentance, or the Lamb.",
-    "Do not spend the hour mapping this chapter onto a single modern headline. Headlines rot. The text does not.",
-    "If a number appears, put it next to Daniel 7 and 12 before you invent a new math.",
-    "End by asking what this chapter wants a tired congregation to do tomorrow morning."
+    "7:1-3 — Four angels hold back the four winds until the servants of God are sealed \"in their foreheads\" (7:3) — Ezekiel 9:4's mark on the faithful before Jerusalem's judgment falls is the direct model: sealing precedes judgment, it doesn't cancel it.",
+    "7:4-8 — 144,000, twelve thousand from each of twelve tribes, named one by one. The list quietly departs from every Old Testament tribal list (Genesis 49; Numbers 1; Numbers 26): Dan is missing entirely, Levi (normally landless and priestly) is included, and Joseph is split into two half-portions. Worth asking your group why a chapter this careful about a number would deliberately vary the list instead of just copying one.",
+    "7:9-10 — The scene changes without transition: not 144,000 but \"a great multitude, which no man could number, of all nations.\" Precision and vastness are placed back-to-back on purpose — a specific, sealed number and a countless one, both true, both worshiping.",
+    "7:11-12 — The full heavenly council — elders, living creatures, angels — falls down again, as in chapter 5, the second time in the book the entire host responds this way.",
+    "7:13-14 — An elder identifies the multitude: \"these are they which came out of great tribulation\" (7:14) — the definite article behind \"the great tribulation\" (not merely \"much distress\") is exactly why this single phrase anchors so much of the timing debate over when believers pass through it.",
+    "7:15-17 — \"They shall hunger no more... God shall wipe away all tears\" (7:16-17) reads Isaiah 49:10 and 25:8 straight into a martyrs' scene; the shepherd language (\"the Lamb... shall feed them\") anticipates John 10's Good Shepherd discourse.",
+    "Taken together, 7:4-8 and 7:9-17 raise the chapter's real question: is the 144,000 the same group as the great multitude seen two ways — sealed on earth, then glorified — or two distinct groups, literal Israel and the wider church? That fork deserves its own consideration, not a quick answer (see views)."
   ],
   "refs": [
     "Ezekiel 9:4 — a mark placed on the foreheads of the faithful before judgment falls on Jerusalem, the direct model for the sealing of the 144,000.",
@@ -395,8 +405,8 @@ window.SESSIONS.push(
     "Isaiah 1:18 — \"though your sins be as scarlet, they shall be as white as snow,\" background for the white-robes-washed-in-blood image (7:14), a deliberate paradox (made white BY blood) worth noting."
   ],
   "hist": [
-    "Date and empire matter here. Put the chapter back in its century before you ask it to settle ours.",
-    "First readers did not have our study notes. They had a letter, a synagogue, and a memory of Israel’s story."
+    "By the first century, \"the twelve tribes\" functioned as a stock way of referring to the entire covenant people even though a literal twelve-tribe census hadn't existed since the Assyrian and Babylonian deportations centuries earlier (compare James 1:1, \"the twelve tribes which are scattered abroad\") — worth knowing this background before deciding whether Revelation 7 intends a literal census or a symbolic totality.",
+    "Palm branches (7:9) were carried at the Feast of Tabernacles and had also become associated with national deliverance and military victory (as in 1 Maccabees 13:51, at Simon Maccabeus's entry into a liberated Jerusalem) — the multitude's palms evoke both festival worship and deliverance already accomplished."
   ],
   "opens": [
     "Why is Dan specifically omitted? Revelation 7 itself gives no reason. The real speculation that exists is grounded in other Scripture, not this passage: Dan's early idolatry (the golden calf at Dan, 1 Kings 12:28–29; Judges 18's earlier idol-setting), or older Antichrist-from-Dan traditions among early church fathers, tied to Genesis 49:17's description of Dan as \"a serpent by the way.\" Worth knowing as real background, but genuinely not something chapter 7 explains on its own.",
@@ -416,19 +426,19 @@ window.SESSIONS.push(
   ],
   "wordStudies": [
     {
-      "word": "Kingdom",
-      "orig": "Aramaic/Hebrew malku / malkuth; Greek basileia",
-      "meaning": "Reign as much as realm. Ask whether the writer is talking about a territory, a government, or the fact that God is actually in charge."
+      "word": "Sphragizo",
+      "orig": "Greek: σφραγίζω",
+      "meaning": "\"To seal\" (7:3-8) — the same verb family behind the seals opened in chapters 5-6. Being sealed here isn't decoration; it marks whose ownership you're under before the next wave of judgment falls."
     },
     {
-      "word": "Saints",
-      "orig": "Aramaic qaddishin; Greek hagioi",
-      "meaning": "Holy ones. In Daniel it can mean heavenly beings or holy people. In Revelation it usually means the faithful on earth. Check the sentence."
+      "word": "Thlipsis",
+      "orig": "Greek: θλῖψις",
+      "meaning": "\"Tribulation\" (7:14) — pressure, crushing distress. Used elsewhere in the New Testament for ordinary Christian suffering (John 16:33), which is exactly why 7:14's definite article (\"the great thlipsis\") matters so much for deciding whether this names a specific future period or intensified, ordinary pressure."
     },
     {
-      "word": "Covenant",
-      "orig": "Hebrew berith; Greek diatheke",
-      "meaning": "A binding arrangement God makes and keeps. When a chapter says covenant, ask who the parties are — not just what the word feels like in English."
+      "word": "Ethnos",
+      "orig": "Greek: ἔθνος",
+      "meaning": "\"Nation\" (7:9) — root of the English \"ethnic.\" The great multitude is drawn \"of all nations, and kindreds, and people, and tongues,\" a deliberate fourfold stack repeated at 5:9, 13:7, and 14:6 underscoring that this redeemed company is genuinely global, not one people group in a heavenly costume."
     }
   ],
   "doctrinal": "The 144,000's own structure — 12×12×1,000 — points toward symbolic covenant-completeness rather than a literal census cap. Worth stating this plainly to your group, since this is the single number in Revelation most prone to speculative misuse and date-setting.",
@@ -438,6 +448,16 @@ window.SESSIONS.push(
   },
   "starterNotes": [
     "The sealing of the one hundred and forty-four thousand, often associated with a faithful remnant"
+  ],
+  "views": [
+    {
+      "name": "144,000 as ethnic/literal Israel (common in dispensational premillennial reading)",
+      "body": "A literal remnant of ethnic Israel, twelve thousand from each named tribe, sealed and preserved through a future tribulation period distinct from the multitude of Gentile believers in 7:9-17."
+    },
+    {
+      "name": "144,000 as symbolic of the whole church (common in amillennial, historic premillennial, and preterist readings)",
+      "body": "The number itself (12 x 12 x 1,000) signals completeness of God's covenant people across both testaments, and the \"great multitude\" of 7:9 is that same company described a second way — sealed on earth, then seen glorified in heaven — rather than a separate group."
+    }
   ]
 },
 {
@@ -446,13 +466,13 @@ window.SESSIONS.push(
   "chapterLabel": "Chapter 8 — The Seventh Seal and the First Trumpets",
   "chNum": "8",
   "points": [
-    "Read Revelation 8 with Daniel open. Ask which image you have already seen: a beast, a horn, a court, a time-limit, a book of names.",
-    "Stay with the scene in Chapter 8 — The Seventh Seal and the First Trumpets long enough to name who is speaking and who is under pressure. John is still writing to churches, not to a hobby.",
-    "Where heaven sings, let the group hear the song before you decode the furniture.",
-    "Where judgment falls, ask what was refused first — worship, repentance, or the Lamb.",
-    "Do not spend the hour mapping this chapter onto a single modern headline. Headlines rot. The text does not.",
-    "If a number appears, put it next to Daniel 7 and 12 before you invent a new math.",
-    "End by asking what this chapter wants a tired congregation to do tomorrow morning."
+    "8:1 — The seventh seal opens not with noise but \"silence in heaven about the space of half an hour.\" After six seals and six chapters of sound, the pause itself is the content — even heaven holds its breath before the trumpets.",
+    "8:2-5 — Seven angels are given seven trumpets; an eighth angel offers incense \"with the prayers of all saints\" on the golden altar, then hurls fire from that same altar to the earth. The martyrs' cry from 6:9-11 (\"how long?\") is not forgotten — this is the answer starting to move.",
+    "8:6-7 — First trumpet: hail, fire, and blood burn up a third of the earth's trees and all the grass — the Exodus plague of hail (Exodus 9:23-25) as the template, now at global rather than national scale.",
+    "8:8-9 — Second trumpet: \"a great mountain burning with fire\" is cast into the sea; a third of the sea becomes blood, a third of sea creatures and ships are destroyed — echoing the Nile-to-blood plague (Exodus 7:20-21).",
+    "8:10-11 — Third trumpet: a star named Wormwood falls on the rivers and springs, poisoning a third of the fresh water. Wormwood is already Old Testament shorthand for the bitterness of judgment (Jeremiah 9:15; 23:15) before anyone in the scene drinks from it.",
+    "8:12-13 — Fourth trumpet strikes sun, moon, and stars — a third darkened, echoing the plague of darkness (Exodus 10:21-23). An eagle flying overhead cries \"Woe, woe, woe\" three times, once for each trumpet still to come, in chapters 9 and 11.",
+    "The recurring \"a third\" throughout this chapter — not total destruction — is worth naming directly: these are severe but limited, restrained judgments. Compare the more totalizing language that begins once mercy's limit has run out, at the bowls of chapter 16."
   ],
   "refs": [
     "Exodus 9:23–25 — the plague of hail and fire, source for the first trumpet.",
@@ -462,8 +482,8 @@ window.SESSIONS.push(
     "Exodus 19:16–19 — thunder, lightning, and earthquake at Sinai, the background pattern behind 8:5 and echoed already at 4:5."
   ],
   "hist": [
-    "Date and empire matter here. Put the chapter back in its century before you ask it to settle ours.",
-    "First readers did not have our study notes. They had a letter, a synagogue, and a memory of Israel’s story."
+    "The Exodus plagues are the deliberate backbone of the trumpet judgments — fire and hail, water to blood, darkness — but every one is now cast at \"a third\" rather than covering a whole nation completely, a restraint a reader steeped in Exodus would have caught immediately.",
+    "\"Wormwood\" translates a genuinely bitter (not itself poisonous) plant used throughout the Old Testament as a byword for judgment's bitterness (Deuteronomy 29:18; Amos 5:7) — which makes 8:11's death toll notable: an ordinary symbol for mere bitterness becomes, here, lethal."
   ],
   "opens": [
     "Are the seals, trumpets, and bowls three separate, sequential judgment cycles, or one nested sequence? The seventh-seal-contains-the-trumpets structure is real evidence for the nested reading (and the seventh trumpet will do something similar with the bowls later in the book) — but this remains a genuinely contested structural question among careful readers, not settled by chapter 8 alone.",
@@ -483,19 +503,19 @@ window.SESSIONS.push(
   ],
   "wordStudies": [
     {
-      "word": "Kingdom",
-      "orig": "Aramaic/Hebrew malku / malkuth; Greek basileia",
-      "meaning": "Reign as much as realm. Ask whether the writer is talking about a territory, a government, or the fact that God is actually in charge."
+      "word": "Apsinthos",
+      "orig": "Greek: ἄψινθος",
+      "meaning": "\"Wormwood\" (8:11) — a genuinely bitter plant, standard Old Testament shorthand for judgment's bitterness (Deuteronomy 29:18; Amos 5:7). Naming a star after it before it falls is Revelation doing wordplay with real botanical bitterness."
+    },
+    {
+      "word": "Salpigx",
+      "orig": "Greek: σάλπιγξ",
+      "meaning": "\"Trumpet\" (8:2ff) — the same word for the trumpet blast at Sinai (Exodus 19:16) and for the last trumpet at the resurrection (1 Corinthians 15:52). A trumpet in Scripture consistently announces God's direct, unmistakable action, not background noise."
     },
     {
       "word": "Saints",
       "orig": "Aramaic qaddishin; Greek hagioi",
-      "meaning": "Holy ones. In Daniel it can mean heavenly beings or holy people. In Revelation it usually means the faithful on earth. Check the sentence."
-    },
-    {
-      "word": "Covenant",
-      "orig": "Hebrew berith; Greek diatheke",
-      "meaning": "A binding arrangement God makes and keeps. When a chapter says covenant, ask who the parties are — not just what the word feels like in English."
+      "meaning": "\"Holy ones\" — here specifically the ones whose prayers rise with the incense (8:3-4). The martyrs' cry of 6:9-11 is one of those prayers; this chapter is where it starts to be answered."
     }
   ],
   "doctrinal": "The first four trumpets strike creation itself — land, sea, fresh water, sky — deliberately echoing the Exodus plagues. Worth naming this pattern directly: Revelation is casting final judgment as a new, cosmic-scale Exodus, a God confronting an oppressive empire on behalf of a people who can't free themselves. That framing should shape how you teach the more violent imagery here.",
@@ -511,13 +531,13 @@ window.SESSIONS.push(
   "chapterLabel": "Chapter 9 — The Fifth and Sixth Trumpets",
   "chNum": "9",
   "points": [
-    "Read Revelation 9 with Daniel open. Ask which image you have already seen: a beast, a horn, a court, a time-limit, a book of names.",
-    "Stay with the scene in Chapter 9 — The Fifth and Sixth Trumpets long enough to name who is speaking and who is under pressure. John is still writing to churches, not to a hobby.",
-    "Where heaven sings, let the group hear the song before you decode the furniture.",
-    "Where judgment falls, ask what was refused first — worship, repentance, or the Lamb.",
-    "Do not spend the hour mapping this chapter onto a single modern headline. Headlines rot. The text does not.",
-    "If a number appears, put it next to Daniel 7 and 12 before you invent a new math.",
-    "End by asking what this chapter wants a tired congregation to do tomorrow morning."
+    "9:1-2 — A star \"fallen from heaven\" is given the key to the bottomless pit; smoke pours out thick enough to darken the sun. The \"fallen star\" language paired with a personal \"he\" given a key suggests a being, not a meteor — commonly read as a fallen angelic figure exercising permitted, delegated authority, not an unleashed rival to God.",
+    "9:3-6 — Locusts emerge with power \"as the scorpions of the earth have power,\" explicitly forbidden to harm grass, trees, or green things (the opposite of ordinary locusts) and commanded instead to torment only those \"which have not the seal of God in their foreheads\" for five months — judgment with a specific target list, tied directly back to the sealing of 7:3-8.",
+    "9:6 — \"In those days shall men seek death, and shall not find it\" — worth letting this single line sit rather than rushing past it: the torment described isn't fatal, and that is precisely what makes it unbearable.",
+    "9:7-10 — The locusts' description — faces like men, hair like women, teeth like lions, breastplates of iron, tails like scorpions, wings \"as the sound of chariots of many horses running to battle\" — lifts its imagery almost verbatim from Joel 2:4-5's locust-army description of the day of the Lord.",
+    "9:11 — They have a king, \"the angel of the bottomless pit,\" named in both Hebrew (Abaddon) and Greek (Apollyon) — both meaning Destroyer. John gives both names so no reader, Jewish or Greek-speaking, misses who is actually in charge.",
+    "9:12-19 — The sixth trumpet releases four bound angels \"at the great river Euphrates,\" prepared for this exact hour, with an army of two hundred million (\"twice ten thousand times ten thousand,\" echoing Daniel 7:10's numbering style again) that kills a third of mankind.",
+    "9:20-21 — After losing a third of humanity, survivors still don't repent — they keep worshiping demons and idols \"which neither can see, nor hear, nor walk\" (echoing Psalm 115:4-7's mockery of idols almost word for word), and keep their sorceries, sexual immorality, and theft. The chapter's real horror may not be the locusts; it may be these two verses."
   ],
   "refs": [
     "Joel 2:4–5 — \"their appearance is like the appearance of horses... as with the rumbling of chariots\" — an extremely close, direct verbal match for the locusts' description (9:7, 9). This is about as tight a source-parallel as anywhere in the book.",
@@ -527,8 +547,8 @@ window.SESSIONS.push(
     "Daniel 7:10 (already used at Revelation 5:11) — the same hyperbolic \"myriads\" numbering style, reused here for the 200-million-strong army."
   ],
   "hist": [
-    "Date and empire matter here. Put the chapter back in its century before you ask it to settle ours.",
-    "First readers did not have our study notes. They had a letter, a synagogue, and a memory of Israel’s story."
+    "Locust plagues were a real, catastrophic, recurring feature of the ancient Near East — Joel 1-2 describes an actual locust invasion in agricultural terms before turning it into end-times imagery — which is why John's first readers would have felt the force of \"like locusts\" immediately, not abstractly.",
+    "The Euphrates (9:14) marked the eastern boundary of the Roman Empire, the direction from which Rome's most feared rival, Parthia, threatened invasion — first-century readers hearing \"an army from the Euphrates\" likely pictured their own era's most terrifying geopolitical threat, not only a distant future one."
   ],
   "opens": [
     "Is Abaddon/Apollyon Satan himself, or a lesser ruling demon? \"The angel of the bottomless pit\" doesn't specify which being this actually is — genuinely undetermined from the text.",
@@ -550,17 +570,17 @@ window.SESSIONS.push(
     {
       "word": "Abaddon / Apollyon",
       "orig": "Hebrew: אֲבַדּוֹן / Greek: Ἀπολλύων",
-      "meaning": "Both names mean \"Destruction\" or \"Destroyer\" — John gives both the Hebrew and Greek forms (9:11), making sure both his Jewish and Greek-speaking readers understand exactly who this is without ambiguity."
+      "meaning": "Both names mean \"Destruction\" or \"Destroyer\" — John gives both the Hebrew and Greek forms (9:11), making sure his Jewish and Greek-speaking readers alike understand exactly who this is without ambiguity."
     },
     {
-      "word": "Saints",
-      "orig": "Aramaic qaddishin; Greek hagioi",
-      "meaning": "Holy ones. In Daniel it can mean heavenly beings or holy people. In Revelation it usually means the faithful on earth. Check the sentence."
+      "word": "Basanismos",
+      "orig": "Greek: βασανισμός",
+      "meaning": "\"Torment\" (9:5) — from a root originally meaning to test metal on a touchstone, later simply severe pain. The locusts' torment is physical and real, not merely psychological dread."
     },
     {
-      "word": "Covenant",
-      "orig": "Hebrew berith; Greek diatheke",
-      "meaning": "A binding arrangement God makes and keeps. When a chapter says covenant, ask who the parties are — not just what the word feels like in English."
+      "word": "Skorpios",
+      "orig": "Greek: σκορπίος",
+      "meaning": "\"Scorpion\" (9:3,5,10) — a genuinely feared small creature in the ancient Near East, known for pain far outsized to its size; used here for a judgment that is agonizing but explicitly not lethal, matching 9:6's \"shall not find it.\""
     }
   ],
   "doctrinal": "Keep the method in front of the system: word, context, book, whole story, then views. Your millennial hope is allowed in the room as a reading with verses. It is not the caption under every passage.",
@@ -576,13 +596,13 @@ window.SESSIONS.push(
   "chapterLabel": "Chapter 10 — The Little Scroll",
   "chNum": "10",
   "points": [
-    "Read Revelation 10 with Daniel open. Ask which image you have already seen: a beast, a horn, a court, a time-limit, a book of names.",
-    "Stay with the scene in Chapter 10 — The Little Scroll long enough to name who is speaking and who is under pressure. John is still writing to churches, not to a hobby.",
-    "Where heaven sings, let the group hear the song before you decode the furniture.",
-    "Where judgment falls, ask what was refused first — worship, repentance, or the Lamb.",
-    "Do not spend the hour mapping this chapter onto a single modern headline. Headlines rot. The text does not.",
-    "If a number appears, put it next to Daniel 7 and 12 before you invent a new math.",
-    "End by asking what this chapter wants a tired congregation to do tomorrow morning."
+    "10:1-2 — \"Another mighty angel\" (distinct from chapter 5's search for someone worthy) comes down \"clothed with a cloud,\" a rainbow over his head, face like the sun, feet like fire — throne-vision language from chapters 1 and 4, now worn by a created angel, one foot on sea and one on land: total, universal reach.",
+    "10:3-4 — He cries out, seven thunders answer, and John moves to write — then is stopped: \"seal up those things which the seven thunders uttered, and write them not.\" This is the one moment in Revelation where John is told NOT to record something, a deliberate reminder that even this detailed a book doesn't tell us everything.",
+    "10:5-6 — The angel swears \"by him that liveth for ever and ever\" that there will be no more delay — directly answering Daniel 12:7's angel, who swore a strikingly similar oath about \"a time, times, and an half\" before the end. Revelation 10 is picking up Daniel's own unfinished oath.",
+    "10:7 — \"In the days of the voice of the seventh angel... the mystery of God should be finished, as he hath declared to his servants the prophets\" — quoting Amos 3:7 almost directly: nothing happens without warning given first, through the prophets.",
+    "10:8-10 — John is told to take the little scroll and eat it: \"sweet as honey\" in the mouth, bitter in the belly once swallowed — a near-verbatim reenactment of Ezekiel 2:8-3:3, where Ezekiel eats a scroll of \"lamentations, and mourning, and woe\" that also tastes like honey.",
+    "10:11 — \"Thou must prophesy again before many peoples, and nations, and tongues, and kings\" — the scroll's sweetness is receiving the word; its bitterness is what comes next, having to speak hard truth to hostile audiences rather than privately holding it.",
+    "This chapter is a hinge, not a judgment scene: the seals and first six trumpets are behind John; a fresh commissioning and the sealed thunders stand between here and the seventh trumpet, still two chapters away (11:15) — worth naming this structural pause so chapter 11's delay doesn't feel accidental."
   ],
   "refs": [
     "Ezekiel 2:8–3:3 — the direct source for eating a scroll, sweet as honey in the mouth.",
@@ -593,8 +613,8 @@ window.SESSIONS.push(
     "Jeremiah 15:16 — \"thy words were found, and I did eat them\" — a related, more general prophetic image of consuming God's word."
   ],
   "hist": [
-    "Date and empire matter here. Put the chapter back in its century before you ask it to settle ours.",
-    "First readers did not have our study notes. They had a letter, a synagogue, and a memory of Israel’s story."
+    "Eating a scroll as a commissioning image has essentially one clear Old Testament precedent — Ezekiel 2:8-3:3 — and readers who knew that text would have recognized John being cast in a prophetic role parallel to Ezekiel's, not receiving a newly invented symbol.",
+    "Legal oaths in the ancient world were sworn by something greater than the speaker to guarantee the statement (compare Hebrews 6:13, God swearing by himself since there was no one greater) — the angel's oath \"by him that liveth for ever and ever\" (10:6) invokes the highest possible guarantor available, underscoring how certain \"no more delay\" really is."
   ],
   "opens": [
     "Is the \"little scroll\" (a diminutive word in the Greek, biblaridion) the same object as chapter 5's sealed scroll (biblion), now opened — or a different scroll entirely? Genuinely contested among careful readers; the text doesn't fully disambiguate.",
@@ -614,19 +634,19 @@ window.SESSIONS.push(
   ],
   "wordStudies": [
     {
-      "word": "Kingdom",
-      "orig": "Aramaic/Hebrew malku / malkuth; Greek basileia",
-      "meaning": "Reign as much as realm. Ask whether the writer is talking about a territory, a government, or the fact that God is actually in charge."
+      "word": "Chronos",
+      "orig": "Greek: χρόνος",
+      "meaning": "\"Time\" (10:6) — often better rendered \"delay\" here, as many modern translations render it, rather than an absolute end of time itself. The angel is answering \"how long?\" (6:10), not declaring the end of clocks."
     },
     {
-      "word": "Saints",
-      "orig": "Aramaic qaddishin; Greek hagioi",
-      "meaning": "Holy ones. In Daniel it can mean heavenly beings or holy people. In Revelation it usually means the faithful on earth. Check the sentence."
+      "word": "Mysterion",
+      "orig": "Greek: μυστήριον",
+      "meaning": "\"Mystery\" (10:7) — in Paul and Revelation alike, not something unknowable, but something previously hidden now being disclosed on schedule. The \"mystery of God\" finishing here is revelation completing, not a riddle remaining unsolved."
     },
     {
-      "word": "Covenant",
-      "orig": "Hebrew berith; Greek diatheke",
-      "meaning": "A binding arrangement God makes and keeps. When a chapter says covenant, ask who the parties are — not just what the word feels like in English."
+      "word": "Propheteuo",
+      "orig": "Greek: προφητεύω",
+      "meaning": "\"To prophesy\" (10:11) — to speak God's word into a specific situation, not primarily to predict the future. John's fresh commission is to keep speaking to \"peoples, and nations, and tongues, and kings,\" an assignment that outlasts this one vision."
     }
   ],
   "doctrinal": "Keep the method in front of the system: word, context, book, whole story, then views. Your millennial hope is allowed in the room as a reading with verses. It is not the caption under every passage.",
@@ -661,8 +681,8 @@ window.SESSIONS.push(
     "Daniel 7:14 — \"his dominion is an everlasting dominion\" — the direct source for \"he shall reign for ever and ever\" (11:15)."
   ],
   "hist": [
-    "Date and empire matter here. Put the chapter back in its century before you ask it to settle ours.",
-    "First readers did not have our study notes. They had a letter, a synagogue, and a memory of Israel’s story."
+    "Roman-era cities regularly displayed lampstand-like symbols and civic monuments claiming a city's own divine favor and status; calling the two witnesses \"two lampstands\" standing before \"the God of the earth\" (11:4) claims a kind of public, visible legitimacy a first-century audience would have recognized, on God's terms rather than Rome's.",
+    "\"The great city, which spiritually is called Sodom and Egypt, where also our Lord was crucified\" (11:8) names Jerusalem by its geography — the crucifixion site — while never using the word \"Jerusalem\" itself; first-century Jewish and Christian readers alike would have caught the identification immediately."
   ],
   "opens": [
     "Who specifically are the two witnesses? Genuinely, seriously contested across centuries of careful readers — Moses and Elijah (matching the exact miracles), Enoch and Elijah (the only two who never died, relevant since these witnesses die and are resurrected), or a symbolic representation of faithful witness/the church generally, following Zechariah's own original office-holders rather than named individuals. The text itself, like Zechariah's own vision, never definitively names them.",
@@ -683,19 +703,19 @@ window.SESSIONS.push(
   ],
   "wordStudies": [
     {
-      "word": "Kingdom",
-      "orig": "Aramaic/Hebrew malku / malkuth; Greek basileia",
-      "meaning": "Reign as much as realm. Ask whether the writer is talking about a territory, a government, or the fact that God is actually in charge."
+      "word": "Martys",
+      "orig": "Greek: μάρτυς",
+      "meaning": "\"Witness\" (11:3) — the same word that becomes \"martyr\" in English, because in Revelation testifying and dying so often go together. The witnesses' entire ministry is testimony; their deaths (11:7) don't cancel that identity, they complete it."
     },
     {
-      "word": "Saints",
-      "orig": "Aramaic qaddishin; Greek hagioi",
-      "meaning": "Holy ones. In Daniel it can mean heavenly beings or holy people. In Revelation it usually means the faithful on earth. Check the sentence."
+      "word": "Pneuma Zoes",
+      "orig": "Greek: πνεῦμα ζωῆς",
+      "meaning": "\"Breath/spirit of life\" (11:11) — the exact phrase behind Ezekiel 37:5's dry-bones resurrection, reused here almost verbatim for the witnesses' own rising. John quotes Ezekiel's most famous resurrection scene onto two individual bodies."
     },
     {
-      "word": "Covenant",
-      "orig": "Hebrew berith; Greek diatheke",
-      "meaning": "A binding arrangement God makes and keeps. When a chapter says covenant, ask who the parties are — not just what the word feels like in English."
+      "word": "Naos",
+      "orig": "Greek: ναός",
+      "meaning": "The inner sanctuary (11:1-2), not the whole temple complex (hieron). Measuring the naos while leaving the outer court to be \"trodden under foot\" distinguishes a protected inner reality from an exposed outer one."
     }
   ],
   "doctrinal": "Keep the method in front of the system: word, context, book, whole story, then views. Your millennial hope is allowed in the room as a reading with verses. It is not the caption under every passage.",
@@ -711,13 +731,13 @@ window.SESSIONS.push(
   "chapterLabel": "Chapter 12 — The Woman and the Dragon",
   "chNum": "12",
   "points": [
-    "Read Revelation 12 with Daniel open. Ask which image you have already seen: a beast, a horn, a court, a time-limit, a book of names.",
-    "Stay with the scene in Chapter 12 — The Woman and the Dragon long enough to name who is speaking and who is under pressure. John is still writing to churches, not to a hobby.",
-    "Where heaven sings, let the group hear the song before you decode the furniture.",
-    "Where judgment falls, ask what was refused first — worship, repentance, or the Lamb.",
-    "Do not spend the hour mapping this chapter onto a single modern headline. Headlines rot. The text does not.",
-    "If a number appears, put it next to Daniel 7 and 12 before you invent a new math.",
-    "End by asking what this chapter wants a tired congregation to do tomorrow morning."
+    "12:1-2 — \"A great wonder in heaven\": a woman clothed with the sun, moon under her feet, twelve stars crowning her head, crying out in labor. Joseph's own dream (Genesis 37:9-10) used this exact sun/moon/eleven-stars image for Israel's patriarchal family — the twelfth star here is the difference, worth asking your group why.",
+    "12:3-4 — \"Another wonder\": a great red dragon, seven heads, ten horns, seven crowns, sweeping a third of heaven's stars to earth with his tail, positioned in front of the woman specifically to devour her child at birth — explicitly identified only later, in 12:9.",
+    "12:5-6 — The child, \"a man child, who was to rule all nations with a rod of iron\" (quoting Psalm 2:9, the same psalm already applied to the church in 2:26-27), is caught up to God's throne the instant he's born — the whole incarnation-through-ascension arc compressed into one verse. The woman flees to a wilderness place for 1,260 days, the same number as the two witnesses' ministry in 11:3, now describing protection instead of testimony.",
+    "12:7-9 — War in heaven: Michael and his angels against the dragon and his; the dragon loses and is cast to the earth, finally named outright: \"that old serpent, called the Devil, and Satan.\" Compare Daniel 10:13,21 and 12:1, where Michael already stands as Israel's specific angelic defender against opposing princes.",
+    "12:10-12 — A loud voice announces salvation has come because \"the accuser of our brethren is cast down\" — his defeat is framed first as the end of accusation, not primarily the end of danger. 12:11 gives the church its own weapons against him: \"the blood of the Lamb, and... the word of their testimony,\" not loving their lives \"unto the death.\" 12:12 is the chapter's warning label: rejoice, heavens — but \"woe to the inhabiters of the earth,\" because the devil, defeated above, has \"great wrath,\" knowing his time is short.",
+    "12:13-16 — Unable to reach the child, the dragon pursues the woman; she's given \"two wings of a great eagle\" to flee for \"a time, and times, and half a time\" (matching Daniel 7:25 and 12:7's identical phrase for three and a half years) — the earth itself helps her by swallowing a flood the dragon spews after her.",
+    "12:17 — Failing against the woman herself, the dragon turns to make war \"with the remnant of her seed, which keep the commandments of God, and have the testimony of Jesus Christ\" — directly echoing Genesis 3:15's promise that the serpent and the woman's seed would be at war. The chapter that opened with Genesis imagery closes by explicitly restating Genesis's oldest unresolved conflict."
   ],
   "refs": [
     "Genesis 37:9–11 — Joseph's dream, the direct source for the sun, moon, and twelve stars.",
@@ -727,8 +747,8 @@ window.SESSIONS.push(
     "Daniel 10:13, 21; 12:1 — Michael named specifically as Israel's angelic prince and defender, the direct background for his role here."
   ],
   "hist": [
-    "Date and empire matter here. Put the chapter back in its century before you ask it to settle ours.",
-    "First readers did not have our study notes. They had a letter, a synagogue, and a memory of Israel’s story."
+    "\"Signs\" (Greek semeion, the same word behind 12:1,3) in the ancient world regularly meant portents read in the sky — first-century readers were culturally primed to take a vision framed this way as cosmic and significant, not decorative.",
+    "The dragon's tail sweeping \"the third part of the stars of heaven\" (12:4) echoes Daniel 8:10's little horn, which similarly \"cast down some of the host of heaven, and of the stars,\" tying this dragon back to Daniel's own beast-and-horn imagery rather than introducing an unrelated symbol."
   ],
   "opens": [
     "Who exactly is \"the woman\" — Israel specifically, the church, Mary, or the whole people of God across both testaments? Real tension in the chapter itself: the sun/moon/stars imagery points toward Israel (per Joseph's dream), but \"the rest of her seed... which keep the commandments of God, and have the testimony of Jesus Christ\" (12:17) sounds like it's describing the church specifically. Not fully resolved by the chapter alone — genuinely contested among careful readers.",
@@ -748,19 +768,14 @@ window.SESSIONS.push(
   ],
   "wordStudies": [
     {
-      "word": "Kingdom",
-      "orig": "Aramaic/Hebrew malku / malkuth; Greek basileia",
-      "meaning": "Reign as much as realm. Ask whether the writer is talking about a territory, a government, or the fact that God is actually in charge."
+      "word": "Kategór",
+      "orig": "Greek: κατήγωρ",
+      "meaning": "\"Accuser\" (12:10) — a legal term, the same role a prosecutor plays in a courtroom. The dragon's defeat is described first in courtroom language — an accusation dismissed — before any of the chapter's war-and-chase imagery."
     },
     {
-      "word": "Saints",
-      "orig": "Aramaic qaddishin; Greek hagioi",
-      "meaning": "Holy ones. In Daniel it can mean heavenly beings or holy people. In Revelation it usually means the faithful on earth. Check the sentence."
-    },
-    {
-      "word": "Covenant",
-      "orig": "Hebrew berith; Greek diatheke",
-      "meaning": "A binding arrangement God makes and keeps. When a chapter says covenant, ask who the parties are — not just what the word feels like in English."
+      "word": "Ischysan",
+      "orig": "Greek: (from νικάω/ἴσχυω, \"prevailed\")",
+      "meaning": "\"Prevailed not\" (12:8) — the dragon's side simply does not win the war in heaven; Revelation states his defeat flatly, in the middle of the chapter, rather than saving it as a final surprise."
     }
   ],
   "doctrinal": "Who the \"woman\" represents — Mary specifically, Israel, the faithful community across both testaments, or some combination — is a real point where different traditions genuinely diverge. Worth naming the different readings rather than assuming one is obvious.",
@@ -832,14 +847,14 @@ window.SESSIONS.push(
       "meaning": "\"The number of a man\" (13:18) — ancient Greek and Hebrew letters doubled as numbers, so names could be calculated into numeric values (a practice called gematria). Many careful readers connect this specifically to Nero Caesar's name in Hebrew letters, which sums to exactly 666 — though this isn't the only proposed solution, worth knowing before your group asks."
     },
     {
-      "word": "Saints",
-      "orig": "Aramaic qaddishin; Greek hagioi",
-      "meaning": "Holy ones. In Daniel it can mean heavenly beings or holy people. In Revelation it usually means the faithful on earth. Check the sentence."
+      "word": "Charagma",
+      "orig": "Greek: χάραγμα",
+      "meaning": "\"Mark\" (13:16-17) — used elsewhere for an official seal or brand (imperial coins carried a charagma), commonly required in the ancient world for participation in trade guilds' religious observances. Refusing the mark wasn't abstract; it meant real economic exclusion, matching 13:17's blunt \"no man might buy or sell.\""
     },
     {
-      "word": "Covenant",
-      "orig": "Hebrew berith; Greek diatheke",
-      "meaning": "A binding arrangement God makes and keeps. When a chapter says covenant, ask who the parties are — not just what the word feels like in English."
+      "word": "Thauma",
+      "orig": "Greek: θαῦμα",
+      "meaning": "\"Wonder/marvel\" (13:3, \"all the world wondered after the beast\") — the same root behind \"thaumaturgy.\" The beast doesn't just gain power; it inspires the kind of astonished admiration true worship is supposed to receive."
     }
   ],
   "doctrinal": "Whether the beast points to a past historical figure (Nero or another Roman emperor being the leading historical candidates) or a still-future Antichrist is a real, live disagreement — the same identity question that runs through Daniel's \"little horn\" too. Worth telling your group these two questions are linked, not independent of each other.",
@@ -885,8 +900,8 @@ window.SESSIONS.push(
     "Micah 4:12–13, Habakkuk 3:12 — additional Old Testament instances of the same trampling/harvest judgment motif."
   ],
   "hist": [
-    "Date and empire matter here. Put the chapter back in its century before you ask it to settle ours.",
-    "First readers did not have our study notes. They had a letter, a synagogue, and a memory of Israel’s story."
+    "\"The winepress trodden without the city\" (14:20) reflects an actual first-century practice: grapes were pressed by treading them underfoot in a stone or rock-cut vat, juice running out through a channel — a genuinely bloody-looking process even under ordinary harvest conditions, which is exactly what John intensifies into literal blood \"even unto the horse bridles.\"",
+    "The distance given, \"a thousand and six hundred furlongs\" (14:20, roughly 184 miles / 296 km), is close to the length of the land of Israel end to end — many take this as deliberately marking the judgment's reach as covering the whole land, not a randomly chosen figure."
   ],
   "opens": [
     "\"Babylon\" being introduced by name here, well before its full explanation in chapters 17–18, continues to build the case — now flagged a third time — that Revelation deliberately introduces figures briefly before fully unveiling them later. Worth watching closely as we approach those chapters.",
@@ -906,19 +921,19 @@ window.SESSIONS.push(
   ],
   "wordStudies": [
     {
-      "word": "Kingdom",
-      "orig": "Aramaic/Hebrew malku / malkuth; Greek basileia",
-      "meaning": "Reign as much as realm. Ask whether the writer is talking about a territory, a government, or the fact that God is actually in charge."
+      "word": "Aparche",
+      "orig": "Greek: ἀπαρχή",
+      "meaning": "\"Firstfruits\" (14:4) — an offering that represents and consecrates a larger harvest still to come, not the entirety of it. Calling the 144,000 \"firstfruits\" implies they represent something larger, not that redemption stops with them."
     },
     {
-      "word": "Saints",
-      "orig": "Aramaic qaddishin; Greek hagioi",
-      "meaning": "Holy ones. In Daniel it can mean heavenly beings or holy people. In Revelation it usually means the faithful on earth. Check the sentence."
+      "word": "Parthenos",
+      "orig": "Greek: παρθένος",
+      "meaning": "\"Virgins\" (14:4) — \"not defiled with women, for they are virgins\" is difficult, debated language; many read it as covenant purity and faithfulness (echoing the Old Testament's use of \"harlotry\" for idolatry) rather than literal celibacy, given how consistently Revelation uses sexual-fidelity imagery for spiritual loyalty (Babylon the harlot in chapter 17)."
     },
     {
-      "word": "Covenant",
-      "orig": "Hebrew berith; Greek diatheke",
-      "meaning": "A binding arrangement God makes and keeps. When a chapter says covenant, ask who the parties are — not just what the word feels like in English."
+      "word": "Thumos",
+      "orig": "Greek: θυμός",
+      "meaning": "\"Wrath/passion\" (14:8,10,19) — used of both Babylon's own intoxicating wrath (\"wine of the wrath of her fornication\") and God's answering wrath, the same word for both: what Babylon serves out, she is finally served back."
     }
   ],
   "doctrinal": "Keep the method in front of the system: word, context, book, whole story, then views. Your millennial hope is allowed in the room as a reading with verses. It is not the caption under every passage.",
@@ -969,19 +984,19 @@ window.SESSIONS.push(
   ],
   "wordStudies": [
     {
-      "word": "Kingdom",
-      "orig": "Aramaic/Hebrew malku / malkuth; Greek basileia",
-      "meaning": "Reign as much as realm. Ask whether the writer is talking about a territory, a government, or the fact that God is actually in charge."
+      "word": "Ode Kaine",
+      "orig": "Greek: ᾠδὴ καινή",
+      "meaning": "\"New song\" (behind 15:3, echoing 5:9 and 14:3) — in the Psalms, a \"new song\" (Psalm 96:1; 98:1) celebrates a fresh act of God's deliverance. Calling this the \"song of Moses and of the Lamb\" fuses the Exodus's oldest song of deliverance with its final one."
     },
     {
-      "word": "Saints",
-      "orig": "Aramaic qaddishin; Greek hagioi",
-      "meaning": "Holy ones. In Daniel it can mean heavenly beings or holy people. In Revelation it usually means the faithful on earth. Check the sentence."
+      "word": "Thumos",
+      "orig": "Greek: θυμός",
+      "meaning": "\"Wrath/fury\" (15:1,7) — the seven bowls are called the \"last\" plagues because in them \"is filled up the wrath of God\"; the word pictures wrath as having a measured capacity, finally reaching its limit, not an endless outpouring."
     },
     {
-      "word": "Covenant",
-      "orig": "Hebrew berith; Greek diatheke",
-      "meaning": "A binding arrangement God makes and keeps. When a chapter says covenant, ask who the parties are — not just what the word feels like in English."
+      "word": "Hosios",
+      "orig": "Greek: ὅσιος",
+      "meaning": "\"Holy/righteous\" (15:4, \"thou only art holy\") — distinct from hagios (set apart); hosios leans toward being rightly, dutifully devout. The song's claim is that only God's own actions have ever actually matched what devotion should look like."
     }
   ],
   "doctrinal": "Keep the method in front of the system: word, context, book, whole story, then views. Your millennial hope is allowed in the room as a reading with verses. It is not the caption under every passage.",
@@ -1040,14 +1055,14 @@ window.SESSIONS.push(
       "meaning": "Literally \"Mount Megiddo\" — Megiddo was a real, strategic valley in northern Israel where numerous ancient battles were fought (Judges 5, 2 Kings 23). Worth noting to your group: the location is real and historically loaded with battle memory, even though the final battle described here is clearly cosmic in scale, not merely regional."
     },
     {
-      "word": "Saints",
-      "orig": "Aramaic qaddishin; Greek hagioi",
-      "meaning": "Holy ones. In Daniel it can mean heavenly beings or holy people. In Revelation it usually means the faithful on earth. Check the sentence."
+      "word": "Ekcheo",
+      "orig": "Greek: ἐκχέω",
+      "meaning": "\"To pour out\" (16:1ff, repeated for each bowl) — the same verb used at Pentecost for the Spirit \"poured out\" (Acts 2:17-18). The same pouring-out language covers both the Spirit given and wrath completed — worth sitting with that tension rather than resolving it too quickly."
     },
     {
-      "word": "Covenant",
-      "orig": "Hebrew berith; Greek diatheke",
-      "meaning": "A binding arrangement God makes and keeps. When a chapter says covenant, ask who the parties are — not just what the word feels like in English."
+      "word": "Batrachos",
+      "orig": "Greek: βάτραχος",
+      "meaning": "\"Frog\" (16:13) — an unclean animal in Jewish thought (Leviticus 11), here pictured as an unclean spirit performing signs. A deliberately repulsive image for deceptive, persuasive power gathering the world's kings to their own destruction."
     }
   ],
   "doctrinal": "Keep the method in front of the system: word, context, book, whole story, then views. Your millennial hope is allowed in the room as a reading with verses. It is not the caption under every passage.",
@@ -1100,19 +1115,19 @@ window.SESSIONS.push(
   ],
   "wordStudies": [
     {
-      "word": "Kingdom",
-      "orig": "Aramaic/Hebrew malku / malkuth; Greek basileia",
-      "meaning": "Reign as much as realm. Ask whether the writer is talking about a territory, a government, or the fact that God is actually in charge."
+      "word": "Porne",
+      "orig": "Greek: πόρνη",
+      "meaning": "\"Harlot\" (17:1,5,15-16) — the Old Testament's standard metaphor (Isaiah, Ezekiel, Hosea) for covenant unfaithfulness through idolatry, now applied to Babylon's seduction of \"the kings of the earth.\" A specific, loaded prophetic charge, not a throwaway insult."
     },
     {
-      "word": "Saints",
-      "orig": "Aramaic qaddishin; Greek hagioi",
-      "meaning": "Holy ones. In Daniel it can mean heavenly beings or holy people. In Revelation it usually means the faithful on earth. Check the sentence."
+      "word": "Mysterion",
+      "orig": "Greek: μυστήριον",
+      "meaning": "\"Mystery\" (17:5,7) — \"MYSTERY, BABYLON THE GREAT\" written on her forehead signals that her name needs decoding, and the angel does exactly that in 17:7-18, identifying the beast and the ten horns explicitly rather than leaving it a riddle."
     },
     {
-      "word": "Covenant",
-      "orig": "Hebrew berith; Greek diatheke",
-      "meaning": "A binding arrangement God makes and keeps. When a chapter says covenant, ask who the parties are — not just what the word feels like in English."
+      "word": "Eremos",
+      "orig": "Greek: ἔρημος",
+      "meaning": "\"Desolate\" (17:16) — the same word used for \"wilderness\" elsewhere in Revelation (12:6,14). The very kings who exploited Babylon turn and make her desolate — betrayal from within her own alliance, not only judgment from outside it."
     }
   ],
   "doctrinal": "Whether \"Babylon\" refers exclusively to first-century Rome (a preterist reading), to a future revived empire, or to worldly power across all of history is a real, ongoing disagreement among careful readers — connects directly to the same interpretive questions raised back in Daniel.",
@@ -1145,8 +1160,8 @@ window.SESSIONS.push(
     "Ezekiel 27:12–22 — Tyre's own trade-goods inventory, directly overlapping with fifteen of the twenty-nine items in Revelation's cargo list."
   ],
   "hist": [
-    "Date and empire matter here. Put the chapter back in its century before you ask it to settle ours.",
-    "First readers did not have our study notes. They had a letter, a synagogue, and a memory of Israel’s story."
+    "Ezekiel 26-28's lament over Tyre — a wealthy Mediterranean trading power judged for pride and commercial excess — is the direct literary template for Revelation 18's three mourning groups (kings, merchants, sailors); a reader who knew Ezekiel would have recognized the structure before reaching the specific cargo list.",
+    "The twenty-nine-item cargo list (18:12-13) reads like an actual first-century luxury-trade manifest — gold, silver, precious stones, fine linen, purple, silk, scarlet, citron wood, ivory, spices — ending, deliberately last, with \"slaves, and souls of men.\" The list's own ordering runs from precious materials down to human beings priced as one more commodity, very likely the point."
   ],
   "opens": [
     "Given chapter 17's Babylon was primarily religious (the harlot) and chapter 18's is primarily commercial (the trading empire), are these two different aspects of the same \"Babylon,\" or two genuinely separate referents being judged separately? A real question some careful readers raise; not resolved by the text alone.",
@@ -1166,19 +1181,19 @@ window.SESSIONS.push(
   ],
   "wordStudies": [
     {
-      "word": "Kingdom",
-      "orig": "Aramaic/Hebrew malku / malkuth; Greek basileia",
-      "meaning": "Reign as much as realm. Ask whether the writer is talking about a territory, a government, or the fact that God is actually in charge."
+      "word": "Somata",
+      "orig": "Greek: σώματα",
+      "meaning": "\"Bodies\" (18:13), the word Revelation's cargo list uses right before clarifying \"and souls of men\" — ancient trade vocabulary for slaves, listed last among luxury goods. The word choice itself indicts a trade system that priced people as cargo."
     },
     {
-      "word": "Saints",
-      "orig": "Aramaic qaddishin; Greek hagioi",
-      "meaning": "Holy ones. In Daniel it can mean heavenly beings or holy people. In Revelation it usually means the faithful on earth. Check the sentence."
+      "word": "Pharmakeia",
+      "orig": "Greek: φαρμακεία",
+      "meaning": "\"Sorceries\" (18:23), the root behind English \"pharmacy\" — used elsewhere in the New Testament for occult practice, but also plausibly evoking the deception and manipulation by which Babylon's trade and influence intoxicated the nations."
     },
     {
-      "word": "Covenant",
-      "orig": "Hebrew berith; Greek diatheke",
-      "meaning": "A binding arrangement God makes and keeps. When a chapter says covenant, ask who the parties are — not just what the word feels like in English."
+      "word": "Basilissa",
+      "orig": "Greek: βασίλισσα",
+      "meaning": "\"Queen\" (18:7) — Babylon's own self-description, \"I sit a queen... and shall see no sorrow,\" directly echoing Isaiah 47:7-8's taunt against historical Babylon's identical arrogant claim, now reused word for word against a later Babylon."
     }
   ],
   "doctrinal": "Keep the method in front of the system: word, context, book, whole story, then views. Your millennial hope is allowed in the room as a reading with verses. It is not the caption under every passage.",
@@ -1208,8 +1223,8 @@ window.SESSIONS.push(
     "Psalm 2 — the nations and an installed king."
   ],
   "hist": [
-    "Date and empire matter here. Put the chapter back in its century before you ask it to settle ours.",
-    "First readers did not have our study notes. They had a letter, a synagogue, and a memory of Israel’s story."
+    "First-century Jewish weddings unfolded in stages — betrothal, a period of preparation, then the groom's arrival, often unannounced in exact timing, to bring the bride to the feast itself; \"the marriage of the Lamb is come, and his wife hath made herself ready\" (19:7) draws on this whole multi-stage custom, not a single ceremony.",
+    "\"KING OF KINGS, AND LORD OF LORDS\" written on the rider's thigh (19:16) matches how Greco-Roman equestrian statuary and ceremonial dress sometimes displayed a ruler's titles at the thigh or sword area — a detail readers steeped in imperial iconography would likely have caught as a deliberate counter-claim against Caesar's own titles."
   ],
   "opens": [
     "If this rider is the same Jesus as John 13’s towel, what does that do to a soft Jesus and a hard Jesus split?",
@@ -1229,19 +1244,19 @@ window.SESSIONS.push(
   ],
   "wordStudies": [
     {
-      "word": "Kingdom",
-      "orig": "Aramaic/Hebrew malku / malkuth; Greek basileia",
-      "meaning": "Reign as much as realm. Ask whether the writer is talking about a territory, a government, or the fact that God is actually in charge."
+      "word": "Halleluia",
+      "orig": "Greek: Ἁλληλουϊά (from Hebrew hallelu-Yah)",
+      "meaning": "\"Praise the LORD\" (19:1,3,4,6) — the only four occurrences of this word in the entire New Testament, all clustered here, transliterated straight from Hebrew rather than translated into Greek."
     },
     {
-      "word": "Saints",
-      "orig": "Aramaic qaddishin; Greek hagioi",
-      "meaning": "Holy ones. In Daniel it can mean heavenly beings or holy people. In Revelation it usually means the faithful on earth. Check the sentence."
+      "word": "Deipnon",
+      "orig": "Greek: δεῖπνον",
+      "meaning": "\"Supper/feast\" (19:9,17) — the same word appears twice in this chapter for two opposite meals: the marriage supper of the Lamb, and the birds' grim supper on the defeated (19:17-18). The chapter deliberately sets one banquet against the other."
     },
     {
-      "word": "Covenant",
-      "orig": "Hebrew berith; Greek diatheke",
-      "meaning": "A binding arrangement God makes and keeps. When a chapter says covenant, ask who the parties are — not just what the word feels like in English."
+      "word": "Logos",
+      "orig": "Greek: λόγος",
+      "meaning": "\"Word\" (19:13) — \"his name is called The Word of God,\" the same title John's Gospel opens with (John 1:1). Revelation's rider on the white horse is explicitly the same person as John's incarnate Word, now returning rather than arriving."
     }
   ],
   "doctrinal": "Keep the method in front of the system: word, context, book, whole story, then views. Your millennial hope is allowed in the room as a reading with verses. It is not the caption under every passage.",
@@ -1302,19 +1317,19 @@ window.SESSIONS.push(
   ],
   "wordStudies": [
     {
-      "word": "Kingdom",
-      "orig": "Aramaic/Hebrew malku / malkuth; Greek basileia",
-      "meaning": "Reign as much as realm. Ask whether the writer is talking about a territory, a government, or the fact that God is actually in charge."
+      "word": "Chilia Ete",
+      "orig": "Greek: χίλια ἔτη",
+      "meaning": "\"A thousand years\" (20:2-7, repeated six times in six verses) — the sheer repetition is itself notable, whatever one concludes about whether the number is meant literally or as a complete, divinely-set symbolic period."
     },
     {
-      "word": "Saints",
-      "orig": "Aramaic qaddishin; Greek hagioi",
-      "meaning": "Holy ones. In Daniel it can mean heavenly beings or holy people. In Revelation it usually means the faithful on earth. Check the sentence."
+      "word": "Lyo",
+      "orig": "Greek: λύω",
+      "meaning": "\"To loose/release\" (20:3,7) — Satan is \"bound\" (deo) then deliberately \"loosed\" (lyo) after the thousand years, not simply destroyed outright at the start. The chapter insists on a real, if temporary, release before the final judgment, not a tidy, early ending."
     },
     {
-      "word": "Covenant",
-      "orig": "Hebrew berith; Greek diatheke",
-      "meaning": "A binding arrangement God makes and keeps. When a chapter says covenant, ask who the parties are — not just what the word feels like in English."
+      "word": "Biblia / Biblos Zoes",
+      "orig": "Greek: βιβλία / βίβλος ζωῆς",
+      "meaning": "\"Books\" and \"book of life\" (20:12) — named separately: \"books\" recording deeds, a distinct \"book of life\" recording names. Judgment here draws on two different kinds of record, not one undifferentiated ledger."
     }
   ],
   "doctrinal": "You believe a millennial kingdom and you have verses for it. Say that. Then keep Ezekiel's eight-mile court and the animals in the conversation so your view has to work for a living.",
@@ -1362,8 +1377,8 @@ window.SESSIONS.push(
     "Daniel 12:1–3 — names in the book, bodies raised."
   ],
   "hist": [
-    "Date and empire matter here. Put the chapter back in its century before you ask it to settle ours.",
-    "First readers did not have our study notes. They had a letter, a synagogue, and a memory of Israel’s story."
+    "The New Jerusalem's cubic dimensions (21:16 — 12,000 furlongs in length, breadth, and height alike) deliberately match the Holy of Holies' own cube shape in Solomon's temple (1 Kings 6:20) — the whole city is now shaped like the one room a high priest could enter once a year.",
+    "The gemstones in the city's foundations (21:19-20) substantially overlap with the twelve stones on the high priest's breastplate (Exodus 28:17-20) — Israel's twelve tribes, once carried on a priest's chest into worship, are now built permanently into the city's own foundation."
   ],
   "opens": [
     "How do you hold Ezekiel’s measured house and John’s ‘no temple’ without throwing one of them away?",
@@ -1383,19 +1398,19 @@ window.SESSIONS.push(
   ],
   "wordStudies": [
     {
-      "word": "Kingdom",
-      "orig": "Aramaic/Hebrew malku / malkuth; Greek basileia",
-      "meaning": "Reign as much as realm. Ask whether the writer is talking about a territory, a government, or the fact that God is actually in charge."
-    },
-    {
-      "word": "Saints",
-      "orig": "Aramaic qaddishin; Greek hagioi",
-      "meaning": "Holy ones. In Daniel it can mean heavenly beings or holy people. In Revelation it usually means the faithful on earth. Check the sentence."
-    },
-    {
       "word": "Covenant",
       "orig": "Hebrew berith; Greek diatheke",
       "meaning": "A binding arrangement God makes and keeps. When a chapter says covenant, ask who the parties are — not just what the word feels like in English."
+    },
+    {
+      "word": "Skene",
+      "orig": "Greek: σκηνή",
+      "meaning": "\"Tabernacle/dwelling\" (21:3) — \"the tabernacle of God is with men\" uses the same root behind John 1:14's \"the Word... dwelt [eskenosen, 'tabernacled'] among us.\" The wilderness tent and the incarnation both anticipate this final, permanent dwelling."
+    },
+    {
+      "word": "Kainos",
+      "orig": "Greek: καινός",
+      "meaning": "\"New\" (21:1,2,5) — kainos means new in kind or quality, not merely new in time (neos). \"A new heaven and a new earth\" is not simply a fresh copy of the old one; it is a different order of thing entirely."
     }
   ],
   "doctrinal": "Keep the method in front of the system: word, context, book, whole story, then views. Your millennial hope is allowed in the room as a reading with verses. It is not the caption under every passage.",
@@ -1438,8 +1453,8 @@ window.SESSIONS.push(
     "Deuteronomy 4:2; 12:32 — the direct source for the add-nothing/take-nothing-away warning."
   ],
   "hist": [
-    "Date and empire matter here. Put the chapter back in its century before you ask it to settle ours.",
-    "First readers did not have our study notes. They had a letter, a synagogue, and a memory of Israel’s story."
+    "The tree of life bearing \"twelve manner of fruits,\" yielding fruit \"every month\" (22:2), pictures a garden operating outside normal agricultural seasons — ancient readers, intimately familiar with harvest cycles and their real scarcity, would have recognized this as abundance genuinely outside nature's ordinary limits.",
+    "Deuteronomy's own add-nothing/take-nothing-away warning (4:2; 12:32) was originally about the Torah as a whole; Revelation 22:18-19 applies nearly identical language specifically to \"this book\" — almost certainly meaning Revelation itself in its immediate context, though it has often been extended, not without controversy, to the whole Bible's closed canon."
   ],
   "opens": [
     "21:24–26 describes \"the nations of them which are saved\" and kings of the earth bringing their glory into the city — does this describe a still-ongoing process among mortal nations (fitting a millennial reading between chapters 20 and the final eternal state), or is it describing the eternal state itself in poetic terms? Tied directly to the same recapitulation-versus-sequence question raised repeatedly throughout this reading; not resolved by chapter 22 alone.",
@@ -1464,14 +1479,14 @@ window.SESSIONS.push(
       "meaning": "\"Our Lord, come\" — an Aramaic phrase so early and so central to the first Christians that it was preserved untranslated even in Greek-speaking churches (see also 1 Corinthians 16:22). Worth telling your group this prayer is genuinely ancient, likely older than most of the New Testament documents themselves."
     },
     {
-      "word": "Saints",
-      "orig": "Aramaic qaddishin; Greek hagioi",
-      "meaning": "Holy ones. In Daniel it can mean heavenly beings or holy people. In Revelation it usually means the faithful on earth. Check the sentence."
+      "word": "Xylon Zoes",
+      "orig": "Greek: ξύλον ζωῆς",
+      "meaning": "\"Tree of life\" (22:2,14,19) — the same phrase from Genesis 2:9 and 3:22-24, where cherubim once barred access to it. The book that opened in Eden with that access closed ends with it permanently reopened."
     },
     {
-      "word": "Covenant",
-      "orig": "Hebrew berith; Greek diatheke",
-      "meaning": "A binding arrangement God makes and keeps. When a chapter says covenant, ask who the parties are — not just what the word feels like in English."
+      "word": "Doulos",
+      "orig": "Greek: δοῦλος",
+      "meaning": "\"Servant/slave\" (22:3,6) — \"his servants shall serve him\" repeats the same word-root twice, the book's own last word on eternity: not idle bliss, but glad, unhindered service to the one being served."
     }
   ],
   "doctrinal": "Keep the method in front of the system: word, context, book, whole story, then views. Your millennial hope is allowed in the room as a reading with verses. It is not the caption under every passage.",
