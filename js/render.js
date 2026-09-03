@@ -41,12 +41,14 @@ function bibleLink(book, chNum, verse){
 
 function linkifyReferences(text, localBooks){
   // Matches things like "Jeremiah 51:13" or "Isaiah 6:1-3" or "1 Kings 17:1"
+  // Every match becomes a clickable trigger for the floating scripture popup box
+  // (see js/versebox.js) — local books (Daniel/Revelation/John) resolve instantly
+  // from the embedded data, everything else does a cached live lookup.
   const pattern = /\b(\d\s?[A-Z][a-z]+|[A-Z][a-z]+)\s(\d{1,3}):(\d{1,3})(?:-(\d{1,3}))?\b/g;
   return text.replace(pattern, function(match, book, ch, v1, v2){
-    if (localBooks && localBooks.includes(book)) return match; // leave in-app books alone for now
-    const verseStr = v2 ? `${v1}-${v2}` : v1;
-    const url = bibleLink(book, ch, verseStr);
-    return `<a href="${url}" target="_blank" class="verse-ref-link">${match}</a>`;
+    const isLocal = localBooks && localBooks.includes(book);
+    const cls = isLocal ? 'verse-ref-link verse-ref-local' : 'verse-ref-link verse-ref-external';
+    return `<a href="#" class="${cls}" data-book="${book}" data-ch="${ch}" data-v1="${v1}" data-v2="${v2 || ''}" onclick="return false;">${match}</a>`;
   });
 }
 
@@ -263,6 +265,10 @@ function teacherHTML(s){
       <div class="eyebrow">Lesson ${current+1} of ${SESSIONS.length} &middot; ${s.book} Group Study</div>
       <h1>${s.chapterLabel}</h1>
       <div class="meta">Target: 30–45 minutes</div>
+    </div>
+    <div class="preload-bar">
+      <span class="preload-status" id="preload-status">Scriptures: checking&hellip;</span>
+      <button type="button" class="preload-btn" id="preload-btn">⬇ Preload Scriptures for Today</button>
     </div>
     <div class="block">
       <div class="block-label"><span>Your Script for This Lesson</span></div>

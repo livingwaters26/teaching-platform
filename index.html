@@ -189,6 +189,25 @@
   .rev-arrow{ color:#b45309; font-weight:800; }
   @media (max-width:700px){ .beast-row{ grid-template-columns:1fr 1fr; } .weeks-bar{ flex-wrap:wrap; } }
   @media print{ .toolbar,.nav-row,.pane-display,.pane-label{ display:none !important; } .split{ display:block; } .pane-teacher{ background:#fff; max-width:100%; } body{ background:#fff; } }
+  /* Floating scripture-reference popup box — present on both teacher and student views */
+  .verse-popup-box{ position:fixed; right:16px; bottom:16px; width:340px; max-width:calc(100vw - 32px); max-height:60vh; background:#fffdf8; border:2px solid #b45309; border-radius:12px; box-shadow:0 8px 28px rgba(0,0,0,0.22); z-index:500; font-family:-apple-system,sans-serif; display:flex; flex-direction:column; }
+  .verse-popup-header{ display:flex; align-items:center; gap:8px; background:#1a1408; color:#f4f0e6; padding:10px 12px; border-radius:10px 10px 0 0; cursor:pointer; }
+  .verse-popup-ref{ font-weight:800; font-size:0.85rem; flex:1; }
+  .verse-popup-actions{ display:flex; align-items:center; gap:10px; }
+  .verse-popup-extlink{ color:#fcd34d; font-size:0.7rem; text-decoration:none; font-weight:700; white-space:nowrap; }
+  .verse-popup-min{ background:none; border:1px solid rgba(255,255,255,0.4); color:#fff; width:26px; height:26px; border-radius:6px; cursor:pointer; font-size:1rem; line-height:1; }
+  .verse-popup-body{ padding:14px 16px; overflow-y:auto; font-size:0.95rem; line-height:1.65; font-family:Georgia,serif; }
+  .verse-popup-box.collapsed .verse-popup-body{ display:none; }
+  .verse-popup-box.collapsed{ width:auto; }
+  .verse-popup-vn{ font-size:0.68rem; vertical-align:super; color:#b45309; font-weight:700; }
+  .verse-popup-loading{ color:#6b5c3c; font-style:italic; }
+  .verse-popup-error{ color:#b91c1c; }
+  .verse-popup-note{ margin-top:8px; font-size:0.72rem; color:#6b5c3c; font-style:italic; font-family:-apple-system,sans-serif; }
+  .preload-bar{ display:flex; align-items:center; gap:10px; background:#eff6ff; border:2px solid #bfdbfe; border-radius:10px; padding:10px 14px; margin-bottom:16px; font-family:-apple-system,sans-serif; flex-wrap:wrap; }
+  .preload-status{ font-size:0.8rem; color:#1e3a5f; font-weight:700; flex:1; }
+  .preload-btn{ background:#0369a1; color:#fff; border:none; padding:8px 14px; border-radius:8px; font-weight:700; font-size:0.8rem; cursor:pointer; }
+  .preload-btn:disabled{ opacity:0.6; cursor:default; }
+  @media print{ .verse-popup-box, .preload-bar{ display:none !important; } }
 </style>
 </head>
 <body>
@@ -296,6 +315,7 @@
 <script src="data/sessions.js"></script>
 <script src="js/atlas.js"></script>
 <script src="js/render.js"></script>
+<script src="js/versebox.js"></script>
 <script src="js/reader.js"></script>
 <script src="js/search.js"></script>
 <script src="js/notes.js"></script>

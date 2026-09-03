@@ -41,6 +41,7 @@ function render(){
   wireNotesSection();
   wireQASection();
   if (typeof renderSittingsDesk === 'function') renderSittingsDesk();
+  if (typeof wirePreloadBar === 'function') wirePreloadBar(s);
 }
 
 document.getElementById('prev-btn').onclick = () => { if(current>0){current--; render(); window.scrollTo(0,0);} };
