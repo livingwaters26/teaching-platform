@@ -25,15 +25,17 @@ document.getElementById('translation-select').addEventListener('change', functio
   render();
 });
 
+let currentSegment = null; // set by cohorts.js when resuming a class mid-chapter; null = whole chapter
+
 function render(){
   const s = SESSIONS[current];
   updateTranslationSelect();
-  document.getElementById('pane-display').innerHTML = displayHTML(s);
-  document.getElementById('pane-teacher').innerHTML = teacherHTML(s);
+  document.getElementById('pane-display').innerHTML = displayHTML(s, currentSegment);
+  document.getElementById('pane-teacher').innerHTML = teacherHTML(s, currentSegment);
   document.getElementById('prev-btn').disabled = current === 0;
   document.getElementById('next-btn').disabled = current === SESSIONS.length - 1;
   if (popoutWin && !popoutWin.closed) {
-    popoutWin.postMessage({ type: 'GROUP_STUDY_UPDATE', html: displayHTML(s), title: `Study Guide — ${s.book} ${s.chNum}` }, '*');
+    popoutWin.postMessage({ type: 'GROUP_STUDY_UPDATE', html: displayHTML(s, currentSegment), title: `Study Guide — ${s.book} ${s.chNum}` }, '*');
   }
   updateSyncStatus();
   renderNavList();
@@ -41,11 +43,12 @@ function render(){
   wireNotesSection();
   wireQASection();
   if (typeof renderSittingsDesk === 'function') renderSittingsDesk();
+  if (typeof wireCohortsDesk === 'function') wireCohortsDesk();
   if (typeof wirePreloadBar === 'function') wirePreloadBar(s);
 }
 
-document.getElementById('prev-btn').onclick = () => { if(current>0){current--; render(); window.scrollTo(0,0);} };
-document.getElementById('next-btn').onclick = () => { if(current<SESSIONS.length-1){current++; render(); window.scrollTo(0,0);} };
+document.getElementById('prev-btn').onclick = () => { if(current>0){current--; currentSegment=null; render(); window.scrollTo(0,0);} };
+document.getElementById('next-btn').onclick = () => { if(current<SESSIONS.length-1){current++; currentSegment=null; render(); window.scrollTo(0,0);} };
 
 function renderNavList(){
   const list = document.getElementById('nav-lesson-list');
@@ -62,6 +65,7 @@ function renderNavList(){
   list.querySelectorAll('.nav-lesson-item').forEach(btn => {
     btn.addEventListener('click', () => {
       current = parseInt(btn.dataset.idx);
+      currentSegment = null;
       render();
       closeDrawer();
       window.scrollTo(0,0);
@@ -86,6 +90,16 @@ if (btnSittingsClose) btnSittingsClose.onclick = closeSittings;
 const sittingsModal = document.getElementById('sittings-modal');
 if (sittingsModal) sittingsModal.addEventListener('click', function(e){ if (e.target === sittingsModal) closeSittings(); });
 if (typeof wireSittingsDesk === 'function') wireSittingsDesk();
+
+function openCohorts(){ document.getElementById('cohorts-modal').classList.add('open'); closeDrawer(); if (typeof renderCohortsList === 'function') renderCohortsList(); }
+function closeCohorts(){ document.getElementById('cohorts-modal').classList.remove('open'); }
+const btnCohorts = document.getElementById('btn-open-cohorts');
+if (btnCohorts) btnCohorts.onclick = openCohorts;
+const btnCohortsClose = document.getElementById('btn-cohorts-close');
+if (btnCohortsClose) btnCohortsClose.onclick = closeCohorts;
+const cohortsModal = document.getElementById('cohorts-modal');
+if (cohortsModal) cohortsModal.addEventListener('click', function(e){ if (e.target === cohortsModal) closeCohorts(); });
+if (typeof wireCohortsDesk === 'function') wireCohortsDesk();
 
 (function buildBookScopeOptions(){
   const scopeSel = document.getElementById('planner-scope');
@@ -163,84 +177,94 @@ document.getElementById('btn-generate-plan').onclick = function(){
   const freq = parseInt(document.getElementById('planner-freq').value) || 1;
   const mins = parseInt(document.getElementById('planner-mins').value) || 40;
   const startVal = document.getElementById('planner-start').value;
-  const startDate = startVal ? new Date(startVal + 'T00:00:00') : null;
-  const scoped = getScopedSessions();
+  const rawScope = document.getElementById('planner-scope').value;
+  const scopeLabel = document.getElementById('planner-scope').selectedOptions[0].textContent;
+  // Custom ranges get baked into an explicit "custom:lo-hi" scope value so a saved class
+  // can be recomputed later even if the planner's own range selects show something else.
+  const scopeValue = (rawScope === 'custom')
+    ? `custom:${Math.min(parseInt(rangeStartSel.value),parseInt(rangeEndSel.value))}-${Math.max(parseInt(rangeStartSel.value),parseInt(rangeEndSel.value))}`
+    : rawScope;
 
+  const scoped = getScopedSessions();
   if (scoped.length === 0) {
     document.getElementById('planner-result').innerHTML = `<p style="color:#b91c1c;"><strong>No lessons in that range.</strong> Check your start/end lesson selection.</p>`;
     return;
   }
-
-  // Estimate real content weight per lesson, not just a flat minutes assumption
-  scoped.forEach(x => { x.estMin = estimateSessionMinutes(x.s); });
 
   let warning = '';
   if (mins < 25) {
     warning += `<p style="color:#b91c1c;"><strong>Heads up:</strong> these lessons are built for a 30–45 minute discussion. At ${mins} minutes you may need to cut discussion short most meetings.</p>`;
   }
 
-  // Only pair lessons per meeting if there's real spare time AND the combined content actually fits
-  let lessonsPerMeeting = 1;
-  if (mins >= 70) {
-    const avgEst = scoped.reduce((sum,x)=>sum+x.estMin,0) / scoped.length;
-    if (avgEst * 2 <= mins * 1.1) {
-      lessonsPerMeeting = 2;
-      warning += `<p>Since you have ${mins} minutes and these lessons run light, this plan pairs two per meeting.</p>`;
-    }
+  // buildMeetingUnits (js/cohorts.js) turns the scoped lesson list into one entry per
+  // meeting — pairing light lessons, or splitting an overlong chapter into parts, each
+  // with its exact stopping point computed in advance, not discovered live.
+  const units = (typeof buildMeetingUnits === 'function') ? buildMeetingUnits(scoped, mins) : scoped.map(x => ({ kind:'whole', label:`Lesson ${x.i+1}: ${x.s.chapterLabel}`, estMin: x.estMin }));
+  const splitCount = units.filter(u => u.kind === 'segment').length;
+  if (splitCount) {
+    warning += `<p>${splitCount} chapter${splitCount===1?'':'s'} won't fit in ${mins} minutes in one sitting, so this plan splits ${splitCount===1?'it':'them'} into parts — each with its own stopping point, shown below.</p>`;
+  }
+  const pairedCount = units.filter(u => u.kind === 'paired').length;
+  if (pairedCount) {
+    warning += `<p>Since you have ${mins} minutes and some lessons run light, this plan pairs two per meeting where it fits.</p>`;
   }
 
-  const totalMeetings = Math.ceil(scoped.length / lessonsPerMeeting);
+  const totalMeetings = units.length;
   const totalWeeks = Math.ceil(totalMeetings / freq);
-
-  // Flag any individual lesson (or combined chunk) whose real content estimate exceeds the chosen window
-  const overflowLessons = [];
+  const startDate = startVal ? new Date(startVal + 'T00:00:00') : null;
 
   let rows = '';
   let meetingNum = 0;
   let idx = 0;
   for (let week = 1; week <= totalWeeks; week++) {
-    for (let m = 0; m < freq && idx < scoped.length; m++) {
+    for (let m = 0; m < freq && idx < units.length; m++) {
       meetingNum++;
-      const chunk = scoped.slice(idx, idx + lessonsPerMeeting);
-      const chunkEst = chunk.reduce((sum,x)=>sum+x.estMin,0);
-      const label = chunk.map(x => `Lesson ${x.i+1}: ${x.s.chapterLabel}`).join(' + ');
+      const unit = units[idx];
       let dateStr = '';
       if (startDate) {
         const d = new Date(startDate);
         d.setDate(d.getDate() + (meetingNum - 1) * Math.round(7/freq));
         dateStr = d.toLocaleDateString('en-US', { month:'short', day:'numeric', year:'numeric' });
       }
-      const over = chunkEst > mins * 1.15;
-      if (over) {
-        const splitInto = Math.ceil(chunkEst / mins);
-        overflowLessons.push({ label, chunkEst, splitInto });
-      }
+      const over = unit.estMin > mins * 1.3;
       const rowClass = over ? ' style="background:#fef2f2;"' : '';
       const estBadge = over
-        ? `<span style="color:#b91c1c; font-weight:700;">~${chunkEst} min ⚠️</span>`
-        : `<span style="color:#6b5c3c;">~${chunkEst} min</span>`;
-      rows += `<tr${rowClass}><td>Week ${week}</td><td>${dateStr || ('Meeting ' + meetingNum)}</td><td>${label}<br>${estBadge}</td></tr>`;
-      idx += lessonsPerMeeting;
+        ? `<span style="color:#b91c1c; font-weight:700;">~${unit.estMin} min ⚠️</span>`
+        : `<span style="color:#6b5c3c;">~${unit.estMin} min</span>`;
+      rows += `<tr${rowClass}><td>Week ${week}</td><td>${dateStr || ('Meeting ' + meetingNum)}</td><td>${unit.label}<br>${estBadge}</td></tr>`;
+      idx++;
     }
   }
 
-  if (overflowLessons.length) {
-    warning += `<div style="background:#fef2f2; border:2px solid #dc2626; border-radius:10px; padding:14px; margin-top:10px;">
-      <strong style="color:#991b1b;">⚠️ ${overflowLessons.length} lesson${overflowLessons.length===1?'':'s'} won't realistically fit in ${mins} minutes:</strong>
-      <ul style="margin:8px 0 0; padding-left:20px;">
-        ${overflowLessons.map(o => `<li><strong>${o.label}</strong> — estimated ~${o.chunkEst} min of real content. Consider splitting this into <strong>${o.splitInto} separate lessons</strong> to actually get depth, rather than rushing it in one sitting.</li>`).join('')}
-      </ul>
-    </div>`;
-  }
+  window.LAST_PLAN = { scopeValue, scopeLabel, freq, mins, startDateISO: startVal || '' };
 
   document.getElementById('planner-result').innerHTML = `
     ${warning}
-    <p><strong>Run until it ends:</strong> ${scoped.length} lesson${scoped.length===1?'':'s'}, ${freq}× a week, ${mins} min nights → <strong>${totalMeetings} meetings</strong> (${totalWeeks} weeks if you never skip). No stop date. If you miss a week, slide everything down. The list does not expire.</p>
-    <p style="font-size:0.75rem; color:#6b5c3c;">Covering: ${document.getElementById('planner-scope').selectedOptions[0].textContent}</p>
+    <p><strong>Run until it ends:</strong> ${scoped.length} lesson${scoped.length===1?'':'s'} (${totalMeetings} meeting${totalMeetings===1?'':'s'} once split/paired), ${freq}× a week, ${mins} min nights → <strong>${totalMeetings} meetings</strong> (${totalWeeks} weeks if you never skip). No stop date. If you miss a week, slide everything down. The list does not expire.</p>
+    <p style="font-size:0.75rem; color:#6b5c3c;">Covering: ${scopeLabel}</p>
     <table><thead><tr><th>Week</th><th>${startDate ? 'Date' : 'Meeting'}</th><th>Covers</th></tr></thead>
     <tbody>${rows}</tbody></table>
     <button onclick="window.print()" style="margin-top:14px; width:100%; background:#0369a1; color:#fff; border:none; padding:10px; border-radius:8px; font-weight:700; cursor:pointer;">Print This Plan</button>
+    <div style="margin-top:14px; padding-top:14px; border-top:1px solid #eee;">
+      <label style="display:block; font-size:0.8rem; font-weight:700; color:#6b5c3c; margin-bottom:6px;">Name this class to bookmark it — resume it later from "My Classes"</label>
+      <div style="display:flex; gap:8px;">
+        <input type="text" id="cohort-name-input" placeholder="e.g. Tuesday Night Daniel Group" style="flex:1; padding:9px 12px; border-radius:8px; border:1px solid #ddd; font-family:-apple-system,sans-serif; font-size:0.9rem; box-sizing:border-box;">
+        <button type="button" onclick="window.saveLastPlanAsCohort()" style="background:#7c3aed;color:#fff;border:none;padding:9px 16px;border-radius:8px;font-weight:700;cursor:pointer;">💾 Save as a Class</button>
+      </div>
+      <p id="cohort-save-confirm" style="font-size:0.8rem; color:#047857; margin-top:6px; display:none;">Saved — find it under "My Classes" in the menu.</p>
+    </div>
   `;
+};
+
+window.saveLastPlanAsCohort = function(){
+  if (!window.LAST_PLAN || typeof createCohort !== 'function') return;
+  const nameInput = document.getElementById('cohort-name-input');
+  const name = (nameInput && nameInput.value.trim()) || 'Untitled class';
+  const p = window.LAST_PLAN;
+  createCohort(name, p.scopeValue, p.scopeLabel, p.freq, p.mins, p.startDateISO);
+  const confirmEl = document.getElementById('cohort-save-confirm');
+  if (confirmEl) confirmEl.style.display = 'block';
+  if (typeof renderCohortsList === 'function') renderCohortsList();
 };
 
 let seconds = 2700, running = false, iv;

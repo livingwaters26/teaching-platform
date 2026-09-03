@@ -229,6 +229,7 @@
     <button id="btn-menu-close">&times;</button>
   </div>
   <button id="btn-open-planner" class="planner-launch-btn">📅 Build a Meeting Plan</button>
+  <button id="btn-open-cohorts" class="planner-launch-btn" style="background:#7c3aed;">🗂️ My Classes</button>
   <button id="btn-open-sittings" class="planner-launch-btn" style="background:#047857;">🎙️ Drive Notes / Sittings</button>
   <button id="btn-copy-student-link" class="planner-launch-btn" style="background:#0369a1;">🔗 Copy Student-Safe Link</button>
   <div class="nav-section-label">Continue your notes</div>
@@ -271,6 +272,19 @@
       <div class="planner-future-note">One lesson per night unless a meeting is 70+ minutes and two light chapters actually fit. Heavy chapters stay one-to-a-night so you do not rush Daniel 7 or 9.</div>
       <button id="btn-generate-plan">Generate Plan</button>
       <div id="planner-result"></div>
+    </div>
+  </div>
+</div>
+
+<div id="cohorts-modal" class="planner-modal">
+  <div class="planner-box" style="max-width:560px;">
+    <div class="planner-header">
+      <span>My Classes</span>
+      <button id="btn-cohorts-close" type="button">&times;</button>
+    </div>
+    <div class="planner-body">
+      <p class="planner-future-note">Each class remembers its own cadence and exactly which meeting it's on — including which part of a chapter, if a chapter had to be split to fit. Build a plan under "Build a Meeting Plan" first, then save it here with a name.</p>
+      <div id="cohorts-list"></div>
     </div>
   </div>
 </div>
@@ -323,6 +337,8 @@
 <script src="js/search.js"></script>
 <script src="js/notes.js"></script>
 <script src="js/sittings.js"></script>
+<script src="js/segments.js"></script>
+<script src="js/cohorts.js"></script>
 <script src="js/popout.js"></script>
 <script src="js/main.js"></script>
 </body>

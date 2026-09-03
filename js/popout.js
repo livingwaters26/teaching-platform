@@ -22,7 +22,7 @@ document.getElementById('btn-close-popout').onclick = function(){
 };
 setInterval(updateSyncStatus, 1000);
 
-function buildPopoutHTML(s){
+function buildPopoutHTML(s, seg){
   return `<!DOCTYPE html><html><head><meta charset="utf-8"><title>Study Guide — ${s.book} ${s.chNum}</title>
     <style>
       body{ font-family: Georgia, serif; background:#fffdf8; color:#1a1408; margin:0; padding:40px; }
@@ -62,7 +62,7 @@ function buildPopoutHTML(s){
     <body>
       <button id="po-print-btn" onclick="window.print()">Print / Save PDF</button>
       <button id="po-scroll-btn">▶ Auto-Scroll</button>
-      <div id="po-content">${displayHTML(s)}</div>
+      <div id="po-content">${displayHTML(s, seg)}</div>
       <script>
         let scrolling = false, scrollTimer = null;
         const scrollBtn = document.getElementById('po-scroll-btn');
@@ -169,12 +169,13 @@ function buildPopoutHTML(s){
 }
 
 document.getElementById('btn-popout').onclick = function(){
+  const seg = (typeof currentSegment !== 'undefined') ? currentSegment : null;
   if (popoutWin && !popoutWin.closed) {
     popoutWin.focus();
-    popoutWin.postMessage({ type: 'GROUP_STUDY_UPDATE', html: displayHTML(SESSIONS[current]), title: `Study Guide — ${SESSIONS[current].book} ${SESSIONS[current].chNum}` }, '*');
+    popoutWin.postMessage({ type: 'GROUP_STUDY_UPDATE', html: displayHTML(SESSIONS[current], seg), title: `Study Guide — ${SESSIONS[current].book} ${SESSIONS[current].chNum}` }, '*');
     return;
   }
-  const html = buildPopoutHTML(SESSIONS[current]);
+  const html = buildPopoutHTML(SESSIONS[current], seg);
   const blob = new Blob([html], { type: 'text/html;charset=utf-8' });
   const url = URL.createObjectURL(blob);
   popoutWin = window.open(url, 'GroupStudyDisplay', 'width=1000,height=750,menubar=no,toolbar=no,location=no,status=no');

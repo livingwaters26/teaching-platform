@@ -52,11 +52,19 @@ function linkifyReferences(text, localBooks){
   });
 }
 
-function renderScriptureBlock(s){
+function renderScriptureBlock(s, seg){
   const ch = s.chNum.replace(/[\u2013\u2014-].*/, '').trim();
   let verses = getVersesForChapter(s.book, ch);
   if (verses) {
-    const versesJson = JSON.stringify(verses).replace(/"/g, '&quot;');
+    let startIdx = 0, endIdx = verses.length - 1, offset = 0;
+    const scoped = seg && seg.total > 1 && seg.startVerseNum;
+    if (scoped) {
+      startIdx = Math.max(0, seg.startVerseNum - 1);
+      offset = startIdx;
+      if (seg.endVerseNum) endIdx = Math.min(verses.length - 1, seg.endVerseNum - 1);
+    }
+    const slice = scoped ? verses.slice(startIdx, endIdx + 1) : verses;
+    const versesJson = JSON.stringify(slice).replace(/"/g, '&quot;');
     const reader = `
       <div class="reader-bar" data-verses="${versesJson}">
         <select class="reader-voice"></select>
@@ -64,7 +72,7 @@ function renderScriptureBlock(s){
         <button class="reader-pause" style="display:none;">⏸ Pause</button>
         <button class="reader-stop" style="display:none;">⏹ Stop</button>
       </div>`;
-    return reader + '<div class="scripture-text">' + verses.map((v,i)=>`<span class="verse-wrap" data-vidx="${i}"><span class="vn">${i+1}</span> ${v} </span>`).join('') + '</div>';
+    return reader + '<div class="scripture-text">' + slice.map((v,i)=>`<span class="verse-wrap" data-vidx="${i}"><span class="vn">${i+1+offset}</span> ${v} </span>`).join('') + '</div>';
   }
   return `<a class="scripture-link" href="${bibleLink(s.book, s.chNum)}" target="_blank">Open ${s.book} ${s.chNum} to read aloud &rarr;</a>`;
 }
@@ -79,13 +87,18 @@ function linkify(text){
   return linkifyReferences(text, LOCAL_BOOKS);
 }
 
-function displayHTML(s){
-  const heroImg = (s.hero && s.hero.src)
+function displayHTML(s, seg){
+  const scoped = seg && seg.total > 1;
+  const topicsArr = scoped ? seg.topics : s.topics;
+  const wordsArr = scoped ? seg.wordStudies : s.wordStudies;
+  const histArr = scoped ? seg.hist : s.hist;
+
+  const heroImg = (!scoped || seg.isFirst) && (s.hero && s.hero.src)
     ? `<div class="hero-image"><img src="${s.hero.src}" alt="${s.hero.alt || ''}" onerror="this.parentElement.style.display='none'"><div class="hero-caption">${s.hero.caption || ''}</div></div>`
-    : (s.book === 'Daniel' && s.chNum === '1')
+    : (!scoped || seg.isFirst) && (s.book === 'Daniel' && s.chNum === '1')
     ? `<div class="hero-image"><img src="images/babylon-gate.jpg" alt="The Ishtar Gate of ancient Babylon"><div class="hero-caption">The Ishtar Gate — the ceremonial entrance into the Babylon where Daniel lived and served.</div></div>`
     : '';
-  const topicsHTML = (s.topics && s.topics.length) ? s.topics.map(t => `
+  const topicsHTML = (topicsArr && topicsArr.length) ? topicsArr.map(t => `
     <div class="topic-card">
       <div class="topic-icon">${t.icon}</div>
       <div class="topic-title">${t.title}</div>
@@ -93,11 +106,11 @@ function displayHTML(s){
     </div>
   `).join('') : '';
 
-  const wordStudiesHTML = (s.wordStudies && s.wordStudies.length) ? `
+  const wordStudiesHTML = (wordsArr && wordsArr.length) ? `
     <div class="word-cards-wrap">
       <div class="word-cards-label">📖 Words Worth Knowing</div>
       <div class="word-cards-grid">
-        ${s.wordStudies.map(w => `
+        ${wordsArr.map(w => `
           <div class="word-card">
             <div class="word-card-term">${w.word}</div>
             <div class="word-card-orig">${w.orig}</div>
@@ -108,33 +121,38 @@ function displayHTML(s){
     </div>
   ` : '';
 
+  const partNote = scoped ? `<div class="meta" style="margin-top:6px;">Part ${seg.index+1} of ${seg.total}${seg.startsAt ? ' — picks up at ' + s.book + ' ' + seg.startsAt : ''}</div>` : '';
+  const continuesNote = (scoped && !seg.isLast) ? `<div class="block" style="text-align:center; font-style:italic; color:#6b5c3c;">We'll continue next time${seg.endVerseNum ? ' at ' + s.book + ' ' + seg.chNum + ':' + (seg.endVerseNum+1) : ''}.</div>` : '';
+
   return `
     <div class="pane-label">Shareable Display — Share This on Zoom</div>
     <div class="session-head">
       <div class="eyebrow">${s.book}</div>
       <h1>${s.chapterLabel}</h1>
+      ${partNote}
     </div>
     ${heroImg}
-    ${typeof visualsHTML === 'function' ? visualsHTML(s) : ''}
+    ${(!scoped && typeof visualsHTML === 'function') ? visualsHTML(s) : ''}
     <div class="block reading">
       <div class="block-label"><span>Scripture (${(typeof CURRENT_TRANSLATION !== 'undefined') ? CURRENT_TRANSLATION : 'ASV'})</span></div>
-      ${renderScriptureBlock(s)}
+      ${renderScriptureBlock(s, seg)}
     </div>
     ${topicsHTML ? `<div class="topics-grid">${topicsHTML}</div>` : ''}
     ${wordStudiesHTML}
-    ${(s.hist && s.hist.length) ? `<div class="block history">
+    ${(histArr && histArr.length) ? `<div class="block history">
       <div class="block-label"><span>Background &amp; Context</span></div>
-      ${s.hist.map(h => `<div class="point">${linkify(h)}</div>`).join('')}
+      ${histArr.map(h => `<div class="point">${linkify(h)}</div>`).join('')}
     </div>` : ''}
-    ${(s.views && s.views.length) ? `<div class="block views-block">
+    ${(s.views && s.views.length && (!scoped || seg.isLast)) ? `<div class="block views-block">
       <div class="block-label"><span>How Readers Take This</span></div>
       <p class="views-lead">Same text. Different chairs at the table. We are reading to understand — not to crown a camp.</p>
       ${s.views.map(v => `<div class="view-card"><div class="view-name">${v.name}</div><div class="view-body">${linkify(v.body)}</div></div>`).join('')}
     </div>` : ''}
-    ${s.apocryphaNote ? `<div class="block apocrypha-block">
+    ${(s.apocryphaNote && (!scoped || seg.isLast)) ? `<div class="block apocrypha-block">
       <div class="block-label"><span>What Some Bibles Include Here</span></div>
       <div class="point">${linkify(s.apocryphaNote)}</div>
     </div>` : ''}
+    ${continuesNote}
   `;
 }
 
@@ -153,19 +171,26 @@ const BOOK_INTROS = {
     <p>It was written by John — most likely the apostle — exiled on Patmos. Date is honestly disputed: Nero years (mid-60s) or Domitian years (mid-90s). Both dates change how some scenes land; we will not pretend that is settled. It is a letter to seven real churches in Asia Minor under pressure to bow to Rome. After this book we start John, where the same writer (or the same circle) tells you who the Lamb is before you ever met the throne.</p>`
 };
 
-function teacherHTML(s){
+function teacherHTML(s, seg){
+  const scoped = seg && seg.total > 1;
+  const pts = scoped ? seg.points : s.points;
+  const refsArr = scoped ? seg.refs : s.refs;
+  const histArr = scoped ? seg.hist : s.hist;
+  const opensArr = scoped ? seg.opens : s.opens;
+
   const bookName = BOOK_AUTHORS[s.book] || s.book;
   const isFirstOfBook = current === 0 || SESSIONS[current-1].book !== s.book;
   let script = '';
 
-  if (isFirstOfBook && BOOK_INTROS[s.book]) {
+  if ((!scoped || seg.isFirst) && isFirstOfBook && BOOK_INTROS[s.book]) {
     script += BOOK_INTROS[s.book];
   }
 
-  script += `<p><strong>Welcome to Lesson ${current+1}: ${s.chapterLabel}.</strong> Right now, on your screen, your group is looking at ${s.book} ${s.chNum} — that's the passage we're reading today. <em>Pacing note: this lesson is built for a 30–45 minute discussion — reading (5 min), walkthrough and discussion (15–25 min), open questions (5–10 min), close (5 min). Adjust to your group's pace; these are estimates, not a stopwatch.</em></p>`;
-  script += `<p>Go ahead and read the full chapter aloud now, straight from the screen — either you read it, or invite someone in the group to read it. Don't summarize it first. Let them hear it in ${bookName}'s own words before we talk about any of it.</p>`;
+  const lessonWhat = scoped ? `part ${seg.index+1} of ${seg.total}${seg.startsAt ? ' — picking up at ' + s.book + ' ' + seg.startsAt : ''}` : `${s.book} ${s.chNum}`;
+  script += `<p><strong>Welcome to Lesson ${current+1}: ${s.chapterLabel}${scoped ? ', Part ' + (seg.index+1) + ' of ' + seg.total : ''}.</strong> Right now, on your screen, your group is looking at ${lessonWhat} — that's the passage we're reading today. <em>Pacing note: this lesson is built for a 30–45 minute discussion — reading (5 min), walkthrough and discussion (15–25 min), open questions (5–10 min), close (5 min). Adjust to your group's pace; these are estimates, not a stopwatch.</em></p>`;
+  script += `<p>Go ahead and read ${scoped ? 'this part' : 'the full chapter'} aloud now, straight from the screen — either you read it, or invite someone in the group to read it. Don't summarize it first. Let them hear it in ${bookName}'s own words before we talk about any of it.</p>`;
 
-  const scriptureForTeacher = renderScriptureBlock(s);
+  const scriptureForTeacher = renderScriptureBlock(s, seg);
   script += `<div class="teacher-scripture-block"><div class="teacher-scripture-label">Scripture (${(typeof CURRENT_TRANSLATION !== 'undefined') ? CURRENT_TRANSLATION : 'ASV'}) — for your own reference</div>${scriptureForTeacher}</div>`;
 
   const myNotesKey = `lw-notes-${s.book}-${s.chNum}`;
@@ -180,7 +205,7 @@ function teacherHTML(s){
   }
   if (typeof sittingNotesHTML === 'function') script += sittingNotesHTML(s.book, s.chNum);
 
-  if (s.story) {
+  if (s.story && (!scoped || seg.isFirst)) {
     script += `
       <button class="story-toggle-btn" onclick="this.nextElementSibling.classList.toggle('open'); this.textContent = this.nextElementSibling.classList.contains('open') ? '📖 Hide the Story' : '📖 Tell the Story';">📖 Tell the Story</button>
       <div class="story-panel">
@@ -196,30 +221,30 @@ function teacherHTML(s){
     `;
   }
 
-  if (s.opens.length) {
-    script += `<p><strong>Before you dive into the discussion, here's a hook to throw out right after the reading, while it's still fresh:</strong> "${linkify(s.opens[0])}" Don't answer it yet — just let it sit with the group for a second. We'll come back to it.</p>`;
+  if (opensArr && opensArr.length) {
+    script += `<p><strong>Before you dive into the discussion, here's a hook to throw out right after the reading, while it's still fresh:</strong> "${linkify(opensArr[0])}" Don't answer it yet — just let it sit with the group for a second. We'll come back to it.</p>`;
   }
 
-  if (s.points.length) {
-    script += `<p><strong>Now let's actually walk through this chapter.</strong> Go section by section, verse by verse where these callouts give you a reference — don't just read these off, put them in your own words as you go:</p>`;
-    s.points.forEach(p => { script += `<p>${linkify(p)}</p>`; });
+  if (pts && pts.length) {
+    script += `<p><strong>Now let's actually walk through ${scoped ? 'this part of the chapter' : 'this chapter'}.</strong> Go section by section, verse by verse where these callouts give you a reference — don't just read these off, put them in your own words as you go:</p>`;
+    pts.forEach(p => { script += `<p>${linkify(p)}</p>`; });
   }
 
-  if (s.refs.length) {
+  if (refsArr && refsArr.length) {
     script += `<p><strong>A few places this passage is directly pulling from elsewhere in Scripture</strong> — worth having your group flip to these, or at least hear them named:</p>`;
-    script += `<ul class="refs">${s.refs.map(r => `<li>${linkify(r)}</li>`).join('')}</ul>`;
+    script += `<ul class="refs">${refsArr.map(r => `<li>${linkify(r)}</li>`).join('')}</ul>`;
   }
 
-  if (s.doctrinal) {
+  if (s.doctrinal && (!scoped || seg.isLast)) {
     script += `<div class="doctrinal-note"><strong>Doctrinal note for you, the teacher — not on the shared screen as “the answer”:</strong> ${linkify(s.doctrinal)}</div>`;
   }
 
-  if (s.views && s.views.length) {
+  if (s.views && s.views.length && (!scoped || seg.isLast)) {
     script += `<p><strong>How readers take this — say it out loud so the room hears more than one chair.</strong> Your view can be named as yours. Do not let it become the only allowed sentence.</p>`;
     s.views.forEach(v => { script += `<p><em>${v.name}.</em> ${linkify(v.body)}</p>`; });
   }
 
-  if (s.apocryphaNote) {
+  if (s.apocryphaNote && (!scoped || seg.isLast)) {
     script += `<p><strong>Catholic / Protestant Bible difference — keep this brief and historical.</strong> ${linkify(s.apocryphaNote)}</p>`;
   }
 
@@ -247,24 +272,27 @@ function teacherHTML(s){
     </div>
   `;
 
-  if (s.hist.length) {
+  if (histArr && histArr.length) {
     script += `<p><strong>Some real background that helps this land</strong> — this is also showing on the group's screen right now:</p>`;
-    s.hist.forEach(h => { script += `<p>${linkify(h)}</p>`; });
+    histArr.forEach(h => { script += `<p>${linkify(h)}</p>`; });
   }
 
-  if (s.opens.length) {
+  if (opensArr && opensArr.length) {
     script += `<p><strong>Now go back to that question from the top of the lesson and actually open it up to the group.</strong> These are genuinely open — let people wrestle, don't hand them an answer:</p>`;
-    s.opens.forEach(o => { script += `<p>${linkify(o)}</p>`; });
+    opensArr.forEach(o => { script += `<p>${linkify(o)}</p>`; });
   }
 
-  script += `<p><strong>Close in prayer.</strong> Then let them know next time, we're moving to <em>${current+1 < SESSIONS.length ? SESSIONS[current+1].chapterLabel : 'the final lesson of the course — congratulations to your group for making it here'}</em>.</p>`;
+  const nextUpLabel = scoped && !seg.isLast
+    ? `Part ${seg.index+2} of ${seg.total} of ${s.chapterLabel}${seg.endsAt ? ' — picking up at ' + s.book + ' ' + seg.chNum + ':' + (seg.endVerseNum+1) : ''}`
+    : (current+1 < SESSIONS.length ? SESSIONS[current+1].chapterLabel : 'the final lesson of the course — congratulations to your group for making it here');
+  script += `<p><strong>Close in prayer.</strong> Then let them know next time, we're moving to <em>${nextUpLabel}</em>.</p>`;
 
   return `
     <div class="pane-label">Teacher Script — Keep on Your Own Screen</div>
     <div class="session-head">
-      <div class="eyebrow">Lesson ${current+1} of ${SESSIONS.length} &middot; ${s.book} Group Study</div>
+      <div class="eyebrow">Lesson ${current+1} of ${SESSIONS.length} &middot; ${s.book} Group Study${scoped ? ' &middot; Part ' + (seg.index+1) + ' of ' + seg.total : ''}</div>
       <h1>${s.chapterLabel}</h1>
-      <div class="meta">Target: 30–45 minutes</div>
+      <div class="meta">Target: 30–45 minutes${scoped && seg.estMinutes ? ' &middot; this part est. ~' + seg.estMinutes + ' min' : ''}</div>
     </div>
     <div class="preload-bar">
       <span class="preload-status" id="preload-status">Scriptures: checking&hellip;</span>
