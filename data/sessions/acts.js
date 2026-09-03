@@ -1,13 +1,6 @@
-// Acts — chapters 1-18 of 28 (deep-dive, matching data/sessions/daniel.js in depth).
-// Combined from Will's 3 batch files (acts-ch01-06.js, acts-ch07-12.js, acts-ch13-18.js),
-// with chapters 13-18 expanded from compressed note-form into full explanatory prose and
-// a second historical-background entry each, to match the depth of chapters 1-12 and the
-// rest of the course (2026-09-03 pass).
-// Course order: Daniel -> Between the Testaments -> Revelation -> John -> Matthew -> Acts.
-// INCOMPLETE: only chapters 1-18 of 28 exist so far. Chapters 19-28 (Ephesus riot through
-// Rome) are not yet written — the course will simply stop at chapter 18 until they're added.
-// No embedded Acts scripture-text file exists — the scripture pane for this book uses the
-// live ESV/BSB lookup (js/scripture-source.js), same as Matthew.
+// Acts — all 28 chapters, deep-dive verse-by-verse (matching data/sessions/daniel.js in depth).
+// Chapters 1-18 combined earlier from Will's first 3 batch files; chapters 19-28 merged this
+// session from batch 4 (ch19-23) and batch 5 (ch24-28), completing the book.
 window.SESSIONS = window.SESSIONS || [];
 window.SESSIONS.push(
 {
@@ -88,7 +81,9 @@ window.SESSIONS.push(
       "body": "One chair: Matthias was a human fix and Paul is the true twelfth. Another: Matthias is the twelfth for Israel-witness, Paul is apostle to the Gentiles (Galatians 2:8). The text of Acts 1 never apologizes for the lot. Let that weigh."
     }
   ]
-},
+}
+);
+window.SESSIONS.push(
 {
   "book": "Acts",
   "slug": "acts",
@@ -167,7 +162,9 @@ window.SESSIONS.push(
       "body": "One chair: baptism is the God-appointed means by which remission is received. Another: baptism follows remission as the public seal, eis meaning 'on the basis of.' A third: the gift of the Spirit is the load, and water is the commanded response. Name them. Do not let a camp eat Peter's actual order."
     }
   ]
-},
+}
+);
+window.SESSIONS.push(
 {
   "book": "Acts",
   "slug": "acts",
@@ -240,7 +237,9 @@ window.SESSIONS.push(
       "body": "Refreshing is the Spirit and forgiveness now; heaven holding Jesus is simply the present session. Strength: 3:19's blotting-out is immediate. Cost: 'until' and 'send Jesus' have to be flattened."
     }
   ]
-},
+}
+);
+window.SESSIONS.push(
 {
   "book": "Acts",
   "slug": "acts",
@@ -307,7 +306,9 @@ window.SESSIONS.push(
       "body": "One chair hears a lasting economic pattern. Another hears a Spirit-given moment in a pilgrim-swollen city with many needy. 5:4's 'while it remained, was it not thine own?' belongs in that argument."
     }
   ]
-},
+}
+);
+window.SESSIONS.push(
 {
   "book": "Acts",
   "slug": "acts",
@@ -374,7 +375,9 @@ window.SESSIONS.push(
       "body": "The Spirit is still God in the assembly. The form of the judgment may differ; the sin is not retired. Strength: 5:3–4's theology. Both chairs should keep 5:4's freedom of property on the table."
     }
   ]
-},
+}
+);
+window.SESSIONS.push(
 {
   "book": "Acts",
   "slug": "acts",
@@ -439,7 +442,9 @@ window.SESSIONS.push(
       "body": "A task force for a language-split mercy problem, not a standing office-template. Strength: the occasion is specific. Both chairs should keep 6:4's prayer-and-word priority."
     }
   ]
-},
+}
+);
+window.SESSIONS.push(
 {
   "book": "Acts",
   "slug": "acts",
@@ -506,7 +511,9 @@ window.SESSIONS.push(
       "body": "Some hear welcome — the Son rising to receive his witness. Some hear testimony — standing as witness for Stephen against the court. Some hear judgment about to move. The verb is the surprise. Psalm 110 had him sitting. Luke wants you to see the difference."
     }
   ]
-},
+}
+);
+window.SESSIONS.push(
 {
   "book": "Acts",
   "slug": "acts",
@@ -572,7 +579,9 @@ window.SESSIONS.push(
       "body": "Jerusalem hands on Samaritan heads so there is one gift, one church. Strength: 8:14's sending. This is the chair I would name as mine without pretending 8:16 is easy."
     }
   ]
-},
+}
+);
+window.SESSIONS.push(
 {
   "book": "Acts",
   "slug": "acts",
@@ -639,7 +648,9 @@ window.SESSIONS.push(
       "body": "Some hear a prophet-call more than a pagan-conversion, because Saul thought he was serving God. Strength: 22:3's zeal. Cost: 9:1 and 1 Timothy 1:13 still call it blasphemy and injury. You can keep both: wrong-headed zeal met by the One he was wounding."
     }
   ]
-},
+}
+);
+window.SESSIONS.push(
 {
   "book": "Acts",
   "slug": "acts",
@@ -707,7 +718,9 @@ window.SESSIONS.push(
       "body": "10:34–35 names the kind of Gentile God will now openly receive; 10:43–44 is the receiving. Strength: 11:14 and the astonishment of the circumcision party."
     }
   ]
-},
+}
+);
+window.SESSIONS.push(
 {
   "book": "Acts",
   "slug": "acts",
@@ -773,7 +786,9 @@ window.SESSIONS.push(
       "body": "Eating is belonging. Share a table and you have already said these people are in. Both chairs can be true at once. 15 will have to say how in they are."
     }
   ]
-},
+}
+);
+window.SESSIONS.push(
 {
   "book": "Acts",
   "slug": "acts",
@@ -836,7 +851,9 @@ window.SESSIONS.push(
       "body": "One chair refuses the question as above our pay grade — 12:24 is the point. Another looks for purpose (James's cup from Matthew 20; Peter's remaining work in 15). Neither chair gets a verse that explains the split. Teach the not-knowing as part of the text."
     }
   ]
-},
+}
+);
+window.SESSIONS.push(
 {
   "book": "Acts",
   "slug": "acts",
@@ -903,7 +920,9 @@ window.SESSIONS.push(
       "body": "Some hear those lined up for life, even those who set themselves toward it. Cost: it can sand tetagmenoi smoother than the Greek wants."
     }
   ]
-},
+}
+);
+window.SESSIONS.push(
 {
   "book": "Acts",
   "slug": "acts",
@@ -969,7 +988,9 @@ window.SESSIONS.push(
       "body": "Kindness in weather is true speech from God; it is not the Name. Matches 17:30."
     }
   ]
-},
+}
+);
+window.SESSIONS.push(
 {
   "book": "Acts",
   "slug": "acts",
@@ -1041,7 +1062,9 @@ window.SESSIONS.push(
       "body": "The rebuilt booth still ahead; Gentile inclusion now is the first gathering into that hope."
     }
   ]
-},
+}
+);
+window.SESSIONS.push(
 {
   "book": "Acts",
   "slug": "acts",
@@ -1107,7 +1130,9 @@ window.SESSIONS.push(
       "body": "The house is baptized because the house received the word. The safer chair inside Acts itself."
     }
   ]
-},
+}
+);
+window.SESSIONS.push(
 {
   "book": "Acts",
   "slug": "acts",
@@ -1173,7 +1198,9 @@ window.SESSIONS.push(
       "body": "Luke numbers little fruit here compared with Thessalonica and Corinth. Do not make Areopagus the only method."
     }
   ]
-},
+}
+);
+window.SESSIONS.push(
 {
   "book": "Acts",
   "slug": "acts",
@@ -1238,6 +1265,699 @@ window.SESSIONS.push(
     {
       "name": "The vow as a puzzle",
       "body": "Some careful readers just say they do not know why Luke includes the shearing. Leave it marked for 21:23–26."
+    }
+  ]
+}
+);
+window.SESSIONS.push(
+{
+  "book": "Acts",
+  "slug": "acts",
+  "chapterLabel": "Chapter 19 — Ephesus: Disciples of John, a Riot for Diana, and the Word Prevailing",
+  "chNum": "19",
+  "points": [
+    "19:1–7 — Paul finds disciples at Ephesus and asks if they received the Holy Ghost when they believed. They have not even heard whether there be any Holy Ghost. John's baptism is what they know. He tells them John said they should believe on the one coming after him, that is, on Christ Jesus. They are baptized in the name of the Lord Jesus. Paul lays hands; the Holy Ghost comes; they speak with tongues and prophesy. About twelve men. This is not a second-class Christianity Luke is inventing. It is the last pocket of John's preparation meeting the name chapter 2 already preached.",
+    "19:8–10 — Three months in the synagogue, reasoning about the kingdom of God. When some harden and speak evil of the Way before the multitude, he separates the disciples and disputes daily in the school of Tyrannus. Two years. All Asia hears the word of the Lord, Jews and Greeks. 1:8's 'uttermost' is now a lecture hall and a province.",
+    "19:11–20 — Special miracles by Paul's hands: handkerchiefs and aprons, diseases leaving, evil spirits going out. Seven sons of Sceva, a chief priest, try 'Jesus whom Paul preacheth.' The spirit answers: Jesus I know, and Paul I know; but who are you? The man leaps on them; they flee naked and wounded. Fear falls. The name of the Lord Jesus is magnified. Believers confess, many who used curious arts bring books and burn them — fifty thousand pieces of silver. 'So mightily grew the word of God and prevailed.' Luke's scoreboard is not the aprons. It is the word.",
+    "19:21–22 — Paul purposed in the spirit, when he has passed through Macedonia and Achaia, to go to Jerusalem, saying, 'After I have been there, I must also see Rome.' 1:8's last horizon is now a sentence in Paul's mouth. 23:11 will hear it again from the Lord.",
+    "19:23–41 — No small stir about the Way. Demetrius the silversmith: our wealth is this craft; Diana of the Ephesians is in danger of being despised; the world-temple of the great goddess is in danger. The city fills with confusion. Two of Paul's companions are rushed into the theatre. Paul would go in; disciples and Asiarchs will not let him. Two hours of 'Great is Diana of the Ephesians.' A Jew named Alexander is put forward and shouted down. The townclerk finally quiets them: these men are not temple-robbers; the law is open; we are in danger of being called in question for this day's uproar. He dismisses the assembly. Rome's order, not a sermon, ends the riot. Luke wants that irony on the page."
+  ],
+  "refs": [
+    "Acts 18:24–28 — Apollos at Ephesus knowing only John's baptism, taught more perfectly by Priscilla and Aquila. 19:1–7 is the same unfinished preparation in a dozen other men.",
+    "Luke 3:16 and Acts 1:5 — John's water and the coming Spirit. 19:4–6 is that promise catching up with people who stopped at John.",
+    "Acts 1:8 and 19:21 — Rome named as a 'must.' The map is tightening.",
+    "Matthew 10:25 and Acts 19:15 — spirits who know the Name and will not take a borrowed one."
+  ],
+  "hist": [
+    "Ephesus held the Artemision, one of the ancient world's great temples, and a trade in silver shrines. Demetrius is not a cartoon pagan. He is a union boss whose god and whose payroll are the same object.",
+    "The school of Tyrannus is a rented hall in a Greek city — public argument, not a hidden conventicle. 'All Asia' in 19:10 is the Roman province, the network of cities around Ephesus."
+  ],
+  "opens": [
+    "What do you do with 19:1–7 — a second blessing every believer still needs, or the last of John's disciples being brought into the name they had not yet heard?",
+    "Demetrius tells the truth about his motive: the craft is in danger. Where does this group's gospel still threaten somebody's silver?"
+  ],
+  "topics": [
+    {
+      "title": "Jesus I Know, and Paul I Know",
+      "icon": "🔥",
+      "body": "The sons of Sceva have a formula and no acquaintance. The spirit is theologically accurate and personally violent. Ephesus learns that the name is not a tool you pick up off Paul's table. Books burn because fear of that name has become larger than the price of the library."
+    },
+    {
+      "title": "A Riot for a Goddess and a Clerk for Rome",
+      "icon": "🏛️",
+      "body": "The gospel does not win Ephesus by out-shouting Diana for two hours. It wins when craftsmen feel the market shift and a civil servant would rather not explain a lynching to a proconsul. Luke will keep using Roman order as a strange servant of the Way all the way to chapter 28."
+    }
+  ],
+  "wordStudies": [
+    {
+      "word": "The Way",
+      "orig": "Greek: hē hodos",
+      "meaning": "19:9, 23. Luke's name for this movement. Not a hobby and not yet the later word 'Christianity.' A road you are on."
+    },
+    {
+      "word": "Prevailed",
+      "orig": "Greek: ischyen",
+      "meaning": "19:20. The word grew and had strength. Luke's verb for what actually conquered Ephesus — not the aprons, the word."
+    }
+  ],
+  "doctrinal": "Teacher-only: I read 19:1–7 as John's remaining circle being baptized into Jesus and receiving the Spirit, not as the template that every later Christian must have a second crisis-experience to be complete. Acts 2:38 already joined repentance, the name, and the gift for the three thousand. This paragraph is unfinished preparation catching up. I read 19:21's 'I must see Rome' as the Spirit's geography, which 23:11 will confirm. Do not let the handkerchiefs become a method. Luke calls them 'special' (19:11) for a reason.",
+  "story": {
+    "scene": "A dozen men who thought they were already on the road, hearing there is a Holy Ghost. A rented school. A name that demons will not rent. A theatre screaming for a silver goddess while a clerk does the quiet work of sending everyone home.",
+    "modern": "Borrowed language about Jesus with no acquaintance behind it. And a church that is shocked when the gospel finally costs someone a trade."
+  },
+  "starterNotes": [],
+  "views": [
+    {
+      "name": "19:1–7 as a second work every believer needs",
+      "body": "They had believed and still lacked the Spirit until hands were laid. Some holiness and Pentecostal chairs take this as the normal pattern. Cost: 2:38 and 10:44–48 do not wait on a later second stage in the same way."
+    },
+    {
+      "name": "19:1–7 as John's disciples arriving late",
+      "body": "They had not heard there is a Holy Ghost; their baptism was John's. This is completion of preparation, not a second tier inside the church. Strength: 18:24–26 sits next door."
+    }
+  ]
+}
+);
+window.SESSIONS.push(
+{
+  "book": "Acts",
+  "slug": "acts",
+  "chapterLabel": "Chapter 20 — Up from Death in Troas, and Tears on a Beach at Miletus",
+  "chNum": "20",
+  "points": [
+    "20:1–6 — After the uproar, Macedonia, Greece, three months, a plot by the Jews as he is about to sail for Syria, so he returns through Macedonia. Named companions: Sopater, Aristarchus, Secundus, Gaius, Timothy, Tychicus, Trophimus. Luke's 'we' is back. Unleavened bread at Philippi; five days to Troas; seven days there.",
+    "20:7–12 — First day of the week, the disciples come together to break bread. Paul preaches, ready to depart on the morrow, and continues his speech until midnight. Many lights in the upper chamber. Eutychus, a young man, sinks into sleep, falls from the third loft, and is taken up dead. Paul goes down, embraces him: 'Trouble not yourselves; for his life is in him.' He breaks bread, talks till break of day, and departs. They bring the young man alive and are not a little comforted. 9:36–41 was a raised woman in Joppa. This is a raised youth in a night service. Luke wants the first-day gathering on the page without writing a later church-calendar treatise.",
+    "20:13–16 — They sail; Paul goes afoot to Assos, then Mitylene, Chios, Samos, Miletus. He has determined to sail by Ephesus because he is hurrying, if possible, to be at Jerusalem for Pentecost. The feast calendar still structures the apostle to the Gentiles.",
+    "20:17–27 — Ephesian elders meet him at Miletus. He reviews the work: humility, tears, trials from the Jews, teaching publicly and from house to house, repentance toward God and faith toward our Lord Jesus Christ. Bound in the spirit to Jerusalem; bonds and afflictions abide him. 'None of these things move me, neither count I my life dear unto myself, so that I might finish my course with joy, and the ministry, which I have received of the Lord Jesus, to testify the gospel of the grace of God.' He has gone among them preaching the kingdom. He is pure from the blood of all men; he has not shunned to declare all the counsel of God.",
+    "20:28–35 — Take heed to yourselves and to all the flock, over which the Holy Ghost hath made you overseers, to feed the church of God, which he hath purchased with his own blood. After he leaves, grievous wolves will enter; of your own selves men will arise speaking perverse things to draw away disciples. Watch, and remember three years of tears. He commends them to God and to the word of his grace, which is able to build you up and give you an inheritance among all them which are sanctified. He has coveted no man's silver. These hands ministered. 'It is more blessed to give than to receive' — a saying of the Lord not written in the four Gospels, kept here.",
+    "20:36–38 — He kneels and prays with them all. They weep, fall on his neck, kiss him, sorrowing most of all for the word that they shall see his face no more. They bring him to the ship. The mission that began with hands at Antioch (13:3) is now a beach full of elders who will have to feed the flock without him."
+  ],
+  "refs": [
+    "Acts 9:36–41 — Tabitha raised. 20:9–12 is that mercy in a third-floor window.",
+    "Acts 2:42 — breaking of bread as a mark of the first church. 20:7 is that mark on the first day of the week.",
+    "Luke 22:19–20 — the bread and cup. 20:7, 11 sit in that memory even when Luke does not pause to parse the meal.",
+    "1 Peter 5:1–4 — elders feeding the flock. 20:28 is that charge in Paul's mouth first.",
+    "Ezekiel 33:1–6 — the watchman's blood. 20:26's 'pure from the blood of all men' lives in that office."
+  ],
+  "hist": [
+    "Troas was a port city looking toward Europe. An upper room with many lamps is a fire-and-air fact as well as a sleep-and-fall fact. Luke the physician notices the fall and the life.",
+    "Miletus sits south of Ephesus. Calling the elders there rather than entering the city matches 20:16's hurry toward Pentecost and, perhaps, the memory of 19:23–41."
+  ],
+  "opens": [
+    "20:7 gathers them on the first day of the week to break bread. What do you hear Luke doing — describing a custom, commanding a Sabbath-transfer, or just telling you what that night was?",
+    "Paul says the Holy Ghost made them overseers of a church God bought with his own blood. What does that do to a light view of an elders' meeting?"
+  ],
+  "topics": [
+    {
+      "title": "All the Counsel of God",
+      "icon": "📣",
+      "body": "20:20 and 20:27 are a pastor's exam: publicly and from house to house; repentance and faith; the kingdom; the gospel of grace; nothing shunned. The tears on the beach are not mood. They are what three years of that kind of speech costs when you say goodbye."
+    },
+    {
+      "title": "Wolves from Outside and from the Bench",
+      "icon": "🐺",
+      "body": "20:29–30 will not let a church watch only the street. Grievous wolves will enter. Men will rise from among the elders themselves. The safeguard he names is not a new personality. It is God and the word of his grace (20:32)."
+    }
+  ],
+  "wordStudies": [
+    {
+      "word": "Overseers",
+      "orig": "Greek: episkopoi",
+      "meaning": "20:28. Same men he called elders (presbyteroi) in 20:17. Luke is not building two offices here. He is stacking two names on one flock-task."
+    },
+    {
+      "word": "Purchased with his own blood",
+      "orig": "Greek: periepoiēsato dia tou haimatos tou idiou",
+      "meaning": "20:28. The church is bought. The blood is God's in this wording — a sentence that will not sit in a low Christology. Manuscripts vary slightly; the claim of the line is still purchase by blood."
+    }
+  ],
+  "doctrinal": "Teacher-only: I read 20:7 as a real first-day gathering to break bread — historically weighty for why Christians meet on Sunday — without turning the verse into the only text in a Sabbath war. I read 20:28 as Paul calling the church God's, bought with blood, and the elders the Spirit's appointment. That is enough to make oversight holy. I read 20:22–24 as a man who knows bonds are coming and still walks toward Jerusalem because the course is the Lord's. Do not use it to baptize every reckless itinerary.",
+  "story": {
+    "scene": "A boy falling through warm lamp-air. A beach where grown men cannot stand up straight because a face is leaving. A speech that sounds like a last will: watch the flock, watch yourselves, remember the tears.",
+    "modern": "The meeting that runs long because someone is leaving in the morning. And the warning that the next wound may not come from the street. It may come from a chair already in the room."
+  },
+  "starterNotes": [],
+  "views": [
+    {
+      "name": "20:7 as the church's new holy day",
+      "body": "The first day is already the gathering day; the Sabbath has been fulfilled. Strength: 20:7 and 1 Corinthians 16:2. Cost: this paragraph is one night's travel diary, not a tract."
+    },
+    {
+      "name": "20:7 as description, not a calendar law",
+      "body": "They gathered because Paul was leaving at dawn. Breaking bread is the throughline from 2:42. The day of the week is noted, not legislated. Both chairs should still say: they met, they heard the word, a dead boy walked home."
+    }
+  ]
+}
+);
+window.SESSIONS.push(
+{
+  "book": "Acts",
+  "slug": "acts",
+  "chapterLabel": "Chapter 21 — Prophecy on the Road, a Vow in the Temple, and Chains in the Court",
+  "chNum": "21",
+  "points": [
+    "21:1–6 — Cos, Rhodes, Patara, a ship to Phoenicia, sighting Cyprus, landing at Tyre. Finding disciples, they stay seven days. These say to Paul through the Spirit that he should not go up to Jerusalem. He still goes. They kneel on the shore and pray. The same Spirit who binds him toward Jerusalem (20:22) is speaking warning through Tyre. That tension is real. Do not flatten it in the first minute.",
+    "21:7–14 — Ptolemais, then Caesarea, the house of Philip the evangelist, one of the seven (6:5; 8:5–40), four daughters who prophesy. Agabus comes down from Judea, takes Paul's girdle, binds his own hands and feet: 'So shall the Jews at Jerusalem bind the man that owneth this girdle, and shall deliver him into the hands of the Gentiles.' They beseech him not to go. 'What mean ye to weep and to break mine heart? for I am ready not to be bound only, but also to die at Jerusalem for the name of the Lord Jesus.' They cease: the will of the Lord be done. Luke 22:42 is still the pattern.",
+    "21:15–26 — To Jerusalem, received gladly. James and the elders hear the Gentiles' fruit and glorify the Lord. Then the problem: many thousands of Jews who believe are zealous of the law. They have been told Paul teaches Jews among the Gentiles to forsake Moses, not to circumcise children, not to walk after the customs. Do this: four men have a vow; purify yourself with them, pay their charges, that all may know you walk orderly and keep the law. As touching the Gentiles who believe, the 15:19–21 letter still stands. Paul takes the men, purifies himself, enters the Temple to announce the days of purification. The man of 15:1–11 is now paying for Nazarite charges so a rumor dies. Whether that is wisdom or compromise is a live chair.",
+    "21:27–36 — Near the end of the seven days, Jews from Asia see him in the Temple, stir the people, seize him: this is the man who teaches against the people, the law, and this place; he has also brought Greeks into the Temple and polluted it. They had seen Trophimus the Ephesian with him in the city and supposed he brought him into the house. The whole city is moved. They drag him out; doors are shut. They go about to kill him. The chief captain takes soldiers, binds him with two chains — Agabus's girdle made iron — and cannot know who he is for the tumult. The multitude follows crying, Away with him. Luke 23:18 is the rhyme.",
+    "21:37–40 — As he is carried into the castle he asks, in Greek, permission to speak. The captain is surprised: you speak Greek? Are you not that Egyptian who made an uproar? 'I am a man which am a Jew of Tarsus, a city in Cilicia, a citizen of no mean city.' He stands on the stairs and beckons. A great silence. He speaks unto them in the Hebrew tongue."
+  ],
+  "refs": [
+    "Acts 20:22–24 — bound in the spirit, bonds waiting. 21:11 is that word with a belt.",
+    "Acts 15:19–21 — the Gentiles' letter, restated in 21:25 so the vow cannot be misread as a new yoke on the nations.",
+    "Numbers 6:1–21 — the Nazarite vow whose charges Paul pays.",
+    "Acts 6:13–14 — Stephen accused of speaking against this place and the law. The same charge now lands on Paul in the same courts.",
+    "Luke 22:42 — thy will be done. 21:14 is that sentence in a Caesarean living room."
+  ],
+  "hist": [
+    "A warning inscription on the Temple barrier told Gentiles that passing it meant death. The rumor about Trophimus is how you start a lynching in that architecture. Luke says they 'supposed' (21:29). The supposed is the whole case.",
+    "Claudius Lysias (named in 23:26) is the chiliarch of the Antonia fortress adjoining the Temple. Roman chains in 21:33 are what keep Paul alive long enough for chapters 22–28."
+  ],
+  "opens": [
+    "The Spirit speaks through Tyre 'do not go,' and Paul goes anyway, saying he is bound in the Spirit. How do you let both of those sentences stay in the same book?",
+    "James asks Paul to sponsor a vow so believing Jews will know he is not against Moses. Is that pastoral wisdom, a stumble, or both?"
+  ],
+  "topics": [
+    {
+      "title": "Warned, and Still Walking",
+      "icon": "🪢",
+      "body": "20:23 said bonds await. 21:4 says through the Spirit he should not go. 21:11 acts out the binding. 21:13 says he is ready to die. Luke will not resolve this by making Agabus a false prophet. The prophecy is accurate. The going is still obedience as Paul understands the course. Hold the tension. It is how this book treats suffering: named in advance, not cancelled by the naming."
+    },
+    {
+      "title": "A Rumor That Needed a Body",
+      "icon": "🚪",
+      "body": "They did not need Trophimus in the Temple. They needed to suppose he was. 6:13 was 'false witnesses' against Stephen. 21:29 is a guess that works like a witness. The gospel is on trial for a pollution that did not happen."
+    }
+  ],
+  "wordStudies": [
+    {
+      "word": "Supposed",
+      "orig": "Greek: enomizon",
+      "meaning": "21:29. They thought. Luke plants the word so you will not baptize the riot as a fact about Trophimus."
+    },
+    {
+      "word": "Away with him",
+      "orig": "Greek: aire auton",
+      "meaning": "21:36. The same cry as Luke 23:18 over Jesus. Paul is walking his Lord's road in the same city."
+    }
+  ],
+  "doctrinal": "Teacher-only: I read Agabus as a true prophet; the girdle happens. I read Paul's going as the same 'must' as 19:21 and 20:22, not as stubbornness against the Spirit. The Tyre warning functions like 20:23 — information, not a veto — though I would say that as mine and admit 21:4 is harder wording. On the vow I sit nearer 'pastoral accommodation for believing Jews, while the Gentile letter stands untouched' than 'Paul betrayed Galatians.' 1 Corinthians 9:20 is sitting under 21:26. I will not pretend the move worked. The riot still comes.",
+  "story": {
+    "scene": "A belt pulled tight around a prophet's own wrists. Daughters who prophesy in Philip's house. A week of purification that was supposed to quiet a rumor. A court that explodes anyway, and a man carried up stairs because the city has already decided what he brought into the house.",
+    "modern": "The meeting where everyone who loves you can see the cost and still cannot cancel your assignment. And the smear that does not need to be true to be useful."
+  },
+  "starterNotes": [],
+  "views": [
+    {
+      "name": "Paul should not have taken the vow",
+      "body": "Galatians 2 and 5 sit uneasily beside Temple purification. The accommodation failed and nearly killed him. A real chair among readers who prize the freedom of 15:10–11."
+    },
+    {
+      "name": "Paul was becoming a Jew to Jews",
+      "body": "1 Corinthians 9:20. The Gentile decree is explicitly left in place (21:25). He is quieting a slander about Jewish believers, not yoking the nations. The riot is Asia's slander, not James's plan backfiring as theology."
+    }
+  ]
+}
+);
+window.SESSIONS.push(
+{
+  "book": "Acts",
+  "slug": "acts",
+  "chapterLabel": "Chapter 22 — The Stairs Speech: A Hebrew Story for a Hebrew Crowd",
+  "chNum": "22",
+  "points": [
+    "22:1–5 — 'Men, brethren, and fathers, hear ye my defence.' He speaks Hebrew; they keep silence the more. Born in Tarsus, brought up in this city at the feet of Gamaliel (5:34), taught according to the perfect manner of the law of the fathers, zealous toward God as ye all are this day. I persecuted this Way unto death, binding and delivering men and women, as the high priest and estate of the elders bear me witness. Letters to Damascus.",
+    "22:6–11 — About noon, a great light. 'Saul, Saul, why persecutest thou me?' 'Who art thou, Lord?' 'I am Jesus of Nazareth, whom thou persecutest.' They saw the light and were afraid; they heard not the voice in the same way chapter 9 described. Ananias will later fill the commission. Here the crowd gets the blinding and the Name.",
+    "22:12–16 — Ananias, a devout man according to the law, having a good report of all the Jews which dwelt there. Brother Saul, receive thy sight. The God of our fathers hath chosen thee, that thou shouldest know his will, see that Just One, hear the voice of his mouth, be his witness unto all men of what thou hast seen and heard. 'And now why tarriest thou? arise, and be baptized, and wash away thy sins, calling on the name of the Lord.' 2:38's pairing of baptism and sins is back in a law-respecting mouth. Luke lets Ananias sound like a faithful Jew, because that is what this crowd needs to hear.",
+    "22:17–21 — Returned to Jerusalem, praying in the Temple — he will not let them think he abandoned the house. A trance: make haste, get out of Jerusalem; they will not receive thy testimony. Lord, they know I imprisoned and beat them that believed, and when Stephen's blood was shed I kept the raiment. 'Depart: for I will send thee far hence unto the Gentiles.'",
+    "22:22–29 — That word ends the silence. 'Away with such a fellow from the earth: for it is not fit that he should live.' They cast off clothes and throw dust. The captain orders him examined by scourging. Paul: is it lawful to scourge a man that is a Roman, and uncondemned? The centurion tells the chief captain. 'Tell me, art thou a Roman?' 'Yea.' With a great sum I obtained this freedom. 'But I was free born.' They depart. The captain is afraid because he had bound him. Citizenship is now a shield. Luke is not ashamed of that. It is how this witness stays alive until 28:30."
+  ],
+  "refs": [
+    "Acts 9:1–19 and 26:12–18 — three tellings of the same road. Watch what each audience is given. 22 stresses Ananias the devout Jew and the Temple trance.",
+    "Acts 7:58 — the clothes at Stephen's feet. 22:20 is Paul putting himself back in that courtyard on purpose.",
+    "Acts 2:21 and 2:38 — calling on the name, baptism, sins. 22:16 is that cluster in Ananias's charge.",
+    "Acts 5:34 — Gamaliel. 22:3 claims that classroom as his own."
+  ],
+  "hist": [
+    "A Tarsian birth plus a Jerusalem education is how Paul can say 'this city' and 'no mean city' in two languages in one hour.",
+    "Roman citizenship could be bought under Claudius; 'free born' means Paul's father already held it. Scourging a citizen uncondemned was a crime the chiliarch suddenly remembers."
+  ],
+  "opens": [
+    "The crowd hears him until the word 'Gentiles.' What does that tell you about where the offense actually sat?",
+    "22:16 says arise, be baptized, and wash away thy sins. How do you let that sentence stand beside 15:9's hearts purified by faith without making either verse a mascot?"
+  ],
+  "topics": [
+    {
+      "title": "A Speech Aimed at the People Who Want Him Dead",
+      "icon": "🪜",
+      "body": "Hebrew language. Gamaliel. Zeal. Letters. A law-keeping Ananias. A trance in the Temple. Paul is not softening the risen Jesus. He is refusing the slander that he is a man from outside Israel's story. The riot resumes when the story opens to the nations. That is this book's offense in one word (22:21–22)."
+    },
+    {
+      "title": "Three Roads to Damascus",
+      "icon": "☀️",
+      "body": "Chapters 9, 22, and 26 tell the same light with different freight. 9 is narrative for the reader. 22 is defense to Jerusalem. 26 is defense to a king. The variations are audience, not a crumbling memory. Teach them as three cameras."
+    }
+  ],
+  "wordStudies": [
+    {
+      "word": "Defence",
+      "orig": "Greek: apologia",
+      "meaning": "22:1. A reasoned account. 1 Peter 3:15 will use the same family of word for every Christian. Paul is doing it on stairs with a chain on his wrist."
+    },
+    {
+      "word": "Wash away",
+      "orig": "Greek: apolousai",
+      "meaning": "22:16. Wash off. Tied to baptism and to calling on the name. Do not thin it into a metaphor so fast that Ananias's urgency disappears. Do not turn it into a water-mechanism that 10:43–48 will not bear."
+    }
+  ],
+  "doctrinal": "Teacher-only: I read 22:16 as baptism bound to calling on the name — the visible act joined to the appeal that saves (2:21) — not as water operating apart from the risen Lord. I would say that as mine and not run a whole baptism war from one stairs-sentence. I read 22:21–22 as Luke showing that 'Gentiles' is the tripwire, which means 1:8 is still the book's conflict. Citizenship in 22:25–29 is providence, not a gospel. Paul will preach in the next room whether the chain is legal or not.",
+  "story": {
+    "scene": "A silence you could feel, because he is speaking the city's own tongue about the city's own teacher. Then the word 'Gentiles,' and the air goes back to dust and cloth and a scream.",
+    "modern": "The testimony that is welcome until it includes the people the room has already decided God is not sending you to."
+  },
+  "starterNotes": [],
+  "views": [
+    {
+      "name": "22:16 as baptismal washing",
+      "body": "Sins are washed in the act of baptism as one calls on the Lord. Strength: the verbs sit together. A long church chair."
+    },
+    {
+      "name": "22:16 as the name, with baptism as the accompanying act",
+      "body": "Calling on the name is the appeal; baptism is how that appeal is enacted. Strength: 2:21; 10:43. Keep both nouns in the sentence either way."
+    }
+  ]
+}
+);
+window.SESSIONS.push(
+{
+  "book": "Acts",
+  "slug": "acts",
+  "chapterLabel": "Chapter 23 — The Council Split, a Nephew in the Hall, and a Promise of Rome",
+  "chNum": "23",
+  "points": [
+    "23:1–5 — He looks on the council: I have lived in all good conscience before God until this day. The high priest Ananias commands to smite him on the mouth. 'God shall smite thee, thou whited wall: for sittest thou to judge me after the law, and commandest me to be smitten contrary to the law?' They say, revilest thou God's high priest? 'I wist not, brethren, that he was the high priest: for it is written, Thou shalt not speak evil of the ruler of thy people' — Exodus 22:28. Whether he truly did not know, or is refusing the man's conduct the title, Luke lets the Scripture stand either way. Paul will not build his defense on contempt for Moses.",
+    "23:6–10 — He perceives the council is one part Sadducee and the other Pharisee. 'I am a Pharisee, the son of a Pharisee: of the hope and resurrection of the dead I am called in question.' The council splits. Pharisees: we find no evil in this man; if a spirit or an angel hath spoken to him, let us not fight against God — Gamaliel's maybe from 5:39 in another mouth. Sadducees deny resurrection, angel, and spirit (23:8). The chief captain, afraid Paul will be pulled in pieces, takes him by force back to the castle.",
+    "23:11 — The night following, the Lord stands by him: 'Be of good cheer, Paul: for as thou hast testified of me in Jerusalem, so must thou bear witness also at Rome.' 19:21's purpose is now a word from the risen one. The rest of the book is that sentence walking.",
+    "23:12–22 — More than forty bind themselves under a curse: they will neither eat nor drink till they have killed Paul. Priests and elders are in the conspiracy. Paul's sister's son hears, enters the castle, tells Paul. Paul sends him to the chief captain. The boy takes the captain by the hand aside and repeats the ambush at the hour of tomorrow's hearing. 'See thou tell no man.' A nameless nephew is now how 23:11 stays on schedule.",
+    "23:23–35 — Two hundred soldiers, seventy horsemen, two hundred spearmen, the third hour of the night, beasts for Paul, a letter to Felix. Claudius Lysias writes a cleaner version of his own conduct than 21:31–39 recorded: he claims he rescued a Roman after learning the citizenship. The charge: questions of their law, nothing worthy of death or of bonds. They bring Paul to Antipatris, then to Caesarea. Felix reads, asks of what province, hears Cilicia, keeps him in Herod's judgment hall until the accusers come. Rome's machinery, again, is the strange servant of the promise."
+  ],
+  "refs": [
+    "Exodus 22:28 — do not curse a ruler of your people. 23:5 is Paul putting that verse on his own mouth after 23:3.",
+    "Acts 5:39 — lest haply ye be found even to fight against God. 23:9 is that caution from the Pharisee bench.",
+    "Acts 19:21 and 23:11 — Rome as a 'must,' first in Paul's spirit, then in the Lord's standing visit.",
+    "Matthew 22:23 — Sadducees who say there is no resurrection. 23:8 is Luke's matching note."
+  ],
+  "hist": [
+    "Ananias son of Nedebaeus was high priest in this window, remembered in Josephus as violent and greedy. 'Whited wall' is not random insult. It is 23:3 meeting a reputation.",
+    "Felix is Antonius Felix, procurator, brother of the freedman Pallas. He will want a bribe in 24:26. Luke is already moving Paul into that man's house."
+  ],
+  "opens": [
+    "Is 23:6 a clever split, a true narrowing of the charge, or both — and what does that do to a room that wants every defense to sound like a sermon only?",
+    "The Lord promises Rome. The next tool he uses is a boy who overheard a vow. Where else in this group's life has the promise arrived by a small, uncredited person?"
+  ],
+  "topics": [
+    {
+      "title": "The Real Charge Is Hope",
+      "icon": "🌅",
+      "body": "Paul names the fight as the resurrection of the dead. That is not a dodge. It is 4:2, 17:18, 17:32, and 24:21 in one line. The Way is on trial because it claims God raised a man, and that claim splits Israel's own council down a seam that was already there."
+    },
+    {
+      "title": "So Must Thou Bear Witness at Rome",
+      "icon": "🛤️",
+      "body": "23:11 is the hinge of the last quarter of the book. Jerusalem has heard. Rome will hear. The conspiracy, the nephew, the night escort, Felix's hall — all of it is furniture under that one sentence. When the later chapters feel like legal delay, come back here."
+    }
+  ],
+  "wordStudies": [
+    {
+      "word": "Conscience",
+      "orig": "Greek: syneidēsis",
+      "meaning": "23:1. A knowing-with. Paul will use it again before Felix (24:16). Not 'I have never been wrong.' I have lived toward God without a hidden second life."
+    },
+    {
+      "word": "Must",
+      "orig": "Greek: dei",
+      "meaning": "23:11. Divine necessity, the same verb as Luke's 'the Son of man must suffer.' Rome is not Paul's bucket list. It is assignment."
+    }
+  ],
+  "doctrinal": "Teacher-only: I read 23:6 as both tactically sharp and theologically true — the resurrection is the charge. I read 23:11 as the risen Jesus still directing the map of 1:8, which is why I will not treat chapters 24–28 as Luke running out of sermon material. They are the 'must' becoming miles. On 23:5 I will not pretend the line is easy; I will say Paul refuses to build a case on contempt for the office even when the officer is a whited wall.",
+  "story": {
+    "scene": "A slap in a holy room. A council tearing itself in half over the dead. A night visitor who does not open the door but stands beside the bed and names a city.\n\nThen forty hungry oaths, and a boy in a hallway who heard them.",
+    "modern": "The promise that arrives before the rescue, and the rescue that looks like bureaucracy and a relative with good ears. Chapter 23 will not let you call either of those unspiritual."
+  },
+  "starterNotes": [],
+  "views": [
+    {
+      "name": "23:6 as faithful focus",
+      "body": "Resurrection is genuinely why he is on trial. Naming it is obedience, and the split is the council's old wound opening."
+    },
+    {
+      "name": "23:6 as tactic first",
+      "body": "He sees a seam and uses it. Still true, but the first move is survival. Both chairs have to keep 23:11: the Lord is not done with this witness."
+    }
+  ]
+}
+);
+window.SESSIONS.push(
+{
+  "book": "Acts",
+  "slug": "acts",
+  "chapterLabel": "Chapter 24 — Tertullus, a Convenient Season, and Two Years in Caesarea",
+  "chNum": "24",
+  "points": [
+    "24:1–9 — After five days Ananias the high priest comes down with the elders and Tertullus an orator. Flattery for Felix: great quietness, very worthy deeds. Then the charge: we have found this man a pestilent fellow, a mover of sedition among all the Jews throughout the world, a ringleader of the sect of the Nazarenes, who also hath gone about to profane the Temple. We took him. Lysias came with great violence and took him out of our hands. The Jews assent. Three accusations: plague, faction, Temple-profaning. Only the third even pretends to be a Temple fact, and 21:29 already called that a supposing.",
+    "24:10–21 — Paul answers. You have been a judge of this nation many years. I went up twelve days ago to worship. They did not find me in the Temple disputing or raising the people, nor in the synagogues, nor in the city. They cannot prove. 'But this I confess unto thee, that after the way which they call heresy, so worship I the God of my fathers, believing all things which are written in the law and in the prophets: and have hope toward God, which they themselves also allow, that there shall be a resurrection of the dead, both of the just and unjust.' I exercise myself to have a conscience void of offence. I came to bring alms and offerings. They found me purified in the Temple, neither with multitude nor with tumult. Certain Jews from Asia ought to be here if they had anything. Or let these say what they found when I stood in the council — except it be this one voice: of the resurrection of the dead I am called in question.",
+    "24:22–23 — Felix, having more perfect knowledge of that Way, defers them: when Lysias comes I will know the uttermost. Paul is to be kept, to have liberty, and his acquaintances are not to be forbidden to minister. A governor who already knows the Way is not confused. He is stalling.",
+    "24:24–27 — After certain days Felix comes with Drusilla his wife, which was a Jewess, and sends for Paul, and hears him concerning the faith in Christ. Paul reasons of righteousness, temperance, and judgment to come. Felix trembles: 'Go thy way for this time; when I have a convenient season, I will call for thee.' He hopes also that money should have been given him of Paul, so he sends for him the oftener. After two years Porcius Festus comes. Felix, willing to shew the Jews a pleasure, leaves Paul bound. Two years. 23:11 still stands. The clock is not Felix's."
+  ],
+  "refs": [
+    "Acts 21:28–29 — the Temple slander Tertullus dresses as fact.",
+    "Daniel 12:2 — many who sleep shall awake, some to everlasting life, some to shame. 24:15's just and unjust sits in that hope.",
+    "Acts 23:6 and 24:21 — the same narrowing: resurrection is the charge.",
+    "Amos 5:24 and John 16:8 — righteousness, self-control, judgment. 24:25 is a governor being evangelized, not briefed."
+  ],
+  "hist": [
+    "Tertullus is a hired rhetor. The opening flattery is how you talked to Felix, whose 'quietness' had been bought with crucifixions. Luke lets the oil sit on the page so you can smell it.",
+    "Drusilla was Herod Agrippa I's daughter, Felix's third wife. A Jewish princess in a procurator's house hearing about judgment to come is not a small audience. Josephus is not kind about either of them."
+  ],
+  "opens": [
+    "Felix already knows the Way (24:22) and still waits for a convenient season. What is this group's version of that sentence?",
+    "Paul confesses the Way and still claims the God of the fathers, the law, and the prophets. Who taught you those had to be different religions?"
+  ],
+  "topics": [
+    {
+      "title": "The Way They Call Heresy",
+      "icon": "⚖️",
+      "body": "24:14 is Paul's whole defense in one breath. The nickname is theirs. The worship is the fathers'. The books are Moses and the prophets. The hope is resurrection of just and unjust. Luke will not let a later reader pry the church off Israel's Scriptures in this courtroom."
+    },
+    {
+      "title": "When I Have a Convenient Season",
+      "icon": "⏳",
+      "body": "Felix trembles and then tables the file. He also wants a bribe. Fear and greed can share a chair. Two years pass. The convenient season never arrives. Festus inherits a bound man and an unfinished hearing."
+    }
+  ],
+  "wordStudies": [
+    {
+      "word": "Heresy / sect",
+      "orig": "Greek: hairesis",
+      "meaning": "24:5, 14. A party, a school. Tertullus uses it as dirt. Paul picks it up and says: that is what they call the Way I worship the fathers' God in."
+    },
+    {
+      "word": "Convenient season",
+      "orig": "Greek: kairos",
+      "meaning": "24:25. An appointed time. Felix wants a better slot. Luke has already told you the Lord's slot is Rome (23:11)."
+    }
+  ],
+  "doctrinal": "Teacher-only: I read 24:14–15 as Acts refusing a church cut loose from Moses and the prophets. Resurrection of just and unjust is Paul's public hope, not a private extra. I read Felix as a man who heard enough to tremble and loved money and favor more than a clean conscience. Do not preach 24:25 as if information were his lack.",
+  "story": {
+    "scene": "A hired speech that oils a governor. A prisoner who will not disown the fathers. A woman from Herod's house listening. A man shaking, then asking for a better calendar, then waiting two years for a bribe that never comes.",
+    "modern": "I know enough. Not now. That sentence can last two years and still feel like prudence."
+  },
+  "starterNotes": [],
+  "views": [
+    {
+      "name": "Felix as almost persuaded",
+      "body": "The tremble is near-faith. A convenient season might have become repentance. Strength: 24:25 is real fear."
+    },
+    {
+      "name": "Felix as a man who already knew enough",
+      "body": "24:22 says he had a more perfect knowledge of the Way. The tremble is conviction he shelves. The bribe is the tell. Both chairs should leave him bound to 24:25's three words: righteousness, temperance, judgment."
+    }
+  ]
+}
+);
+window.SESSIONS.push(
+{
+  "book": "Acts",
+  "slug": "acts",
+  "chapterLabel": "Chapter 25 — Festus, an Appeal to Caesar, and a King Who Comes to Hear",
+  "chNum": "25",
+  "points": [
+    "25:1–5 — Festus, three days in the province, goes up to Jerusalem. The high priest and chief of the Jews inform against Paul and want a favor: send him to Jerusalem. They lie in wait to kill him on the road — 23:12's oath still hungry. Festus: Paul will be kept at Caesarea; who among you are able, go down with me and accuse him.",
+    "25:6–12 — Next sitting, Paul is brought. Many and grievous complaints they cannot prove. 'Neither against the law of the Jews, neither against the temple, nor yet against Caesar, have I offended any thing at all.' Festus, willing to do the Jews a pleasure, asks if he will go to Jerusalem. 'I stand at Caesar's judgment seat, where I ought to be judged… I appeal unto Caesar.' Festus, with the council: 'Hast thou appealed unto Caesar? unto Caesar shalt thou go.' 23:11 just received a legal mechanism.",
+    "25:13–22 — Agrippa the king and Bernice come to salute Festus. Festus lays Paul's case: the accusers brought no crime I supposed; questions of their own superstition, and of one Jesus, which was dead, whom Paul affirmed to be alive. I was at a loss how to investigate and asked if he would go to Jerusalem; he appealed. Agrippa: I would also hear the man myself. Tomorrow.",
+    "25:23–27 — Agrippa and Bernice come with great pomp, into the place of hearing with the chief captains and principal men of the city. Festus's speech is almost comic in its honesty: I have no certain thing to write unto my lord. It seems unreasonable to send a prisoner and not to signify the crimes. 26 will be the hearing he cannot write. Luke wants you to see Rome's paperwork needing a sermon."
+  ],
+  "refs": [
+    "Acts 23:11 — thou must bear witness at Rome. 25:11–12 is how a citizen's right becomes that itinerary.",
+    "Acts 23:12–15 — the oath to kill him on a Jerusalem road. 25:3 is that plot wearing a legal request.",
+    "Luke 23:2–4 — charges that will not hold, a governor who finds no fault. The rhyme is deliberate."
+  ],
+  "hist": [
+    "Porcius Festus replaced Felix around AD 59. He looks more competent than Felix and still plays to Jerusalem on 25:9.",
+    "Agrippa II and Bernice are Herod's house again — Drusilla's brother and sister. The family that killed James in 12:1–2 is now in the audience for chapter 26."
+  ],
+  "opens": [
+    "Paul appeals to Caesar rather than take a Jerusalem hearing. Wisdom, fear, or obedience to 23:11 — or all three?",
+    "Festus can only describe the dispute as 'one Jesus, which was dead, whom Paul affirmed to be alive.' What is missing from that sentence, and why is that still almost enough?"
+  ],
+  "topics": [
+    {
+      "title": "Unto Caesar Shalt Thou Go",
+      "icon": "🦅",
+      "body": "The appeal is a Roman right. In this book it is also a prophetic door. Paul does not know Nero's end of the hall. He knows the Lord stood by him and named Rome. 25:12 is the sentence that makes chapters 27–28 necessary."
+    },
+    {
+      "title": "One Jesus, Whom Paul Affirmed to Be Alive",
+      "icon": "👑",
+      "body": "Festus cannot find a crime and cannot understand the argument. He gets the center anyway: dead, affirmed alive. That is Acts from 1:3 to 25:19 in a pagan administrator's shrug."
+    }
+  ],
+  "wordStudies": [
+    {
+      "word": "Appeal",
+      "orig": "Greek: epikaloumai",
+      "meaning": "25:11. I call upon Caesar. Same verb family as 'call upon the name of the Lord' (2:21; 22:16). Here the call is legal. The irony is Luke's."
+    },
+    {
+      "word": "Pomp",
+      "orig": "Greek: phantasia",
+      "meaning": "25:23. Spectacle. A king and his sister enter in display to hear a chained man talk about a risen one."
+    }
+  ],
+  "doctrinal": "Teacher-only: I read the appeal as Paul using a lawful tool the Lord already pointed toward, not as unbelief in God's ability to spare him in Jerusalem. I read Festus's 'one Jesus… alive' as Luke's joke and thesis at once. Do not turn Agrippa's pomp into the point. The point is that the gospel is about to be spoken in a room that thinks it is doing paperwork.",
+  "story": {
+    "scene": "A new governor, an old ambush dressed as a change of venue, a citizen's sentence that locks a route across the sea. Then a king in full display walking in to hear a case nobody can write down.",
+    "modern": "The meeting called to solve a file, which is actually about whether a dead man is alive. Most official rooms still do not know that is the file."
+  },
+  "starterNotes": [],
+  "views": [
+    {
+      "name": "The appeal as the Spirit's route",
+      "body": "23:11 required Rome. 25:11 is obedience with a legal handle."
+    },
+    {
+      "name": "The appeal as mixed",
+      "body": "Citizenship saves his skin and also serves the mission. Luke is willing to have both. Do not baptize every use of rights, and do not scorn this one."
+    }
+  ]
+}
+);
+window.SESSIONS.push(
+{
+  "book": "Acts",
+  "slug": "acts",
+  "chapterLabel": "Chapter 26 — Agrippa Hears the Hope of the Promise Made unto the Fathers",
+  "chNum": "26",
+  "points": [
+    "26:1–8 — Agrippa gives him leave. Paul stretches forth the hand. I am happy to answer before thee, especially because you know Jewish customs. My manner of life from my youth, spent at Jerusalem, the Jews know. I lived a Pharisee. 'And now I stand and am judged for the hope of the promise made of God unto our fathers: unto which promise our twelve tribes, instantly serving God day and night, hope to come. For which hope's sake, king Agrippa, I am accused of the Jews. Why should it be thought a thing incredible with you, that God should raise the dead?' 24:14–15 widened. The Way is Israel's hope on trial.",
+    "26:9–18 — I thought I ought to do many things contrary to the name of Jesus of Nazareth. I shut saints in prison, gave my voice against them when they were put to death, punished them in every synagogue, compelled them to blaspheme, persecuted even unto strange cities. Damascus, midday, a light above the brightness of the sun. We were all fallen. A voice in the Hebrew tongue: Saul, Saul, why persecutest thou me? it is hard for thee to kick against the pricks. 'I am Jesus whom thou persecutest.' Rise, stand; I have appeared to appoint you a minister and a witness. Delivering you from the people and from the Gentiles, unto whom now I send you, to open their eyes, to turn them from darkness to light, and from the power of Satan unto God, that they may receive forgiveness of sins and inheritance among them which are sanctified by faith that is in me. This is the fullest commission-form of the three tellings.",
+    "26:19–23 — I was not disobedient unto the heavenly vision. Damascus first, then Jerusalem, then the coasts of Judaea, then the Gentiles: repent and turn to God, and do works meet for repentance. For these causes the Jews caught me in the Temple and went about to kill me. Having obtained help of God, I continue unto this day, witnessing both to small and great, saying none other things than those which the prophets and Moses did say should come: that Christ should suffer, and that he should be the first that should rise from the dead, and should shew light unto the people, and to the Gentiles.",
+    "26:24–32 — Festus loud: Paul, thou art beside thyself; much learning doth make thee mad. 'I am not mad, most noble Festus; but speak forth the words of truth and soberness. The king knoweth… this thing was not done in a corner.' Agrippa, believest thou the prophets? I know that thou believest. Agrippa: 'Almost thou persuadest me to be a Christian.' 'I would to God, that not only thou, but also all that hear me this day, were both almost, and altogether such as I am, except these bonds.' They go aside: this man doeth nothing worthy of death or of bonds. Agrippa to Festus: he might have been set at liberty if he had not appealed unto Caesar. The paperwork now owns the promise."
+  ],
+  "refs": [
+    "Acts 9 and 22 — the other two cameras. 26 adds 'kick against the pricks' and the longest Gentile-commission sentence.",
+    "Isaiah 42:6–7 and 49:6 — open eyes, light to the nations. 26:17–18, 23 live in those Servant songs.",
+    "Luke 24:25–27, 44–47 — Moses and the prophets: suffer, rise, light to the nations. 26:22–23 is that Emmaus curriculum in a throne room.",
+    "Acts 1:8 — people and Gentiles. 26:17 names both as the field he is sent to."
+  ],
+  "hist": [
+    "'Not done in a corner' (26:26) is a claim about public events in a small province a king already knows. Luke's whole two-volume project sits under that line: this was history you could have asked about.",
+    "'Christian' on Agrippa's lips (26:28) is only the second use in the book (11:26). A Herodian king is now saying the Antioch nickname out loud."
+  ],
+  "opens": [
+    "Paul says he is on trial for the hope the twelve tribes still serve toward. Do you hear that as rhetoric for Agrippa, or as the thesis of Acts?",
+    "Agrippa's 'almost' has been preached a thousand ways. What in 26:26–29 will you not let a slogan flatten?"
+  ],
+  "topics": [
+    {
+      "title": "The Hope of the Promise Made unto the Fathers",
+      "icon": "🕯️",
+      "body": "26:6–8 is the most Israel-facing sentence in the defenses. Twelve tribes. Night-and-day service. A promise. Resurrection. Paul will not let Agrippa think the Way is a novelty from Tarsus. It is the fathers' hope arriving in a raised man."
+    },
+    {
+      "title": "Not Done in a Corner",
+      "icon": "☀️",
+      "body": "Festus hears learning and calls it madness. Paul hears a king who knows the prophets and pins him: believest thou? The almost is Agrippa's dodge and Luke's ache. The invitation includes the whole room, bonds excepted."
+    }
+  ],
+  "wordStudies": [
+    {
+      "word": "Hope",
+      "orig": "Greek: elpis",
+      "meaning": "26:6–7. Not optimism. The promised thing the tribes still wait for. Paul names resurrection as that hope's content."
+    },
+    {
+      "word": "Almost",
+      "orig": "Greek: en oligō",
+      "meaning": "26:28. In a little / in short / almost. The phrase is debated. Agrippa may be saying 'you are trying to make me a Christian in a short speech' with a sting. Either way he does not kneel."
+    }
+  ],
+  "doctrinal": "Teacher-only: I read 26:6–8 as Luke's own view of the argument — not a mask. The church's gospel is the fathers' promise fulfilled in the risen Christ and opened to the Gentiles as the prophets already said. I read 26:16–18 as the risen Jesus interpreting Paul's life: eyes opened, darkness to light, Satan to God, forgiveness, inheritance, faith in me. That is conversion language wide enough for Jew and Gentile. Agrippa's almost I will not romanticize. He leaves with Bernice and the file.",
+  "story": {
+    "scene": "A chained hand stretched toward a king. A noon light retold one more time. A governor shouting 'mad.' A king who knows enough to feel the pinch and smiles his way out of the room.",
+    "modern": "The person who knows the prophets well enough to be almost, and loves the room's pomp too much to be altogether."
+  },
+  "starterNotes": [],
+  "views": [
+    {
+      "name": "26:28 as a sincere near miss",
+      "body": "Agrippa is nearly persuaded. The line is grief. Strength: Paul's reply treats it as a real threshold."
+    },
+    {
+      "name": "26:28 as irony or deflection",
+      "body": "en oligō may mean 'so quickly you think you have me.' A court joke. Strength: the pomp of 25:23 and the exit of 26:30–32. Either chair still has to preach 26:29."
+    }
+  ]
+}
+);
+window.SESSIONS.push(
+{
+  "book": "Acts",
+  "slug": "acts",
+  "chapterLabel": "Chapter 27 — The Storm, an Angel in the Night, and a Ship Broken on a Beach",
+  "chNum": "27",
+  "points": [
+    "27:1–8 — Italy. Julius, a centurion of Augustus' band, treats Paul courteously and gives him liberty to see friends at Sidon. They sail under Cyprus, over the sea of Cilicia and Pamphylia, to Myra. An Alexandrian ship for Italy. Slow passage to Cnidus, then under Crete to Fair Havens, nigh to Lasea. Luke's 'we' is back in the spray. This is not filler. It is how 23:11 moves.",
+    "27:9–12 — Sailing is now dangerous because the fast is already past — the Day of Atonement, autumn on the calendar. Paul advises: this voyage will be with hurt and much damage, not only of lading and ship, but also of our lives. The centurion believes the master and the owner more than Paul. They hope to reach Phoenix and winter there. The majority carries the vote.",
+    "27:13–20 — A south wind blows softly; they suppose they have their purpose; they loose and sail close by Crete. Then Euroclydon, a tempestuous wind. The ship is caught. They under-run the boat, gird the ship, strike sail, are driven. Next day they lighten the ship. Third day they cast out the tackling with their own hands. Neither sun nor stars in many days. All hope that they should be saved is then taken away.",
+    "27:21–26 — After long abstinence Paul stands forth. Ye should have hearkened. Now I exhort you to be of good cheer: there shall be no loss of any man's life among you, but of the ship. There stood by me this night the angel of God, whose I am, and whom I serve, saying, Fear not, Paul; thou must be brought before Caesar: and, lo, God hath given thee all them that sail with thee. 'I believe God, that it shall be even as it was told me. Howbeit we must be cast upon a certain island.' 23:11 has now boarded a sinking grain ship.",
+    "27:27–38 — Fourteenth night in Adria. The shipmen deem they draw near land, sound twenty fathoms, then fifteen, and fearing rocks, cast four anchors out of the stern and wish for day. Shipmen would flee in the boat. Paul to the centurion: except these abide in the ship, ye cannot be saved. The soldiers cut the ropes and let the boat fall off. At daybreak he beseeches them all to take meat: not a hair shall fall. He takes bread, gives thanks to God in presence of them all, breaks, and begins to eat. They are all of good cheer, and eat. Two hundred seventy-six souls. They lighten the ship of the wheat.",
+    "27:39–44 — Day: a creek with a shore. They aim to thrust the ship in. Bow sticks; stern is broken by the violence. The soldiers' counsel is to kill the prisoners, lest any swim out and escape. The centurion, willing to save Paul, keeps them from that purpose. Those who can swim, cast themselves first; the rest on boards and broken pieces of the ship. 'And so it came to pass, that they escaped all safe to land.' The angel's word holds. The owner's ship does not."
+  ],
+  "refs": [
+    "Acts 23:11 — thou must bear witness at Rome. 27:24 is that word in a storm.",
+    "Jonah 1 — a prophet on a ship in a gale. The rhyme is there; the difference is too: this prophet is not running, and no one is thrown overboard.",
+    "Luke 22:19 — took bread, gave thanks, broke. 27:35 is that motion in front of pagans and prisoners.",
+    "Matthew 10:30 — hairs numbered. 27:34 says it to a crew."
+  ],
+  "hist": [
+    "Alexandrian grain ships fed Rome. A late autumn crossing after the Fast is a known gamble. Fair Havens is a poor winter harbor; Phoenix looks better on a map. Luke's nautical detail is why many readers think he was in the water.",
+    "Killing prisoners to prevent escape was Roman self-protection. Julius's refusal is how 276 people match 27:24."
+  ],
+  "opens": [
+    "The majority, the pilot, and the owner outvote the man who has an angel. When has this group trusted expertise past a word they already had?",
+    "Paul gives thanks and breaks bread on a deck that may not last the morning. What is that act doing in a chapter with no synagogue?"
+  ],
+  "topics": [
+    {
+      "title": "Whose I Am, and Whom I Serve",
+      "icon": "⚓",
+      "body": "27:23 is identity in a gale. The angel does not promise the ship. He promises Caesar and the souls on board. Faith in 27:25 is not a feeling about weather. It is agreement with a sentence already spoken in 23:11."
+    },
+    {
+      "title": "All Safe to Land",
+      "icon": "🪵",
+      "body": "Soldiers would solve the night with a sword. A centurion who has learned to listen keeps 276 men inside the angel's math. They finish the voyage on planks. Luke's last word on the ship is not seamanship. It is 'all safe.'"
+    }
+  ],
+  "wordStudies": [
+    {
+      "word": "Must (be brought before Caesar)",
+      "orig": "Greek: dei",
+      "meaning": "27:24. Same necessity as 23:11. The storm is not stronger than the verb."
+    },
+    {
+      "word": "Given thee",
+      "orig": "Greek: kecharistai soi",
+      "meaning": "27:24. God has gifted you the passengers. Paul's life is not the only cargo the promise is carrying."
+    }
+  ],
+  "doctrinal": "Teacher-only: I read chapter 27 as history, not as an allegory of the church in the world — though preaching may lawfully see planks and a kept word. The load is 23:11 surviving Euroclydon. I will not turn 27:35 into a secret Lord's Supper unless the group needs that conversation; Luke describes thanksgiving and bread that steadies a crew. The miracle is the kept census, not a quiet sea.",
+  "story": {
+    "scene": "A soft south wind that lies. Fourteen nights without stars. An angel on a pitching deck. A boat cut loose so no one can sneak off the promise. Dawn, a creek, a cracking stern, and men in the surf holding wood.",
+    "modern": "The meeting where the experts are sure and the word you already had is treated as a hobby. Then the night when only the word is left."
+  },
+  "starterNotes": [],
+  "views": [
+    {
+      "name": "The voyage as straight history with a kept promise",
+      "body": "Luke the companion is telling what the we-sections always tell: we sailed, we nearly died, the word held."
+    },
+    {
+      "name": "The voyage as also a picture",
+      "body": "Some read ship, storm, and planks as the church's passage through the age. Fine as after-sermon. Do not let it replace 276 real names and a real beach."
+    }
+  ]
+}
+);
+window.SESSIONS.push(
+{
+  "book": "Acts",
+  "slug": "acts",
+  "chapterLabel": "Chapter 28 — A Fire on Malta, a House in Rome, and Isaiah's Dull Ears",
+  "chNum": "28",
+  "points": [
+    "28:1–6 — They learn the island is called Melita. Barbarians show no little kindness; they kindle a fire because of the rain and the cold. A viper out of the heat fastens on Paul's hand. He shakes it off into the fire and feels no harm. They look for him to swell or fall dead. After a great while they change their minds and say he is a god. 14:11–15 already taught him what to do with that sentence. Luke does not even pause to record a protest. He moves to the next house.",
+    "28:7–10 — The chief man of the island, Publius, lodges them three days courteously. Publius's father lies sick of a fever and a bloody flux. Paul goes in, prays, lays hands on him, and heals him. Others in the island which had diseases come and are healed. They honor the party with many honors and lade them with such things as are necessary. The wreck ends as 3:1–10 began: a name that can raise a body.",
+    "28:11–16 — After three months they sail in a ship of Alexandria which had wintered in the isle, whose sign is Castor and Pollux. Syracuse, Rhegium, Puteoli — brethren there, seven days. Toward Rome, brethren from the city meet them as far as Appii Forum and The Three Taverns. When Paul sees them, he thanks God and takes courage. At Rome the centurion delivers the prisoners to the captain of the guard; Paul is suffered to dwell by himself with a soldier that keeps him. 23:11 has arrived, in hired quiet, with a chain.",
+    "28:17–22 — After three days he calls the chief of the Jews. I have done nothing against the people or the customs of the fathers, yet was I delivered prisoner from Jerusalem into the hands of the Romans, who would have let me go. I was constrained to appeal. I have called you to see you and speak with you: 'because that for the hope of Israel I am bound with this chain.' They have received no letters and none of the brethren has reported harm. They want to hear what he thinks; as concerning this sect, it is known to us that everywhere it is spoken against.",
+    "28:23–29 — A day appointed, many come to his lodging. From morning till evening he expounds and testifies the kingdom of God, persuading them concerning Jesus, both out of the law of Moses and out of the prophets. Some believe, some do not. They agree not among themselves. Paul's last citation in the book is Isaiah 6:9–10, in the Septuagint shape Matthew already used at 13:14–15: hearing ye shall hear and shall not understand; seeing ye shall see and not perceive; the heart of this people is waxed gross, ears dull, eyes closed; lest they should see, hear, understand, be converted, and I should heal them. 'Be it known therefore unto you, that the salvation of God is sent unto the Gentiles, and that they will hear it.' The Jews depart, and have great reasoning among themselves.",
+    "28:30–31 — Two whole years in his own hired house, receiving all that come in unto him, preaching the kingdom of God, and teaching those things which concern the Lord Jesus Christ, with all confidence, no man forbidding him. The book does not narrate the trial, the death, or the release. It ends on an open door and an unhindered word. 1:1's 'began' is still the right verb."
+  ],
+  "refs": [
+    "Isaiah 6:9–10 — the hardening word. 28:26–27 follows the LXX, as Matthew 13:14–15 did. Luke's two volumes now both close a major movement with that scroll.",
+    "Luke 24:27, 44–47 — Moses and the prophets concerning himself. 28:23 is that method in a rented room.",
+    "Acts 1:3, 8 and 28:23, 31 — the kingdom of God at both ends of the book. The map changed. The subject did not.",
+    "Acts 13:46–47 and 18:6 — earlier turns to the Gentiles after synagogue resistance. 28:28 is the last of those turns, spoken in Rome.",
+    "Acts 23:11 — Rome. 28:16 is arrival; 28:31 is what arrival was for."
+  ],
+  "hist": [
+    "Melita is Malta. 'Barbarians' in 28:2 means they did not speak Greek, not that they were cruel. Luke honors their kindness before he honors their theology.",
+    "Castor and Pollux on the prow is ordinary pagan shipping. Luke does not make a sermon of the figurehead. He names it the way a passenger names a boat.",
+    "A hired house with a soldier is light custody, the kind a citizen-appellant could get while waiting for the docket. Two years is a long wait. Luke calls the speech unhindered anyway."
+  ],
+  "opens": [
+    "Paul is bound for the hope of Israel (28:20) in the same breath that he says salvation is sent to the Gentiles (28:28). How do you keep both sentences?",
+    "Why would Luke end without the trial? What does an unhindered word in a rented room do that a verdict would not?"
+  ],
+  "topics": [
+    {
+      "title": "The Hope of Israel, in a Chain, in Rome",
+      "icon": "⛓️",
+      "body": "28:20 is 26:6–7 moved west. He has not changed the charge. The first conversation in the capital is with Jews, about Moses and the prophets, about the kingdom, about Jesus. 1:8 did not mean 'skip Israel when you hit the end of the earth.'"
+    },
+    {
+      "title": "Isaiah 6 as the Book's Last Citation",
+      "icon": "📜",
+      "body": "Matthew used Isaiah 6 to explain parables by the lake. Luke uses it to explain a split in a Roman lodging. Same LXX lines: dull ears, closed eyes, a healing they will not turn to receive. Then the turn: the Gentiles will hear. Not because Israel was a mistake. Because Isaiah already named a hardness, and the Servant already named a light to the nations. The word is still unhindered (28:31)."
+    }
+  ],
+  "wordStudies": [
+    {
+      "word": "Hope of Israel",
+      "orig": "Greek: elpis tou Israēl",
+      "meaning": "28:20. Paul's chain-reason. If you preach Acts as Israel-abandoned, you have to talk over this phrase."
+    },
+    {
+      "word": "Unhindered",
+      "orig": "Greek: akōlytōs",
+      "meaning": "28:31. The last word of the book in Greek. A soldier is in the room. The speech is still not forbidden. Luke wanted that adverb in your ear when the scroll stops."
+    }
+  ],
+  "doctrinal": "Teacher-only: I read 28:20 and 28:28 together as I read 1:6–8 — Israel's hope is not cancelled, the nations are not a backup plan, and hardness is a real prophetic category Isaiah already gave. I sit with a future for Israel that Romans 11 will name more fully, and I would say that as mine without turning 28:26–27 into theater. I read the open ending as theology: the risen Jesus is still doing and teaching (1:1), now in Rome, through a chained man, without a court verdict needed for the word to run. Do not invent a chapter 29 in Luke's voice. Do finish the sentence the way 28:31 does — kingdom, Lord Jesus Christ, confidence, no one forbidding.",
+  "story": {
+    "scene": "Wet men at a fire. A snake in a fist. A governor's father sitting up. A ship with twin gods on the nose. Brothers on the Appian Way who make a prisoner thank God out loud.\n\nThen a rented room, Moses and the prophets from morning until night, a split in the company, Isaiah's old ache spoken one more time, and a last picture: the kingdom still being preached while a soldier listens and nobody stops the mouth.",
+    "modern": "Arrival that does not look like winning — a chain, a rental, a mixed response — and a word that is somehow still not hindered. That is how Luke thought the story should end, because that is how it actually goes on."
+  },
+  "starterNotes": [],
+  "views": [
+    {
+      "name": "28:28 as a last turn away from Israel",
+      "body": "Some hear the book closing Israel's chapter. Strength: three prior turns (13:46; 18:6; 28:28). Cost: 28:20 and the first audience in Rome being the chief of the Jews."
+    },
+    {
+      "name": "28:28 as this-audience hardness, not the end of the people",
+      "body": "Isaiah 6 already described a generation that would not turn. Gentiles will hear. The hope of Israel remains the name of the chain. This chair sits nearer Romans 11 and Acts 1:6–8. Leave both sentences in the rented room."
     }
   ]
 }
