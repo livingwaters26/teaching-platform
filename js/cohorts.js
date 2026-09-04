@@ -13,6 +13,46 @@
 
 const COHORTS_KEY = 'lw-cohorts-v1';
 
+// Which class THIS BROWSER TAB is currently teaching (if any) — sessionStorage on purpose,
+// not localStorage. A cohort's saved schedule/position (above) is shared across every tab
+// and persists between visits; "which one is active right now" is deliberately per-tab, so
+// opening a second tab to look something up never hijacks the class running in tab one, and
+// never leaves tab one silently scoped to whatever tab two was just doing.
+const ACTIVE_COHORT_KEY = 'lw-active-cohort-v1';
+
+function setActiveCohortId(id){
+  try {
+    if (id) sessionStorage.setItem(ACTIVE_COHORT_KEY, id);
+    else sessionStorage.removeItem(ACTIVE_COHORT_KEY);
+  } catch(e) {}
+}
+window.setActiveCohortId = setActiveCohortId;
+
+function getActiveCohort(){
+  let id;
+  try { id = sessionStorage.getItem(ACTIVE_COHORT_KEY); } catch(e) { id = null; }
+  if (!id) return null;
+  const found = loadCohorts().find(c => c.id === id);
+  if (!found) { setActiveCohortId(null); return null; } // stale pointer (class was deleted)
+  return found;
+}
+window.getActiveCohort = getActiveCohort;
+
+// Returns null unless a class is active in this tab AND the given SESSIONS index is part
+// of that class's own scope — used by js/render.js's teacher-pane header so it can say
+// "Lesson 3 of 25 · Tuesday Nights Daniel Group" instead of "Lesson 118 of 509 · Daniel
+// Group Study" (technically true, but reads like the whole app is one endless course).
+window.getActiveCohortLabelFor = function(sessionIndex){
+  const cohort = getActiveCohort();
+  if (!cohort) return null;
+  const scoped = scopedSessionsFor(cohort.scopeValue);
+  const pos = scoped.findIndex(x => x.i === sessionIndex);
+  if (pos === -1) return null; // this chapter isn't part of the active class's plan
+  return { name: cohort.name, num: pos + 1, total: scoped.length };
+};
+
+
+
 function loadCohorts(){
   try {
     const raw = localStorage.getItem(COHORTS_KEY);
@@ -140,6 +180,11 @@ function createCohort(name, scopeValue, scopeLabel, freq, mins, startDateISO){
 
 function deleteCohort(id){
   saveCohorts(loadCohorts().filter(c => c.id !== id));
+  if (typeof getActiveCohort === 'function') {
+    let activeId;
+    try { activeId = sessionStorage.getItem(ACTIVE_COHORT_KEY); } catch(e) { activeId = null; }
+    if (activeId === id) setActiveCohortId(null);
+  }
 }
 
 // Jumps the app's live view to a given meeting number within a cohort's schedule, setting
@@ -164,6 +209,7 @@ function advanceCohort(id){
   const { units } = scheduleForCohortParams(cohort.scopeValue, cohort.freq, cohort.mins, cohort.startDateISO);
   cohort.currentUnitIndex = Math.min(cohort.currentUnitIndex + 1, Math.max(units.length - 1, 0));
   saveCohorts(cohorts);
+  setActiveCohortId(id);
   jumpToCohortUnit(cohort, cohort.currentUnitIndex);
   if (typeof closeCohorts === 'function') closeCohorts();
   if (typeof closeDrawer === 'function') closeDrawer();
@@ -174,6 +220,7 @@ function resumeCohort(id){
   const cohorts = loadCohorts();
   const cohort = cohorts.find(c => c.id === id);
   if (!cohort) return;
+  setActiveCohortId(id);
   jumpToCohortUnit(cohort, cohort.currentUnitIndex);
   if (typeof closeCohorts === 'function') closeCohorts();
   if (typeof closeDrawer === 'function') closeDrawer();

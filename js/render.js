@@ -348,10 +348,15 @@ function teacherHTML(s, seg){
     : (current+1 < SESSIONS.length ? SESSIONS[current+1].chapterLabel : 'the final lesson of the course — congratulations to your group for making it here');
   script += `<p><strong>Close in prayer.</strong> Then let them know next time, we're moving to <em>${nextUpLabel}</em>.</p>`;
 
+  const activeCohortLabel = (typeof getActiveCohortLabelFor === 'function') ? getActiveCohortLabelFor(current) : null;
+  const eyebrowText = activeCohortLabel
+    ? `Lesson ${activeCohortLabel.num} of ${activeCohortLabel.total} &middot; ${activeCohortLabel.name}${scoped ? ' &middot; Part ' + (seg.index+1) + ' of ' + seg.total : ''}`
+    : `Lesson ${current+1} of ${SESSIONS.length} &middot; ${s.book} Group Study${scoped ? ' &middot; Part ' + (seg.index+1) + ' of ' + seg.total : ''}`;
+
   return `
     <div class="pane-label">Teacher Script — Keep on Your Own Screen</div>
     <div class="session-head">
-      <div class="eyebrow">Lesson ${current+1} of ${SESSIONS.length} &middot; ${s.book} Group Study${scoped ? ' &middot; Part ' + (seg.index+1) + ' of ' + seg.total : ''}</div>
+      <div class="eyebrow">${eyebrowText}</div>
       <h1>${s.chapterLabel}</h1>
       <div class="meta">Target: 30–45 minutes${scoped && seg.estMinutes ? ' &middot; this part est. ~' + seg.estMinutes + ' min' : ''}</div>
     </div>

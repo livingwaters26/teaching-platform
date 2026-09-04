@@ -42,8 +42,9 @@ function render(){
   updateTranslationSelect();
   document.getElementById('pane-display').innerHTML = displayHTML(s, currentSegment);
   document.getElementById('pane-teacher').innerHTML = teacherHTML(s, currentSegment);
-  document.getElementById('prev-btn').disabled = current === 0;
-  document.getElementById('next-btn').disabled = current === SESSIONS.length - 1;
+  const navBounds = (typeof computeNavBoundaries === 'function') ? computeNavBoundaries() : { atFirst: current === 0, atLast: current === SESSIONS.length - 1 };
+  document.getElementById('prev-btn').disabled = navBounds.atFirst;
+  document.getElementById('next-btn').disabled = navBounds.atLast;
   // Keeps the Teams-share popout window synced on every navigation. Resolves any
   // externally-hosted (data-cache-key) images to portable data: URLs first, since the
   // popout is a separate blob: document that can't run js/image-cache.js itself —
@@ -65,20 +66,75 @@ function render(){
   if (typeof wireImageCache === 'function') wireImageCache(document.getElementById('pane-display'));
 }
 
-document.getElementById('prev-btn').onclick = () => { if(current>0){current--; currentSegment=null; render(); window.scrollTo(0,0);} };
-document.getElementById('next-btn').onclick = () => { if(current<SESSIONS.length-1){current++; currentSegment=null; render(); window.scrollTo(0,0);} };
+// Once a class is active in this tab, Prev/Next stay inside that class's own lessons
+// (skip other books) instead of walking the whole 509-lesson app — matches the nav-drawer
+// and teacher-header scoping above. Falls back to plain whole-app stepping when no class
+// is active, or if the current chapter isn't part of the active class's scope (e.g. you
+// used "Browse all books" to wander off it).
+function computeNavBoundaries(){
+  const activeCohort = (typeof getActiveCohort === 'function') ? getActiveCohort() : null;
+  if (activeCohort && typeof scopedSessionsFor === 'function') {
+    const scoped = scopedSessionsFor(activeCohort.scopeValue);
+    const pos = scoped.findIndex(x => x.i === current);
+    if (pos !== -1) {
+      return { atFirst: pos === 0, atLast: pos === scoped.length - 1, scoped, pos };
+    }
+  }
+  return { atFirst: current === 0, atLast: current === SESSIONS.length - 1, scoped: null, pos: -1 };
+}
 
+document.getElementById('prev-btn').onclick = () => {
+  const nav = computeNavBoundaries();
+  if (nav.scoped) {
+    if (nav.pos > 0) { current = nav.scoped[nav.pos-1].i; currentSegment=null; render(); window.scrollTo(0,0); }
+    return;
+  }
+  if(current>0){current--; currentSegment=null; render(); window.scrollTo(0,0);}
+};
+document.getElementById('next-btn').onclick = () => {
+  const nav = computeNavBoundaries();
+  if (nav.scoped) {
+    if (nav.pos < nav.scoped.length - 1) { current = nav.scoped[nav.pos+1].i; currentSegment=null; render(); window.scrollTo(0,0); }
+    return;
+  }
+  if(current<SESSIONS.length-1){current++; currentSegment=null; render(); window.scrollTo(0,0);}
+};
+
+// "This Study" in the nav drawer used to always dump every lesson in the whole app (509+
+// across every book) no matter what you were teaching — confusing when you're mid-way
+// through, say, a Daniel class and just want to see Daniel's own lessons. Now: once a class
+// is active in this tab (via "Resume this lesson" under My Classes), this list narrows to
+// just that class's own scoped lessons, with an escape hatch back to the full browse list.
+// No class active yet (nothing resumed this tab) → same full list as before, so browsing
+// freely still works with zero setup.
 function renderNavList(){
   const list = document.getElementById('nav-lesson-list');
+  const activeCohort = (typeof getActiveCohort === 'function') ? getActiveCohort() : null;
   let html = '';
-  let lastBook = null;
-  SESSIONS.forEach((s,i) => {
-    if (s.book !== lastBook) {
-      html += `<div class="nav-book-group">${s.book}</div>`;
-      lastBook = s.book;
-    }
-    html += `<button class="nav-lesson-item ${i===current?'active':''}" data-idx="${i}">Lesson ${i+1}: ${s.chapterLabel}</button>`;
-  });
+
+  if (activeCohort) {
+    const scoped = (typeof scopedSessionsFor === 'function')
+      ? scopedSessionsFor(activeCohort.scopeValue)
+      : SESSIONS.map((s,i)=>({s,i}));
+    html += `<div class="nav-active-class-head">
+        <strong>${activeCohort.name}</strong>
+        <button type="button" id="btn-leave-class-view" class="notes-add-btn" style="margin-top:6px;">Browse all books instead</button>
+      </div>`;
+    scoped.forEach(x => {
+      html += `<button class="nav-lesson-item ${x.i===current?'active':''}" data-idx="${x.i}">Lesson ${x.i+1}: ${x.s.chapterLabel}</button>`;
+    });
+  } else {
+    html += `<p class="nav-drawer-note" style="margin-bottom:10px;">No class active in this tab. Open <strong>&#128193;&#65039; My Classes</strong> and hit "Resume this lesson" to scope this list to just that class — until then, here's every lesson in the app:</p>`;
+    let lastBook = null;
+    SESSIONS.forEach((s,i) => {
+      if (s.book !== lastBook) {
+        html += `<div class="nav-book-group">${s.book}</div>`;
+        lastBook = s.book;
+      }
+      html += `<button class="nav-lesson-item ${i===current?'active':''}" data-idx="${i}">Lesson ${i+1}: ${s.chapterLabel}</button>`;
+    });
+  }
+
   list.innerHTML = html;
   list.querySelectorAll('.nav-lesson-item').forEach(btn => {
     btn.addEventListener('click', () => {
@@ -89,6 +145,13 @@ function renderNavList(){
       window.scrollTo(0,0);
     });
   });
+  const leaveBtn = document.getElementById('btn-leave-class-view');
+  if (leaveBtn) {
+    leaveBtn.addEventListener('click', () => {
+      if (typeof setActiveCohortId === 'function') setActiveCohortId(null);
+      renderNavList();
+    });
+  }
 }
 
 function openDrawer(){ document.getElementById('nav-drawer').classList.add('open'); document.getElementById('nav-overlay').classList.add('open'); }
@@ -141,7 +204,10 @@ if (recordingsModal) recordingsModal.addEventListener('click', function(e){ if (
     const opt = document.createElement('option');
     opt.value = 'book:' + b.book;
     const count = b.last - b.first + 1;
-    opt.textContent = `${b.book} only (Lesson${count>1?'s':''} ${b.first+1}${b.last>b.first?'–'+(b.last+1):''})`;
+    // Book name + chapter count only — no raw "Lesson 344" numbering. Picking a study
+    // should read like picking a book of the Bible, not like picking a slice out of one
+    // giant continuous course.
+    opt.textContent = `${b.book} only (${count} chapter${count>1?'s':''})`;
     scopeSel.insertBefore(opt, customOpt);
   });
 })();
@@ -149,7 +215,9 @@ if (recordingsModal) recordingsModal.addEventListener('click', function(e){ if (
 const rangeStartSel = document.getElementById('planner-range-start');
 const rangeEndSel = document.getElementById('planner-range-end');
 SESSIONS.forEach((s,i) => {
-  const label = `Lesson ${i+1}: ${s.chapterLabel}`;
+  // Same idea as the book dropdown above: "Genesis — Chapter 22 — ..." reads like a Bible
+  // reference; "Lesson 118:" reads like an opaque slot in one giant course.
+  const label = `${s.book} — ${s.chapterLabel}`;
   rangeStartSel.appendChild(new Option(label, i));
   rangeEndSel.appendChild(new Option(label, i));
 });
@@ -288,10 +356,17 @@ window.saveLastPlanAsCohort = function(){
   const nameInput = document.getElementById('cohort-name-input');
   const name = (nameInput && nameInput.value.trim()) || 'Untitled class';
   const p = window.LAST_PLAN;
-  createCohort(name, p.scopeValue, p.scopeLabel, p.freq, p.mins, p.startDateISO);
+  const cohort = createCohort(name, p.scopeValue, p.scopeLabel, p.freq, p.mins, p.startDateISO);
   const confirmEl = document.getElementById('cohort-save-confirm');
   if (confirmEl) confirmEl.style.display = 'block';
   if (typeof renderCohortsList === 'function') renderCohortsList();
+  // Jump straight into teaching it — no separate trip to "My Classes" needed. This marks
+  // the new class active in this tab (js/cohorts.js), which scopes "This Study" in the nav
+  // drawer down to just its own lessons and shows lesson 1 right away.
+  if (cohort && typeof resumeCohort === 'function') {
+    resumeCohort(cohort.id);
+    if (typeof closePlanner === 'function') closePlanner();
+  }
 };
 
 let seconds = 2700, running = false, iv;
