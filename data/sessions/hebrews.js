@@ -303,7 +303,8 @@ window.SESSIONS.push(
   ],
   "hist": [
     "Aaronic priesthood was hereditary and weak-on-purpose: the man on duty had to offer for himself (Lev 16). Hebrews honors that compassion-structure, then says the Son was called to a different order — not from Levi’s paperwork, from two psalms.",
-    "Melchizedek has been waiting since Genesis 14 and Psalm 110. Second Temple readers already found him strange. The writer says the block is not the strangeness. It is dull hearing in a church that has had time to grow teeth."
+    "Melchizedek has been waiting since Genesis 14 and Psalm 110. Second Temple readers already found him strange. The writer says the block is not the strangeness. It is dull hearing in a church that has had time to grow teeth.",
+    "The 'order of Melchizedek' names a pattern, priest-king, not from Levi, not ended by death, not a secret society. See Genesis 14 and Psalm 110 for the entire biblical dossier on Melchizedek himself, expanded in chapter 7."
   ],
   "opens": [
     "He learned obedience by what he suffered. What would it mean if our ‘Sonship’ still needed a school of suffering?",
@@ -319,6 +320,11 @@ window.SESSIONS.push(
       "title": "Dull of Hearing",
       "icon": "🍼",
       "body": "Hard things to say. They should be teachers and need ABCs. Milk. Babies in the word of righteousness. Solid food for trained senses that can tell good from evil."
+    },
+    {
+      "title": "Called, not self-appointed",
+      "icon": "🕊️",
+      "body": "No man takes the priestly honor for himself; even Aaron was called by God (5:4). The chapter sets up the Melchizedek argument by first establishing that a real priest is appointed, not self-declared. Jesus 'glorified not himself' to become high priest either (5:5), but was addressed by the same oath in Psalm 110:4 that names him a priest forever after the order of Melchizedek."
     }
   ],
   "wordStudies": [
@@ -390,6 +396,11 @@ window.SESSIONS.push(
       "title": "An Anchor of the Soul",
       "icon": "⚓",
       "body": "Beloved, better things. God remembers love-labor. Diligence to the end. Abraham’s oath. Two unchangeable things. Refugees grab a hope that has already gone behind the veil with Jesus."
+    },
+    {
+      "title": "Forerunner behind the veil",
+      "icon": "⚓",
+      "body": "The hope 'both sure and stedfast' enters within the veil where Jesus has gone as forerunner (6:19-20): access into the Most Holy Place, once barred to everyone but the high priest once a year, now opened because Jesus already holds the office after the order of Melchizedek. This anchors the sharp warning earlier in the chapter (6:4-8) in real hope, not just real danger."
     }
   ],
   "wordStudies": [
@@ -446,7 +457,8 @@ window.SESSIONS.push(
   ],
   "hist": [
     "Genesis gives Melchizedek no birth or death notice. Hebrews reads that silence as a type — ‘made like’ the Son — not as a claim that the Salem king was a phantom. Typology is announced (7:3), not smuggled.",
-    "Judah-not-Levi is a legal problem if the only priesthood you have is Aaron’s. The letter’s answer is not a forged genealogy. It is an older priest-king and an oath later than the law."
+    "Judah-not-Levi is a legal problem if the only priesthood you have is Aaron’s. The letter’s answer is not a forged genealogy. It is an older priest-king and an oath later than the law.",
+    "Genesis 14 gives Melchizedek three verses: king of Salem, priest of God Most High, blessing Abraham and receiving a tenth, then gone, with no father, mother, or recorded death mentioned. Hebrews reads that silence as a type, 'made like unto the Son of God' (7:3), not a claim that the Salem king literally had no parents or was a pre-incarnate appearance of Christ."
   ],
   "opens": [
     "If the lesser is blessed by the better, what does Abraham’s tenth do to a piety that treats Levi as the last word?",
@@ -462,6 +474,16 @@ window.SESSIONS.push(
       "title": "Able to Save to the Uttermost",
       "icon": "🙌",
       "body": "Oath. Better covenant’s guarantee. Priesthood that death cannot rotate. He always lives to intercede. Once he offered himself. The oath appoints the Son forever."
+    },
+    {
+      "title": "Lesser blessed by the better",
+      "icon": "🍞",
+      "body": "Abraham, and Levi still in the loins of his ancestor, pays a tenth to Melchizedek. The logic runs one direction: the one who blesses is greater than the one blessed (7:4-10). If Levi's own ancestor paid tribute to this priest-king, Levi's priesthood can't be the final word."
+    },
+    {
+      "title": "An indestructible life, not a bloodline",
+      "icon": "♾️",
+      "body": "Levitical priests multiply because each one dies. Jesus continueth ever and holds an unchangeable priesthood by the power of an endless life (7:16, 24), able to save to the uttermost because his intercession never has to be handed off to a successor."
     }
   ],
   "wordStudies": [
@@ -479,9 +501,14 @@ window.SESSIONS.push(
       "word": "To the uttermost",
       "orig": "Greek: eis to panteles",
       "meaning": "7:25. Completely / for all time. Save all the way, because the intercession does not clock out."
+    },
+    {
+      "word": "order (of Melchizedek)",
+      "orig": "Greek: taxis",
+      "meaning": "7:11, 17 - not a lineage or guild but a pattern or rank: priest-king, not descended from Levi, not ended by death. Psalm 110:4 swears this pattern onto David's Lord; Hebrews argues a change of priesthood-pattern requires a change of law (7:12)."
     }
   ],
-  "doctrinal": "Teacher-only: Melchizedek is type, not a rival incarnation story unless you choose a fringe chair and say so. Change of law in 7:12 is the priesthood-arrangement, not a sneer at Moses’ gift; 7:19 still says the law completed nothing as a finishing instrument. Save-to-the-uttermost is for those who come to God through him — same draw-near verb as 4:16. Once-for-all offering arrives here and will dominate chs. 9–10. Forever priest + weak many-priests is the pastoral comfort for a congregation watching a temple system (or its memory) age.",
+  "doctrinal": "Teacher-only: Melchizedek is type, not a rival incarnation story unless you choose a fringe chair and say so. Change of law in 7:12 is the priesthood-arrangement, not a sneer at Moses’ gift; 7:19 still says the law completed nothing as a finishing instrument. Save-to-the-uttermost is for those who come to God through him — same draw-near verb as 4:16. Once-for-all offering arrives here and will dominate chs. 9–10. Forever priest + weak many-priests is the pastoral comfort for a congregation watching a temple system (or its memory) age. Teacher's own read on Melchizedek: a real historical priest-king of Salem whose thin, undated record in Genesis is exactly the raw material Hebrews needed to argue for a priesthood outside Levi, not a theophany. The point of the chapter isn't solving his biography; it's that Jesus holds an office sworn by oath (Psalm 110:4), unbound by death. That's not the only faithful way to read 7:3, which is why the theophany view is named above rather than dismissed.",
   "story": {
     "scene": "A king-priest on a road with bread and a blessing. A tenth from Abraham. Judah walking toward an altar Moses never assigned him. An oath. One offering. A living intercession that does not retire.",
     "modern": "Treating silence in Genesis as nothing; clinging to a weak rotation because it is familiar; coming to God as if the priest might be off duty."
@@ -495,6 +522,14 @@ window.SESSIONS.push(
     {
       "name": "Law-change as priesthood-order, not anti-Torah spite",
       "body": "7:12, 18–19. Strength: another priest required it. Cost: ‘unprofitable’ is about finishing, not about God’s gift being trash."
+    },
+    {
+      "name": "Melchizedek as literary type",
+      "body": "Genesis's silence about his ancestry is simply what a brief narrative cameo looks like, no birth or death recorded because the story isn't about him. Hebrews uses that silence rhetorically to picture a priesthood not bound by genealogy, without claiming anything supernatural about the man himself."
+    },
+    {
+      "name": "Melchizedek as theophany",
+      "body": "A minority reading takes 'without father, mother, genealogy, beginning of days or end of life' more literally, suggesting Melchizedek was a pre-incarnate appearance of the Son. Hebrews' own wording, made like unto the Son of God (7:3), points the other way: a type resembling the Son, not the Son himself."
     }
   ]
 }

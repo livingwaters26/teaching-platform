@@ -1015,7 +1015,8 @@ window.SESSIONS.push({
   ],
   "hist": [
     "The collection from Macedonia and Achaia is doctrine in coins: uncircumcised assemblies sending relief to Zion’s poor. If Jerusalem accepts the fruit, the one-body claim of chapters 9–11 gets a receipt.",
-    "Illyricum is the Balkan edge of Paul’s arc. Spain is the western rim. Rome is not his trophy church; it is a launch. He writes as a man who still thinks he may pass through free."
+    "Illyricum is the Balkan edge of Paul’s arc. Spain is the western rim. Rome is not his trophy church; it is a launch. He writes as a man who still thinks he may pass through free.",
+    "'Now, however, I am going to Jerusalem' with the collection for the saints there, hoping then to visit Rome on the way to Spain (15:25-28), is Paul's own timestamp. It places Romans in a later winter in Corinth (Acts 20:2-3), after the Ephesus stay behind 1-2 Corinthians and years after the Gallio-dated founding visit of Acts 18, roughly AD 56-57. The collection, the Spain hope, and the fear of what awaits him in Jerusalem all sit in this one chapter."
   ],
   "opens": [
     "Christ did not please himself. Where is ‘I have liberty’ still a nicer name for pleasing ourselves?",

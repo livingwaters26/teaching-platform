@@ -68,6 +68,14 @@ window.SESSIONS.push(
     {
       "name": "Deposit as both Paul’s trust in God and Timothy’s trust to guard",
       "body": "1:12 and 1:14. Strength: same word. Cost: do not flatten them into one slogan."
+    },
+    {
+      "name": "The most personally 'Paul' of the three",
+      "body": "The cloak left at Troas, the parchments, the named companions and their small dramas (4:9-21) are hard to invent without a point. Many who doubt 1 Timothy and Titus still hear Paul's own voice here, near the end, in prison, 'poured out as a drink offering' (4:6)."
+    },
+    {
+      "name": "Still part of the same later school",
+      "body": "Others read 2 Timothy's personal color as a deliberate device, the kind of vivid detail a later writer uses to make a testament feel authentic, and keep all three Pastorals together as products of Paul's school writing after his death, roughly AD 80-100."
     }
   ]
 }

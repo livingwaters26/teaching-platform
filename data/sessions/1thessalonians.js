@@ -18,7 +18,8 @@ window.SESSIONS.push(
   ],
   "hist": [
     "Thessalonica was a free city, capital of Macedonia, on the Via Egnatia. A Jewish synagogue plus a thick pagan street (1:9’s idols) is exactly Acts 17. Turning from idols in a port that honored Cabirus and the emperor was public, costly, and loud enough to be rumored down the road to Achaia.",
-    "Written from Corinth on the second journey, inside the Gallio peg (see PAULINE-COMMENTARY.md). That is why 1 Thessalonians is among the earliest Christian letters we have — a few months after a church was born in a riot."
+    "Written from Corinth on the second journey, inside the Gallio peg (see PAULINE-COMMENTARY.md). That is why 1 Thessalonians is among the earliest Christian letters we have — a few months after a church was born in a riot.",
+    "Paul writes from the eighteen-month stay in Corinth that Acts 18 dates precisely: Gallio, proconsul of Achaia, heard the case against Paul there in AD 51, confirmed by a Delphi inscription naming him in office. That anchors this letter to around AD 50-51, the earliest of Paul's letters to survive."
   ],
   "opens": [
     "If election is known by work-of-faith, labor-of-love, and patience-of-hope, what is our room currently offering as evidence?",

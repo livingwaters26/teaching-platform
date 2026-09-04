@@ -68,6 +68,14 @@ window.SESSIONS.push(
     {
       "name": "Pauline school after his death",
       "body": "Colossians rewritten for the churches. Strength: parallels and general address. Cost: the prayer and the blood still have to be preached as gospel, not as a tribute piece."
+    },
+    {
+      "name": "Paul, writing generally or circularly",
+      "body": "Early and wide reception treats this as Paul's, and the shared courier language with Colossians (Tychicus, 6:21-22) ties it to the same imprisonment. Some early copies lack 'to the Ephesians' in 1:1, which fits a circular letter meant for several churches, not a forgery."
+    },
+    {
+      "name": "A later Pauline student, using Colossians",
+      "body": "About half of Ephesians has verbal cousins in Colossians, the sentences run unusually long even for Paul, and the address is generic, no local names or local trouble, unlike his other letters. Many read this as a follow-up composition written in Paul's name and style shortly after his death, drawing on Colossians as its base text."
     }
   ]
 }

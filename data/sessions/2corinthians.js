@@ -20,7 +20,8 @@ window.SESSIONS.push(
   ],
   "hist": [
     "Between 1 and 2 Corinthians most reconstructions place a painful visit and a tear-letter (see PAULINE-CHRONOLOGY.md). Chapter 1 is written after that storm, from Macedonia, with Titus already on the road. ‘Yea and nay’ is patronage-language: a client reads a cancelled appearance as insult.",
-    "‘Trouble in Asia’ is not named as a jail in Acts, which is why some chairs put an Ephesian imprisonment here. The letter only requires a death-sentence feeling and a God who raises."
+    "‘Trouble in Asia’ is not named as a jail in Acts, which is why some chairs put an Ephesian imprisonment here. The letter only requires a death-sentence feeling and a God who raises.",
+    "Paul's 'trouble in Asia' that felt like a death sentence (1:8-10) falls after the Ephesus stay behind 1 Corinthians and before this letter, roughly AD 55-56, on the same Gallio-anchored timeline that dates the earlier Corinth visit to AD 50-52."
   ],
   "opens": [
     "Where have we read someone’s change of plans as a change of character?",
@@ -69,6 +70,14 @@ window.SESSIONS.push(
     {
       "name": "Changed plan as pastoral sparing",
       "body": "1:23. Strength: his oath. Cost: 10–13 will still sound like a man ready to come with weight."
+    },
+    {
+      "name": "One continuous letter",
+      "body": "2 Corinthians reads as a single composition: Paul's mood shifts, calm in chapters 1-9, sharp in 10-13, because he's addressing the same fragile church from different angles in one sitting, not because two documents have been stitched together."
+    },
+    {
+      "name": "A spliced 'letter of tears'",
+      "body": "Many read chapters 10-13 as a separate, earlier letter, the severe letter written 'out of much affliction and anguish of heart' (2:4), later joined to chapters 1-9 by an editor. The tone shift at chapter 10 is the seam. Either way, the letter sits inside a real crisis: a founding visit, a painful second visit, a tearful letter carried by Titus, and this follow-up, not two tidy volumes."
     }
   ]
 }
@@ -452,7 +461,8 @@ window.SESSIONS.push(
   ],
   "hist": [
     "Titus is the human hinge of this letter: sent with the severe word, met in Macedonia, later trusted with the collection (8:6, 16–17). A younger coworker walking into a loud church is why ‘fear and trembling’ in 7:15 is not theater.",
-    "‘Revenge / punishment’ (ekdikesis) in 7:11 is the church putting the case right, the 2:6 penalty in the rearview. The paragraph assumes they have already acted. Restoration (2:7) and this clearing belong together."
+    "‘Revenge / punishment’ (ekdikesis) in 7:11 is the church putting the case right, the 2:6 penalty in the rearview. The paragraph assumes they have already acted. Restoration (2:7) and this clearing belong together.",
+    "'Godly sorrow' here (7:9-11) is Paul's relief that the tear-letter landed. Titus has just brought word that the Corinthians grieved, disciplined the offender, and long to see Paul again; this chapter is the emotional hinge of the whole crisis sequence: founding visit, painful visit, letter of tears, this letter."
   ],
   "opens": [
     "What is the difference, in our house, between godly sorrow and the sorrow that only wants the feeling to stop?",
@@ -668,7 +678,8 @@ window.SESSIONS.push(
   ],
   "hist": [
     "Chs. 10–13 shift tone so hard that many read a separate letter (the tear-letter, or a later add-on). Teach the heat as the letter’s own second movement either way. The charge ‘weak in person’ fits a short man with no sophist polish in a city that bought voices.",
-    "‘Measure of the rule’ (kanon) is an assigned sphere — apostolic territory, not a personality test. Itinerant rivals with papers (3:1) were measuring success by each other’s glow."
+    "‘Measure of the rule’ (kanon) is an assigned sphere — apostolic territory, not a personality test. Itinerant rivals with papers (3:1) were measuring success by each other’s glow.",
+    "The tone shifts sharply here, from relief in chapters 1-7 to a direct, even combative defense of Paul's apostleship. Whether that's the same letter changing register to confront a holdout faction, or a separate 'letter of tears' preserved alongside the earlier chapters, is the live text-critical question for 2 Corinthians (see chapter 1's views)."
   ],
   "opens": [
     "Where do we still judge a ministry by the room’s first five minutes of presence?",

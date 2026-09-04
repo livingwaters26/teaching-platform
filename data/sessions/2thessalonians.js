@@ -138,6 +138,14 @@ window.SESSIONS.push(
     {
       "name": "Day not present — against over-realized panic",
       "body": "2:2. Strength: the point of the chapter. Cost: 1 Thess 5 still says the day comes as a thief; both pages stay."
+    },
+    {
+      "name": "Paul, correcting a misread first letter",
+      "body": "The same church, a rumor 'that the day of Christ is at hand' (2:1-2), and the hand-written greeting Paul calls 'the token in every epistle' (3:17) all fit a second, corrective note from the same author addressing a real misunderstanding of the first."
+    },
+    {
+      "name": "A later imitation, tightening 1 Thessalonians' urgency",
+      "body": "2:2 already worries about a letter forged in Paul's name, which some read as evidence this letter is itself doing what it warns against. The man-of-sin timeline here slows down 1 Thessalonians 4-5's sudden, unannounced day, and the careful, almost defensive style reads to some as a later hand smoothing out an embarrassing delay."
     }
   ]
 }

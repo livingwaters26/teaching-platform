@@ -67,6 +67,14 @@ window.SESSIONS.push(
     {
       "name": "Faithful saying as a received line Paul quotes",
       "body": "1:15. Strength: ‘worthy of all acceptation.’ Cost: it is still his testimony."
+    },
+    {
+      "name": "Paul, in a late, free period",
+      "body": "Acts ends with Paul still in custody, but Romans 15's hope of going further west and the early church's own memory of his release both leave room for more travel, placing men like Timothy in Ephesus and Titus in Crete, before a final arrest and 2 Timothy."
+    },
+    {
+      "name": "A Pauline school, writing after his death",
+      "body": "The vocabulary here differs noticeably from Paul's undisputed letters, the concern for church order (overseers, deacons, widows' lists) reads like a later, more settled church, and the itinerary doesn't fit anywhere inside Acts. Many read the Pastorals as later letters written in Paul's name and honor, continuing his authority for a new generation of leaders."
     }
   ]
 }

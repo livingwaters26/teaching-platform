@@ -1101,7 +1101,8 @@ window.SESSIONS.push(
   ],
   "hist": [
     "First day of the week laying-by is the earliest clear Sunday-practice note in Paul — not yet a full liturgical essay, a payday-habit for the Jerusalem poor. Carriers approved by letter is accountability in a world of light fingers.",
-    "Maranatha is Aramaic left untranslated: Our Lord, come (or: Our Lord has come). In a Greek port it is a foreign family-word, like Abba in Romans 8. Anathema beside it is synagogue-ban language. Love and ban in two breaths."
+    "Maranatha is Aramaic left untranslated: Our Lord, come (or: Our Lord has come). In a Greek port it is a foreign family-word, like Abba in Romans 8. Anathema beside it is synagogue-ban language. Love and ban in two breaths.",
+    "Paul's travel plan here ('I will tarry at Ephesus until Pentecost,' 16:8) places this letter during the third journey's Ephesus stay, a few years after the Corinth visit Acts 18 dates to AD 50-52 by the Gallio/Delphi inscription, putting 1 Corinthians around AD 54-55."
   ],
   "opens": [
     "An open door and many adversaries — which one have we been using to cancel the other?",

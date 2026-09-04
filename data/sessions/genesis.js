@@ -927,7 +927,8 @@ window.SESSIONS.push(
   ],
   "hist": [
     "Salem is widely read as Jerusalem's older name (Psalm 76:2). A priest-king of the most high God in that place, before Israel exists, is the shock. Abram recognizes him without a Sinai résumé.",
-    "El Elyon, 'most high God,' is a title the nations could hear. Abram yokes it to YHWH in 14:22."
+    "El Elyon, 'most high God,' is a title the nations could hear. Abram yokes it to YHWH in 14:22.",
+    "Melchizedek's three verses here (14:18-20) are the entire Genesis dossier on him; Psalm 110:4 and Hebrews 5-7 build an entire priesthood argument on this thin, undated cameo. Later Jewish tradition sometimes identifies him with Shem, Noah's son, whose lifespan on the Masoretic numbers overlaps Abraham's, putting the first priest inside Noah's blessed line, but Genesis itself never makes that equation, and Hebrews' argument depends on Melchizedek appearing without a recorded genealogy."
   ],
   "opens": [
     "Why does Abram take nothing from Sodom and give a tenth to Melchizedek?",
@@ -943,6 +944,11 @@ window.SESSIONS.push(
       "title": "A King-Priest With No Genealogy",
       "icon": "👑",
       "body": "Every other name in this book comes wrapped in a father, a mother, a toledot. Melchizedek shows up with none of that — just bread, wine, and a blessing — which is exactly the detail Hebrews 7:3 will later build an entire argument on. The chapter hands you a mystery and moves on without explaining it."
+    },
+    {
+      "title": "Melchizedek, priest before Levi existed",
+      "icon": "🍞",
+      "body": "After Abram defeats the eastern kings and rescues Lot, Melchizedek king of Salem, priest of God Most High, brings out bread and wine, blesses Abram, and blesses God Most High for the victory. Abram gives him a tenth of everything. Then he's gone: no genealogy, no death notice, no return appearance. He's the first person in the Bible called a priest (kohen), centuries before Levi's line exists."
     }
   ],
   "wordStudies": [
@@ -955,6 +961,11 @@ window.SESSIONS.push(
       "word": "Most high God",
       "orig": "Hebrew: El Elyon",
       "meaning": "14:18–22. Abram will add YHWH to the title so no one thinks he picked up a local extra god."
+    },
+    {
+      "word": "Melchizedek",
+      "orig": "Hebrew: malki-tsedeq",
+      "meaning": "14:18 - king of righteousness. Salem (peace) is widely identified with later Jerusalem (see Psalm 76:2). Abram's own oath just after this scene (14:22) names 'the LORD, El Elyon,' identifying his God with Melchizedek's God Most High."
     }
   ],
   "doctrinal": "Teacher-only: I read Melchizedek as a real priest-king whom Abram honors, and I read Psalm 110 and Hebrews 7 as later Scripture telling us that office is the pattern for Messiah's priesthood — not Levi's. I will not spend the hour on whether Melchizedek is a pre-incarnate appearance. The text as we have it is a man; the argument of Hebrews is an order. Both can be said.",

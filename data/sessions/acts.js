@@ -1221,7 +1221,9 @@ window.SESSIONS.push(
   ],
   "hist": [
     "Claudius's expulsion of Jews from Rome (often dated AD 49) is why a tentmaking couple is in Corinth. The Gallio inscription is why many chronologies peg this stay near AD 51–52.",
-    "First-century Corinth had a reputation across the Roman world for wealth, commerce, and sexual license so pronounced that 'to Corinthianize' had become a byword for loose living — which makes the Lord's promise in 18:10 ('I have many people in this city') land as a genuinely startling claim about where God already has a harvest waiting, not a comment on the city cleaning up its act first."
+    "First-century Corinth had a reputation across the Roman world for wealth, commerce, and sexual license so pronounced that 'to Corinthianize' had become a byword for loose living — which makes the Lord's promise in 18:10 ('I have many people in this city') land as a genuinely startling claim about where God already has a harvest waiting, not a comment on the city cleaning up its act first.",
+    "The bema, Corinth's public tribunal (still standing in the forum today), is where Gallio hears the case (18:12). A Roman proconsul heard civic and religious disputes there; Gallio's refusal to rule shows him classifying the charge as an internal Jewish argument over 'words and names and your own law' (18:15), not a Roman crime, functioning as unintentional legal cover for the young movement across the empire.",
+    "Gallio can be dated to the year, rare for anyone in Acts. He was Lucius Junius Gallio Annaeanus, brother of the philosopher Seneca, and proconsul of Achaia. In 1905 excavators at Delphi found fragments of a letter from Claudius naming him in office, dated by Claudius's 26th acclamation to AD 51/early 52. That places Gallio's year at roughly summer 51 to summer 52, and lets nearly every other date in Paul's life be counted forward or backward from this one hearing."
   ],
   "opens": [
     "God says 'I have much people in this city' over Corinth — a town 1 Corinthians will later describe as a mess. What does that do to our instinct that a hard church means a God-forsaken city?",

@@ -69,6 +69,14 @@ window.SESSIONS.push(
     {
       "name": "Firstborn as heir-rank, not creature",
       "body": "1:15–17. Strength: created through him. Cost: the word can be twisted; nail 1:16 down."
+    },
+    {
+      "name": "Paul, from prison with Onesimus",
+      "body": "Colossians names the same circle as Philemon: Onesimus, Archippus, Epaphras (4:7-17; Phlm 10-12), which almost nobody disputes is Paul's. That shared cast is the strongest anchor for treating Colossians as his too."
+    },
+    {
+      "name": "A student writing up the master's thought",
+      "body": "The long, liturgical sentences and the cosmic 'fulness of the Godhead' language (2:9) read differently than Galatians or 1 Corinthians to many readers. The Christ-hymn in 1:15-20 may be Paul quoting a hymn already in use, the way he does in Philippians 2, rather than evidence of a different author."
     }
   ]
 }

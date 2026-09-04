@@ -67,6 +67,14 @@ window.SESSIONS.push(
     {
       "name": "Circumcision-party as the main house-wreckers",
       "body": "1:10. Strength: ‘especially.’ Cost: vain talkers are ‘many,’ not only that circle."
+    },
+    {
+      "name": "Paul, placing Titus on Crete",
+      "body": "This fits the same release-and-further-travel chair as 1 Timothy: Paul free after Acts 28, organizing new churches on Crete before a final arrest."
+    },
+    {
+      "name": "Same later-school profile as 1 Timothy",
+      "body": "Titus shares 1 Timothy's vocabulary, overseer qualifications, and concern for 'sound doctrine' as a settled deposit; the same authorship question applies here for the same reasons."
     }
   ]
 }
