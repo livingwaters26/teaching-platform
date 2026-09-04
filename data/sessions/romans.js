@@ -1066,6 +1066,9 @@ window.SESSIONS.push({
       "name": "Root of Jesse as future reign",
       "body": "He that rises to rule the Gentiles. Strength: the reign-verb and Isaiah 11. Cost: Paul also uses it to ground a current welcome."
     }
+  ],
+  "visuals": [
+    "paulineTimeline"
   ]
 });
 window.SESSIONS.push({

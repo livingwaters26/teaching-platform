@@ -44,7 +44,13 @@ function render(){
   document.getElementById('pane-teacher').innerHTML = teacherHTML(s, currentSegment);
   document.getElementById('prev-btn').disabled = current === 0;
   document.getElementById('next-btn').disabled = current === SESSIONS.length - 1;
-  if (popoutWin && !popoutWin.closed) {
+  // Keeps the Teams-share popout window synced on every navigation. Resolves any
+  // externally-hosted (data-cache-key) images to portable data: URLs first, since the
+  // popout is a separate blob: document that can't run js/image-cache.js itself —
+  // fire-and-forget (see js/popout.js), the popout catches up a beat later.
+  if (typeof pushResolvedUpdateToPopout === 'function') {
+    pushResolvedUpdateToPopout(s, currentSegment);
+  } else if (popoutWin && !popoutWin.closed) {
     popoutWin.postMessage({ type: 'GROUP_STUDY_UPDATE', html: displayHTML(s, currentSegment), title: `Study Guide — ${s.book} ${s.chNum}` }, '*');
   }
   updateSyncStatus();
@@ -56,6 +62,7 @@ function render(){
   if (typeof wireCohortsDesk === 'function') wireCohortsDesk();
   if (typeof wireBookRecordingWidget === 'function') wireBookRecordingWidget();
   if (typeof wirePreloadBar === 'function') wirePreloadBar(s);
+  if (typeof wireImageCache === 'function') wireImageCache(document.getElementById('pane-display'));
 }
 
 document.getElementById('prev-btn').onclick = () => { if(current>0){current--; currentSegment=null; render(); window.scrollTo(0,0);} };

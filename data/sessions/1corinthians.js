@@ -1152,6 +1152,9 @@ window.SESSIONS.push(
       "name": "Maranatha as come, Lord",
       "body": "Future cry. Strength: 11:26; 15:23. Cost: the other punctuation (‘our Lord has come’) exists; the letter’s hope still looks ahead."
     }
+  ],
+  "visuals": [
+    "paulineTimeline"
   ]
 }
 );

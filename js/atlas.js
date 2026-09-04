@@ -36,6 +36,10 @@ const ATLAS = {
   templePlan: {
     title: "Ezekiel’s measured house — a sketch",
     caption: "Not to scale for today’s Temple Mount. The holy district in the land grant is about eight miles on a side."
+  },
+  paulineTimeline: {
+    title: "Paul's dated years",
+    caption: "Everything else in Paul's life is counted forward or backward from one hard peg: Gallio's year in Corinth, fixed by a stone inscription found at Delphi."
   }
 };
 
@@ -155,6 +159,18 @@ function svgTimeline(){
   </div>`;
 }
 
+function svgPaulineTimeline(){
+  const ticks = [
+    ['~34','Conversion'],['48–49','1st journey'],['50–52','Corinth (Gallio, AD 51)'],
+    ['54–55','1 Corinthians'],['55–56','2 Corinthians'],['56–57','Romans'],
+    ['60–62','Rome custody'],['~65','Death under Nero']
+  ];
+  return `<div class="time-line pauline-time-line">
+    <div class="time-rail"></div>
+    ${ticks.map(t => `<div class="time-tick"><b>${t[0]}</b><span>${t[1]}</span></div>`).join('')}
+  </div>`;
+}
+
 function svgRevPath(){
   const steps = ['7 churches','Throne','Seals','Trumpets','Bowls','City'];
   return `<div class="rev-path">${steps.map((s,i)=> `<div class="rev-step"><i>${i+1}</i><span>${s}</span></div>${i<steps.length-1?'<div class="rev-arrow">→</div>':''}`).join('')}</div>`;
@@ -184,7 +200,8 @@ const ATLAS_RENDER = {
   weeks: svgWeeks,
   timeline: svgTimeline,
   revelationPath: svgRevPath,
-  templePlan: svgTemple
+  templePlan: svgTemple,
+  paulineTimeline: svgPaulineTimeline
 };
 
 function defaultVisualsFor(s){
@@ -220,7 +237,7 @@ const PHOTO_DEFAULTS = {
   'Daniel|3': [{src:'images/fiery-furnace.jpg', alt:'Furnace', caption:'The furnace — and a fourth figure the king cannot name.'}],
   'Daniel|6': [{src:'images/lions-den.jpg', alt:'Lions', caption:'The den. The edict was about prayer.'}],
   'Revelation|1': [{src:'images/patmos.jpg', alt:'Patmos', caption:'Patmos — prison island, open heaven.'}],
-  'Revelation|2–3': [{src:'images/patmos.jpg', alt:'Churches', caption:'The letters walk a real coast.'}],
+  // Rev 2-3 dropped the duplicate Patmos photo (2026-09-04) - that chapter already gets the churchesMap SVG below, and a 'Churches' caption on a Patmos-island photo was actually mislabeled (Patmos isn't where the 7 churches were).
   'John|4': [{src:'images/jacobs-well.jpg', alt:'Well', caption:'Noon at the well no respectable rabbi was supposed to visit.'}],
   'Between the Testaments|Azariah': [{src:'images/fiery-furnace.jpg', alt:'Furnace', caption:'Same fire. Some Bibles let the three men pray out loud.'}],
   'Between the Testaments|Maccabees': [{src:'images/scrolls.jpg', alt:'Scrolls', caption:'The library between Malachi and Matthew.'}]
@@ -232,7 +249,9 @@ function visualsHTML(s){
   if (!ids.length && !extraPhotos.length) return '';
   let html = '<div class="atlas-wrap">';
   extraPhotos.forEach(p => {
-    html += `<figure class="atlas-fig"><img src="${p.src}" alt="${p.alt||''}"><figcaption>${p.caption||''}</figcaption></figure>`;
+    const isExternal = /^https?:\/\//i.test(p.src);
+    const imgAttr = isExternal ? `data-cache-key="${p.src}"` : `src="${p.src}"`;
+    html += `<figure class="atlas-fig"><img ${imgAttr} alt="${p.alt||''}" onerror="this.closest('.atlas-fig').style.display='none'" loading="lazy"><figcaption>${p.caption||''}</figcaption></figure>`;
   });
   ids.forEach(id => {
     const meta = ATLAS[id];

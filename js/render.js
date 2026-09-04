@@ -356,8 +356,8 @@ function teacherHTML(s, seg){
       <div class="meta">Target: 30–45 minutes${scoped && seg.estMinutes ? ' &middot; this part est. ~' + seg.estMinutes + ' min' : ''}</div>
     </div>
     <div class="preload-bar">
-      <span class="preload-status" id="preload-status">Scriptures: checking&hellip;</span>
-      <button type="button" class="preload-btn" id="preload-btn">⬇ Preload Scriptures for Today</button>
+      <span class="preload-status" id="preload-status">Checking what's already offline-ready&hellip;</span>
+      <button type="button" class="preload-btn" id="preload-btn">⬇ Load Lesson (Offline-Ready)</button>
     </div>
     <div class="block">
       <div class="block-label"><span>Your Script for This Lesson</span></div>

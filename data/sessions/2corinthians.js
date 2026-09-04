@@ -79,6 +79,9 @@ window.SESSIONS.push(
       "name": "A spliced 'letter of tears'",
       "body": "Many read chapters 10-13 as a separate, earlier letter, the severe letter written 'out of much affliction and anguish of heart' (2:4), later joined to chapters 1-9 by an editor. The tone shift at chapter 10 is the seam. Either way, the letter sits inside a real crisis: a founding visit, a painful second visit, a tearful letter carried by Titus, and this follow-up, not two tidy volumes."
     }
+  ],
+  "visuals": [
+    "paulineTimeline"
   ]
 }
 );

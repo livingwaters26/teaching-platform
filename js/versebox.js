@@ -227,20 +227,29 @@
     return { cached, total: refs.length };
   };
 
-  // Wires the "Scriptures preloaded: X of Y" bar at the top of the teacher
-  // script for the currently-shown session. Called from main.js's render().
+  // Wires the "Load Lesson" bar at the top of the teacher script for the
+  // currently-shown session: preloads the main chapter text, every cross-referenced
+  // verse, and every externally-linked image, so the whole lesson works with the
+  // connection off. Called from main.js's render().
   window.wirePreloadBar = function (s) {
     const statusEl = document.getElementById('preload-status');
     const btn = document.getElementById('preload-btn');
     if (!statusEl || !btn) return;
 
-    function refreshStatus() {
-      const { cached, total } = window.countCachedSessionScriptures(s);
+    async function refreshStatus() {
+      const scr = window.countCachedSessionScriptures(s);
+      const img = (typeof window.countCachedSessionImages === 'function')
+        ? await window.countCachedSessionImages(s) : { cached: 0, total: 0 };
+      const total = scr.total + img.total;
+      const cached = scr.cached + img.cached;
       if (total === 0) {
-        statusEl.textContent = 'All of today’s references are local — nothing to preload.';
+        statusEl.textContent = 'Everything for today is local — nothing to preload.';
         btn.style.display = 'none';
       } else {
-        statusEl.textContent = `Scriptures preloaded: ${cached} of ${total}`;
+        const parts = [];
+        if (scr.total) parts.push(`${scr.cached}/${scr.total} scripture refs`);
+        if (img.total) parts.push(`${img.cached}/${img.total} images`);
+        statusEl.textContent = `Lesson ready offline: ${parts.join(', ')}`;
         btn.style.display = cached >= total ? 'none' : 'inline-block';
       }
     }
@@ -248,12 +257,19 @@
     refreshStatus();
     btn.onclick = function () {
       btn.disabled = true;
-      btn.textContent = 'Preloading…';
-      window.preloadSessionScriptures(s, (done, total) => {
-        statusEl.textContent = `Scriptures preloaded: ${done} of ${total}`;
-      }).then(() => {
+      btn.textContent = 'Loading lesson…';
+      const jobs = [
+        (typeof window.preloadMainScripture === 'function') ? window.preloadMainScripture(s) : Promise.resolve(),
+        window.preloadSessionScriptures(s, (done, total) => {
+          statusEl.textContent = `Scripture refs: ${done} of ${total}…`;
+        }),
+        (typeof window.preloadSessionImages === 'function') ? window.preloadSessionImages(s, (done, total) => {
+          statusEl.textContent = `Images: ${done} of ${total}…`;
+        }) : Promise.resolve({ done: 0, total: 0 }),
+      ];
+      Promise.all(jobs).then(() => {
         btn.disabled = false;
-        btn.textContent = '⬇ Preload Scriptures for Today';
+        btn.textContent = '⬇ Load Lesson (Offline-Ready)';
         refreshStatus();
       });
     };

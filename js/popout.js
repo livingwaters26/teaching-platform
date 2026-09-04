@@ -169,19 +169,44 @@ function buildPopoutHTML(s, seg){
     </body></html>`;
 }
 
+// Sends the fully-resolved (real <img src>, no data-cache-key placeholders left) HTML
+// to an already-open popout window. Safe to call any time after the window exists —
+// no popup-blocker concern here, since no new window is being opened.
+function pushResolvedUpdateToPopout(s, seg){
+  if (!(popoutWin && !popoutWin.closed)) return;
+  const rawHtml = displayHTML(s, seg);
+  const title = `Study Guide — ${s.book} ${s.chNum}`;
+  if (typeof resolveCacheKeyImagesInHTML === 'function') {
+    resolveCacheKeyImagesInHTML(rawHtml).then(resolvedHtml => {
+      if (popoutWin && !popoutWin.closed) {
+        popoutWin.postMessage({ type: 'GROUP_STUDY_UPDATE', html: resolvedHtml, title }, '*');
+      }
+    });
+  } else {
+    popoutWin.postMessage({ type: 'GROUP_STUDY_UPDATE', html: rawHtml, title }, '*');
+  }
+}
+
 document.getElementById('btn-popout').onclick = function(){
   const seg = (typeof currentSegment !== 'undefined') ? currentSegment : null;
   if (popoutWin && !popoutWin.closed) {
     popoutWin.focus();
-    popoutWin.postMessage({ type: 'GROUP_STUDY_UPDATE', html: displayHTML(SESSIONS[current], seg), title: `Study Guide — ${SESSIONS[current].book} ${SESSIONS[current].chNum}` }, '*');
+    pushResolvedUpdateToPopout(SESSIONS[current], seg);
     return;
   }
+  // window.open must happen synchronously inside this click handler (no await before
+  // it) or browsers treat it as an unrequested popup and block it. So the window opens
+  // immediately with the raw HTML (any museum/archive images just render blank for a
+  // beat — no broken-image icon, since data-cache-key isn't a real src the browser
+  // tries to load) and gets a follow-up update with real image URLs once it's loaded.
   const html = buildPopoutHTML(SESSIONS[current], seg);
   const blob = new Blob([html], { type: 'text/html;charset=utf-8' });
   const url = URL.createObjectURL(blob);
   popoutWin = window.open(url, 'GroupStudyDisplay', 'width=1000,height=750,menubar=no,toolbar=no,location=no,status=no');
   if (!popoutWin) {
     alert('Your browser blocked this popup. Please allow popups for this page (check the address bar for a blocked-popup icon), then click the button again.');
+  } else {
+    popoutWin.addEventListener('load', function(){ pushResolvedUpdateToPopout(SESSIONS[current], seg); });
   }
   updateSyncStatus();
 };

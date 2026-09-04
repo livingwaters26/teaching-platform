@@ -69,6 +69,9 @@ window.SESSIONS.push(
       "name": "Election known by gospel-fruit",
       "body": "1:4–5. Strength: how they received. Cost: do not turn fruit into a ladder you climb to get chosen."
     }
+  ],
+  "visuals": [
+    "paulineTimeline"
   ]
 }
 );

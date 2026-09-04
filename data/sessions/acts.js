@@ -1268,6 +1268,9 @@ window.SESSIONS.push(
       "name": "The vow as a puzzle",
       "body": "Some careful readers just say they do not know why Luke includes the shearing. Leave it marked for 21:23–26."
     }
+  ],
+  "visuals": [
+    "paulineTimeline"
   ]
 }
 );

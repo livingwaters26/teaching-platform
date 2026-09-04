@@ -121,3 +121,30 @@ function kickOffLiveScriptureFetch(book, ch){
     }
   })();
 }
+
+// Awaitable single-chapter preload (used by the "Load Lesson" button) — unlike
+// kickOffLiveScriptureFetch above (fire-and-forget, used automatically on render),
+// this one is awaited by the caller so the button can promise "done" before Will
+// heads home to a low-bandwidth connection.
+window.preloadMainScripture = async function (s) {
+  const book = s.book;
+  const ch = String(s.chNum || '').replace(/[–—-].*/, '').trim();
+  if (hasEmbeddedScripture(book)) return { skipped: true, reason: 'embedded' };
+  if (getCachedLiveChapter(book, ch)) return { skipped: true, reason: 'cached' };
+
+  let verses = null, translation = null;
+  try { verses = await fetchEsvChapter(book, ch); translation = 'ESV'; }
+  catch (e) { /* fall through to BSB */ }
+
+  if (!verses) {
+    try { verses = await fetchBsbChapter(book, ch); translation = 'BSB'; }
+    catch (e) { /* nothing available */ }
+  }
+
+  if (verses && verses.length) {
+    scriptureLiveCache[scriptureLiveCacheKey(book, ch)] = { translation, verses };
+    saveScriptureLiveCache();
+    return { skipped: false, ok: true, translation };
+  }
+  return { skipped: false, ok: false };
+};

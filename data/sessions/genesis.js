@@ -1513,6 +1513,13 @@ window.SESSIONS.push(
       "name": "A type of the Father and the Son",
       "body": "Loved son, wood, third day, substitute. The church's long reading. Strength: later texts. Cost: Isaac does not die. Keep the ram; keep the later glory."
     }
+  ],
+  "photos": [
+    {
+      "src": "https://catholic-resources.org/Dore/Images/OT-016-med.jpg",
+      "alt": "The Testing of Abraham's Faith, engraving by Gustave Dore",
+      "caption": "Gustave Dore, \"The Testing of Abraham's Faith\" (1866, public domain). Loaded live from catholic-resources.org's Dore Bible Gallery archive."
+    }
   ]
 },
 {
@@ -1898,6 +1905,13 @@ window.SESSIONS.push(
     {
       "name": "The vow as still a bargain",
       "body": "If you do X, then you will be my God. Strength: the ifs are on the page. 32–35 will have to take the if out of him."
+    }
+  ],
+  "photos": [
+    {
+      "src": "https://catholic-resources.org/Dore/Images/OT-021-med.jpg",
+      "alt": "Jacob's Dream, engraving by Gustave Dore",
+      "caption": "Gustave Dore, \"Jacob's Dream\" (1866, public domain). Loaded live from catholic-resources.org's Dore Bible Gallery archive."
     }
   ]
 },
